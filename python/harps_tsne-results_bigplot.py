@@ -27,27 +27,48 @@ labels = [r'$\rm \tau \ [Gyr]$', r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$',
 
 xx  = [data['meanage'], data['feh'], data['TiIFe'], data['YFe']-data['MgFe'],
           data['ZrIIFe'], data['AlFe']-data['MgFe']]
-#exlist = [x1e**2., x2e**2., x3e**2., x4e**2., x5e**2.,
-#          x6e**2., x7e**2., x8e**2., x9e**2., x10e**2., x11e**2., x12e**2.]
+xerr = [data['agestd'], data['erfeh'], data['errTiI'],
+        np.sqrt(data['errY']**2.+data['errMg']**2.), data['errZrII'],
+        np.sqrt(data['errAl']**2.+data['errMg']**2.) ]
 
-subsets = ["thin", "thick1", "thick2", "thick3",
-           "mpthin", "smr",
-           "t1trans", "debris", "highAlMg",
-           "t3trans", "highTioutlier","lowalphaoutlier"]
-names   = ["Thin disc", "Thick Disc I", "Thick Disc II", "Thick Disc III",
-           "Metal-poor \n thin disc", "SMR", "Transition I",
-           "Satellite \n debris", r"High-[Al/Mg]", "Transition III",
-           r"Extreme-Ti star", r"Low-[Mg/Fe] star"]
-Xcoords = [-25, 15, 4.5, -12,  18, -31, 22, 26,-22.5, -14, -2, -25]
-Ycoords = [5.5 ,-6,  -2, -4,   6,  0,   1.5, -.5, -7, -2, -6, 14]
-fsize   = [20 , 16,  12, 12,  15,  13, 11, 11, 11, 11, 11, 11]
-sym = ["o", "v", "^", ">", "s", "*", "<", "D", "p", "8", "H", "h"]
-al  = [.4, .6, .8, .8, .75, 1,1,1,1,1,1,1]
-lw  = [0,0,.5,.5, .5, .5, .5, .5, .5, .5, .5, .5]
-size= [6,9,9,9,12,20,18,18,18,18,22,25]
-col = ["k", "r", "orange", "gold", "g", "orange",
-      "brown", "yellow", "royalblue", "hotpink", 
-      "lime", "black"]
+if mc:
+    subsets = ["thin", "thick1", "thick2", "thick3", "thick4",
+               "mpthin", "smr", "t4trans",
+               "debris1", "debris2", "debris3", "debris4", "debris5?", 
+               "t2trans1", "t2trans2", "highTi","thicklow"]
+    names   = ["Thin Disc", "Thick Disc I", "Thick Disc II", "Thick Disc III",
+               "Thick Disc IV", "Metal-poor \n Thin Disc", "SMR", "Transition",
+               "", "", "Satellite \n debris", "", "", r"TII/III", "", 
+               r"Extreme-Ti star", r"Lowest-[Fe/H] star"]
+    Xcoords = [-25, 15, 4.5, -12,  18, -31, 22, 26,-22.5, -14, -2, -25]
+    Ycoords = [5.5 ,-6,  -2, -4,   6,  0,   1.5, -.5, -7, -2, -6, 14]
+    fsize   = [20 , 16,  12, 12,  15,  13, 11, 11, 11, 11, 11, 11]
+    sym = ["o", "v", "^", ">", "<", "s", "*", "<", "D", "h", "d", "H", "D", "p", "8", "H", "p"]
+    al  = [.6, .6, .8, .8, .75, 1,1,1,1,1,1,1,1,1,1,1,1]
+    lw  = [0,0,.5,.5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5]
+    size= [6,9,9,9,12,20,18,18,18,18,18,18,18,18,18,18,18]
+    col = ["k", "m", "hotpink", "r", "crimson", "g", "orange", "gold",
+          "yellow", "yellow", "yellow", "yellow", "green", "royalblue", "royalblue",
+           "lime", "m"]
+else:
+    subsets = ["thin", "thick1", "thick2", "thick3",
+               "mpthin", "smr",
+               "t1trans", "debris", "highAlMg",
+               "t3trans", "highTioutlier","lowalphaoutlier"]
+    names   = ["Thin disc", "Thick Disc I", "Thick Disc II", "Thick Disc III",
+               "Metal-poor \n thin disc", "SMR", "Transition I",
+               "Satellite \n debris", r"High-[Al/Mg]", "Transition III",
+               r"Extreme-Ti star", r"Low-[Mg/Fe] star"]
+    Xcoords = [-25, 15, 4.5, -12,  18, -31, 22, 26,-22.5, -14, -2, -25]
+    Ycoords = [5.5 ,-6,  -2, -4,   6,  0,   1.5, -.5, -7, -2, -6, 14]
+    fsize   = [20 , 16,  12, 12,  15,  13, 11, 11, 11, 11, 11, 11]
+    sym = ["o", "v", "^", ">", "s", "*", "<", "D", "p", "8", "H", "h"]
+    al  = [.6, .6, .8, .8, .75, 1,1,1,1,1,1,1]
+    lw  = [0,0,.5,.5, .5, .5, .5, .5, .5, .5, .5, .5]
+    size= [6,9,9,9,12,20,18,18,18,18,22,25]
+    col = ["k", "r", "orange", "gold", "g", "orange",
+          "brown", "yellow", "royalblue", "hotpink", 
+          "lime", "black"]
 #------------------------------------------------------------
 # Plot the results
 import matplotlib.gridspec as gridspec
@@ -60,14 +81,20 @@ gs0 = gridspec.GridSpec(1, 1)
 gs0.update(left=0.1, bottom=0.05, right=0.98, top=0.7)
 ax  = plt.Subplot(g, gs0[0, 0])
 g.add_subplot(ax)
+if mc:
+    # plot MC realisations
+    mcres =  np.genfromtxt("../tsne_results/harps_tsne_results_withteffcutmc5040_rand0.csv", delimiter=',',
+                      dtype=[('Name', "|S14"), ('X', float), ('Y', float)])
+    ax.scatter(mcres["X"], mcres["Y"], s=4, lw=0, c="grey", alpha=0.15)
 for kk in np.arange(len(subsets)):
-    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
-    if mc:
+    if mc:        
+        mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
         ax.scatter(data["X_tsne_teffcut40_mc"][mask], data["Y_tsne_teffcut40_mc"][mask],
                s=4*size[kk], lw=lw[kk], edgecolors="k",
                c=col[kk], alpha=al[kk],
                marker=sym[kk])
     else:
+        mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
         ax.scatter(data["X_tsne_teffcut40"][mask], data["Y_tsne_teffcut40"][mask],
                s=4*size[kk], lw=lw[kk], edgecolors="k",
                c=col[kk], alpha=al[kk],
@@ -85,7 +112,15 @@ for jj in range(3):
     ax = plt.Subplot(g, gs[0, jj])
     g.add_subplot(ax)
     for kk in np.arange(len(subsets)):
-        mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+        if mc:        
+            mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
+        else:        
+            mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+        ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
+                    xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
+                   ms=0, mec="k", capthick=0, elinewidth=1,
+                   mfc=col[kk], alpha=al[kk]/3., ecolor=col[kk], lw=0,
+                   marker=sym[kk], zorder=0)
         ax.scatter(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
                    s=size[kk], lw=lw[kk], edgecolors="k",
                    c=col[kk], alpha=al[kk],
@@ -106,7 +141,10 @@ gs1.update(left=0.64, bottom=0.64, right=0.98, top=0.98)
 ax = plt.Subplot(f, gs1[0, 0])
 f.add_subplot(ax)
 for kk in np.arange(len(subsets)):
-    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+    if mc:        
+        mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
+    else:        
+        mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
     if mc:
         ax.scatter(data["X_tsne_teffcut40_mc"][mask], data["Y_tsne_teffcut40_mc"][mask],
                    s=size[kk], lw=lw[kk], edgecolors="k",
@@ -118,7 +156,7 @@ for kk in np.arange(len(subsets)):
                    c=col[kk], alpha=al[kk],
                    marker=sym[kk])
     # Annotate population names
-    ax.text(Xcoords[kk], Ycoords[kk], names[kk], fontsize=.92*fsize[kk])
+    #ax.text(Xcoords[kk], Ycoords[kk], names[kk], fontsize=.92*fsize[kk])
 ax.get_xaxis().set_visible(False)
 ax.get_yaxis().set_visible(False)
 
@@ -136,7 +174,10 @@ for ii in range(2):
             ax = plt.Subplot(f, gs2[ii, jj])
             f.add_subplot(ax)
             for kk in np.arange(len(subsets)):
-                mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+                if mc:        
+                    mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
+                else:        
+                    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
                 ax.scatter(uvw[1-jj][mask], uvw[2-ii][mask],
                            s=size[kk], lw=lw[kk], edgecolors="k",
                            c=col[kk], alpha=al[kk],
@@ -164,8 +205,11 @@ for ii in range(2):
             ax = plt.Subplot(f, gs2[ii, jj])
             f.add_subplot(ax)
             for kk in np.arange(len(subsets)):
-                mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])*\
-                       (data['JZ_st_m'] > 0)
+                if mc:        
+                    mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
+                else:        
+                    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+                mask = mask * (data['JZ_st_m'] > 0)
                 ax.scatter(uvw[1-jj][mask], uvw[2-ii][mask],
                            s=size[kk], lw=lw[kk], edgecolors="k",
                            c=col[kk], alpha=al[kk],
@@ -206,7 +250,10 @@ for ii in range(n_dim):
             ax = plt.Subplot(f, gs0[ii, jj])
             f.add_subplot(ax)
             for kk in np.arange(len(subsets)):
-                mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+                if mc:        
+                    mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
+                else:        
+                    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
                 ax.scatter(xx[jj][mask], xx[ii+1][mask],
                            s=size[kk], lw=lw[kk], edgecolors="k",
                            c=col[kk], alpha=al[kk],
