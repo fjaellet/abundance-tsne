@@ -22,13 +22,12 @@ import scipy
 age      = False
 kin      = False
 feh      = True
-teffcut  = True
-p        = 50
+p        = 75
 i        = 0
 mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
 
 add = ""
-if age or kin or mc>1 or teffcut or not feh:
+if age or kin or mc>1 or not feh:
     add = add + "_with"
     if age:
         add = add + "age"
@@ -36,14 +35,12 @@ if age or kin or mc>1 or teffcut or not feh:
         add = add + "kin"
     if not feh:
         add = add + "nofeh"
-    if teffcut:
-        add = add + "teffcut"
     if mc>1:
         add = add + "mc" + str(mc)
 print add        
 
 # The dataset
-tsne =  np.genfromtxt("../tsne_results/harps_tsne_results"+add+str(p)+
+tsne =  np.genfromtxt("../tsne_results/bensby2014_tsne_results"+add+str(p)+
                            "_rand"+str(i)+".csv", delimiter=',',
                       dtype=[('Name', "|S14"), ('X', float), ('Y', float)])
 
@@ -54,32 +51,34 @@ for ii in np.arange(means.shape[0]):
 
 # READ DelGADO-MENA DATA
 hdu = pyfits.open(
-    '/home/friedel/Astro/Spectro/HARPS/DelgadoMena2017.fits',
+    '/home/friedel/Astro/Spectro/Bensby/Bensby2014_SN_survey.fits',
     names=True)
 data=hdu[1].data
-if teffcut:
-    data=data[ (data['Teff']>5300) * (data['Teff']<6000) * \
-               (data['logg_hip']>3) * (data['logg_hip']<5) ]
-data=data[ (data['nCu']>0) * (data['nZn']>0) * (data['nSr']>0) * (data['nY']>0) *
-           (data['nZrII']>0) * (data['nBa']>0) * (data['nCe']>0) * (data['errAl']<1) *
-           (data['nMg']>0) * (data['nSi']>0) * (data['nCa']>0) * (data['nTiI']>0) *
-           np.isfinite(data['meanage']) ] 
+#if teffcut:
+#    data=data[ (data['Teff']>5300) * (data['Teff']<6000) * \
+#               (data['logg_hip']>3) * (data['logg_hip']<5) ]
+data=data[ (data['nO1']>0) * (data['nNa1']>0) * (data['nMg1']>0) * (data['nAl1']>0) *
+           (data['nSi1']>0) * (data['nCa1']>0) * (data['nTi1']>0) * (data['nCr1']>0) *
+           (data['nNi1']>0) * (data['nZn1']>0) * (data['nY2']>0) * (data['nBa2']>0) *
+           (data['nFe1']>0) ]
 
-colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
-            data['MgFe']-data['TiIFe'],data['CuFe'],data['AlFe']-data['MgFe'],
-            data['BaFe'], data['ZnFe'], 
-            data['YFe']-data['BaFe'],data['YFe']-data['ZnFe'],data['CeFe'],
-            data['Teff'],data['logg'], data['vt_1'],np.log10(data['S/N']),
-            data['meanage'],data['Ulsr'],data['Vlsr'],data['Wlsr']]
-titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Ca/Fe]$', r'$\rm [Mg/Fe]$',
-          r'$\rm [Mg/Ti]$', r'$\rm [Cu/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Ba/Fe]$',
-          r'$\rm [Zn/Fe]$', r'$\rm [Y/Ba]$', r'$\rm [Y/Zn]$', r'$\rm [Ce/Fe]$',
-          r'$T_{\rm eff}$', r'$\log g$', r'$\xi$', r'lg $S/N$',
+colors   = [data['Fe_H'], data['Ti_Fe'], data['Fe_H']+data['O_Fe'],
+            data['Mg_Fe']-(data['Fe_H']+data['O_Fe']),
+            data['Mg_Ti'],data['Ni_Ti'],data['Al_Fe']-data['Mg_Fe'],
+            data['Ba_Fe']-(data['Fe_H']+data['O_Fe']),
+            data['Zn_Fe']-(data['Fe_H']+data['O_Fe']),
+            data['Y_Fe']-data['Ba_Fe'],data['Y_Fe']-data['Zn_Fe'],data['Ni_Fe'],
+            data['Teff'],data['logg'], data['xi'],np.log10(data['td_d']),
+            data['Age'],data['Ulsr'],data['Vlsr'],data['Wlsr']]
+titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [O/H]$', r'$\rm [Mg/O]$',
+          r'$\rm [Mg/Ti]$', r'$\rm [Ni/Ti]$', r'$\rm [Al/Mg]$', r'$\rm [Ba/O]$',
+          r'$\rm [Zn/O]$', r'$\rm [Y/Ba]$', r'$\rm [Y/Zn]$', r'$\rm [Ni/Fe]$',
+          r'$T_{\rm eff}$', r'$\log g$', r'$\xi$', r'$TD/D$',
           r'$\tau$', r'$U$', r'$V$', r'$W$']
 
 
 f = plt.figure(figsize=(12, 12))
-plt.suptitle("t-SNE manifold learning for the HARPS sample (Delgado-Mena et al. 2017)", fontsize=14)
+plt.suptitle("t-SNE manifold learning for the Bensby+2014 sample", fontsize=14)
 import matplotlib.gridspec as gridspec
 gs0 = gridspec.GridSpec(5, 4)
 gs0.update(left=0.08, bottom=0.08, right=0.92, top=0.92,
@@ -115,12 +114,12 @@ for ii in range(5):
         f.colorbar(scat, cax=cax, orientation="horizontal")
         #plt.axis('tight')
 
-rec = np.rec.fromarrays((data['Star'], means[:,1], means[:,4]),
+rec = np.rec.fromarrays((data['HIP'], means[:,1], means[:,4]),
                         dtype=[('ID','|S18'),('X_tsne','float'),
                                ('Y_tsne','float')])
-np.savetxt("../tsne_results/harps_tsne_results"+add+str(p)+
+np.savetxt("../tsne_results/bensby2014_tsne_results"+add+str(p)+
                    "_rand"+str(i)+"_montecarloaverage.csv", rec, delimiter=',',
        fmt = ('%s, %.5e, %.5e'))
-plt.savefig("../im/HARPS_tsne_plots"+add+str(p)+
+plt.savefig("../im/Bensby2014_tsne_plots"+add+str(p)+
                    "_montecarloaverage.png", dpi=200)
         

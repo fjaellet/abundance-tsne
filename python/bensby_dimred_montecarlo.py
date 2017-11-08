@@ -52,7 +52,8 @@ Xerr     = np.mean( Xerr1, axis=0)
 if mc > 1:
     Y        = np.zeros(( mc*len(data), 14 ))
     for ii in np.arange(mc):
-        Y[ii::mc, :] = scipy.random.normal(loc=X, scale=Xerr1, size=X.shape)
+        Y[ii::mc, :] = scipy.random.normal(loc=X, size=X.shape,
+                                           scale=np.maximum(Xerr1, 0.02*np.ones(Xerr1.shape)))
     X = Y
 
 if not age:
