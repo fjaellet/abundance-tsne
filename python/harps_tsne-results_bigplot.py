@@ -15,8 +15,10 @@ from astropy.io import fits as pyfits
 from astroML.plotting import setup_text_plots
 setup_text_plots(fontsize=10, usetex=True)
 
-mc = True
-   
+mc  = True
+feh = False
+
+  
 hdu = pyfits.open(
     '/home/friedel/Astro/Spectro/HARPS/DelgadoMena2017.fits',
     names=True)
@@ -83,13 +85,13 @@ ax  = plt.Subplot(g, gs0[0, 0])
 g.add_subplot(ax)
 if mc:
     # plot MC realisations
-    mcres =  np.genfromtxt("../tsne_results/harps_tsne_results_withteffcutmc5040_rand0.csv", delimiter=',',
+    mcres =  np.genfromtxt("../tsne_results/harps_tsne_results_withnofehteffcutmc5040_rand0.csv", delimiter=',',
                       dtype=[('Name', "|S14"), ('X', float), ('Y', float)])
     ax.scatter(mcres["X"], mcres["Y"], s=4, lw=0, c="grey", alpha=0.15)
 for kk in np.arange(len(subsets)):
     if mc:        
         mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
-        ax.scatter(data["X_tsne_teffcut40_mc"][mask], data["Y_tsne_teffcut40_mc"][mask],
+        ax.scatter(data["X_tsne_teffcut40_nofeh_mc"][mask], data["Y_tsne_teffcut40_nofeh_mc"][mask],
                s=4*size[kk], lw=lw[kk], edgecolors="k",
                c=col[kk], alpha=al[kk],
                marker=sym[kk])
@@ -103,6 +105,9 @@ for kk in np.arange(len(subsets)):
     #ax.text(Xcoords[kk], Ycoords[kk], names[kk], fontsize=1.25*fsize[kk])
 ax.set_xlabel("t-SNE X dimension", fontsize=13)
 ax.set_ylabel("t-SNE Y dimension", fontsize=13)
+#ax.set_yscale("symlog")
+ax.axis([-11, 17, -6, 6])
+ax.text(-7, 5, r"What happens when only the {[X$_i$/Fe]} are used as input", fontsize=15)
 gs = gridspec.GridSpec(1, 3)
 gs.update(left=0.1, bottom=0.77, right=0.98, top=0.98,
            wspace=0.44, hspace=0.05)
@@ -127,7 +132,7 @@ for jj in range(3):
                    marker=sym[kk])
     ax.set_xlabel(labels[exinds[jj][0]], fontsize=12)
     ax.set_ylabel(labels[exinds[jj][1]], fontsize=12)
-plt.savefig("../im/harps_tsne-plot.png", dpi=200)  
+plt.savefig("../im/harps_tsne-plot_test-nofeh.png", dpi=200)  
 
 #------------------------------------------------------------
 # Plot the results

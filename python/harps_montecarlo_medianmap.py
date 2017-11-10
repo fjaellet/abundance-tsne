@@ -21,9 +21,9 @@ import scipy
 
 age      = False
 kin      = False
-feh      = True
+feh      = False
 teffcut  = True
-p        = 50
+p        = 40
 i        = 0
 mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
 
