@@ -21,7 +21,7 @@ import scipy
 
 age      = False
 kin      = False
-feh      = False
+feh      = True
 teffcut  = True
 p        = 40
 i        = 0

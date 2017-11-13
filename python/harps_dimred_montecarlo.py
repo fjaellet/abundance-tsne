@@ -26,7 +26,7 @@ import scipy
 plot     = True
 age      = False
 kin      = False
-feh      = False
+feh      = True
 teffcut  = True
 mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
 
@@ -56,14 +56,15 @@ Xerr1    = np.c_[data['erfeh'],data['errCu'],data['errZn'],data['errSr'],
                  data['errY'],data['errZrII'],data['errBa'],data['errCe'],
                  data['errAl'],data['errMg'],data['errSi'],data['errCa'],
                  data['errTiI'],data['agestd']]
+# Take care of the 0.0 uncertainties: forced minimum to 0.03 
+Xerr1[:, :] = np.maximum(Xerr1, 0.03*np.ones(Xerr1.shape))
+
 Xerr     = np.mean( Xerr1, axis=0)
 
 if mc > 1:
     Y        = np.zeros(( mc*len(data), 14 ))
     for ii in np.arange(mc):
-        # Take care of the 0.0 uncertainties: forced minimum to 0.02 
-        Y[ii::mc, :] = scipy.random.normal(loc=X, size=X.shape, 
-                                           scale=np.maximum(Xerr1, 0.02*np.ones(Xerr1.shape)))                                      
+        Y[ii::mc, :] = scipy.random.normal(loc=X, size=X.shape, scale=Xerr1)                                      
     X = Y
 if not age:
     X = X[:,:-1]; Xerr = Xerr[:-1]

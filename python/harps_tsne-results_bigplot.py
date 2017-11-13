@@ -15,9 +15,7 @@ from astropy.io import fits as pyfits
 from astroML.plotting import setup_text_plots
 setup_text_plots(fontsize=10, usetex=True)
 
-mc  = True
-feh = False
-
+sets = "errlim" # either 'mc', 'errlim' or 'plain'
   
 hdu = pyfits.open(
     '/home/friedel/Astro/Spectro/HARPS/DelgadoMena2017.fits',
@@ -33,7 +31,10 @@ xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         np.sqrt(data['errY']**2.+data['errMg']**2.), data['errZrII'],
         np.sqrt(data['errAl']**2.+data['errMg']**2.) ]
 
-if mc:
+if sets=="mc":
+    Xt = data["X_tsne_teffcut40_mc"]
+    Yt = data["Y_tsne_teffcut40_mc"]
+    classcol= np.char.rstrip(data["tSNE_class_mc"],' ')
     subsets = ["thin", "thick1", "thick2", "thick3", "thick4",
                "mpthin", "smr", "t4trans",
                "debris1", "debris2", "debris3", "debris4", "debris5?", 
@@ -52,7 +53,33 @@ if mc:
     col = ["k", "m", "hotpink", "crimson", "r", "g", "orange", "gold",
           "yellow", "yellow", "yellow", "yellow", "green", "royalblue", "royalblue",
            "lime", "m"]
-else:
+elif sets=="errlim":
+    Xt = data["X_tsne_teffcut40_errlim_mc"]
+    Yt = data["Y_tsne_teffcut40_errlim_mc"]
+    classcol= np.char.rstrip(data["tSNE_class_errlim_mc"],' ')
+    subsets = ["thin", "thick1", "thick2", "thick3", "thick4",
+               "mpthin", "youngthin", "smr", "t4trans",
+               "debris1", "debris2", "debris3", "debris4", "debris5?", 
+               "t2trans1", "t2trans2", "highTi","t2trans3", "smr2", "lowMg"]
+    names   = ["Thin Disc", "Thick Disc I", "Thick Disc II", "Thick Disc III",
+               "Thick Disc IV", "Metal-poor \n Thin Disc", "Young", "SMR", "Transition",
+               "", "", "Satellite \n debris", "", "", r"TII/III", "", 
+               r"Extreme-Ti star", r""]
+    Xcoords = [-25, 15, 4.5, -12,  18, -31, 22, 26,-22.5, -14, -2, -25]
+    Ycoords = [5.5 ,-6,  -2, -4,   6,  0,   1.5, -.5, -7, -2, -6, 14]
+    fsize   = [20 , 16,  12, 12,  15,  13, 11, 11, 11, 11, 11, 11]
+    sym = ["o", "v", "^", ">", "<", "s", "o", "*", "<", "D", "h", "d", "H", "v",
+           "p", "8", "H", "p", "*", "s"]
+    al  = [.6, .8, .8, .8, .8, .6, 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    lw  = [0,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5,.5]
+    size= [9,12,12,12,12,15,18,22,18,18,18,18,18,18,22,22,22,22,28,20]
+    col = ["k", "m", "hotpink", "crimson", "r", "g", "lightgrey", "orange", "gold",
+          "yellow", "yellow", "yellow", "yellow", "green", "royalblue", "royalblue",
+           "lime", "green", "gold", "k"]
+elif sets=="plain":
+    Xt = data["X_tsne_teffcut40"]
+    Yt = data["Y_tsne_teffcut40"]
+    classcol= np.char.rstrip(data["tSNE_class"],' ')
     subsets = ["thin", "thick1", "thick2", "thick3",
                "mpthin", "smr",
                "t1trans", "debris", "highAlMg",
@@ -71,6 +98,9 @@ else:
     col = ["k", "r", "orange", "gold", "g", "orange",
           "brown", "yellow", "royalblue", "hotpink", 
           "lime", "black"]
+else:
+    raise ValueError("No valid 'subsets' name set")
+
 #------------------------------------------------------------
 # Plot the results
 import matplotlib.gridspec as gridspec
@@ -83,31 +113,27 @@ gs0 = gridspec.GridSpec(1, 1)
 gs0.update(left=0.1, bottom=0.05, right=0.98, top=0.7)
 ax  = plt.Subplot(g, gs0[0, 0])
 g.add_subplot(ax)
-if mc:
+if sets != "plain":
     # plot MC realisations
-    mcres =  np.genfromtxt("../tsne_results/harps_tsne_results_withnofehteffcutmc5040_rand0.csv", delimiter=',',
+    mcres =  np.genfromtxt("../tsne_results/harps_tsne_results_withteffcutmc5040_rand0.csv", delimiter=',',
                       dtype=[('Name', "|S14"), ('X', float), ('Y', float)])
     ax.scatter(mcres["X"], mcres["Y"], s=4, lw=0, c="grey", alpha=0.15)
 for kk in np.arange(len(subsets)):
-    if mc:        
-        mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
-        ax.scatter(data["X_tsne_teffcut40_nofeh_mc"][mask], data["Y_tsne_teffcut40_nofeh_mc"][mask],
-               s=4*size[kk], lw=lw[kk], edgecolors="k",
-               c=col[kk], alpha=al[kk],
-               marker=sym[kk])
+    mask = (classcol == subsets[kk])
+    if subsets[kk] == "debris1" and sets=="errlim":
+        ax.plot(Xt[mask], 9.7, marker=r"$\uparrow$", zorder=0, ms=20)
+        ax.scatter(Xt[mask], 9.5, s=4*size[kk], lw=lw[kk], edgecolors="k",
+                   c=col[kk], alpha=al[kk], marker=sym[kk])
     else:
-        mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
-        ax.scatter(data["X_tsne_teffcut40"][mask], data["Y_tsne_teffcut40"][mask],
-               s=4*size[kk], lw=lw[kk], edgecolors="k",
-               c=col[kk], alpha=al[kk],
-               marker=sym[kk])
+        ax.scatter(Xt[mask], Yt[mask], s=4*size[kk], lw=lw[kk], edgecolors="k",
+               c=col[kk], alpha=al[kk], marker=sym[kk])
     # Annotate population names
     #ax.text(Xcoords[kk], Ycoords[kk], names[kk], fontsize=1.25*fsize[kk])
 ax.set_xlabel("t-SNE X dimension", fontsize=13)
 ax.set_ylabel("t-SNE Y dimension", fontsize=13)
 #ax.set_yscale("symlog")
-ax.axis([-11, 17, -6, 6])
-ax.text(-7, 5, r"What happens when only the {[X$_i$/Fe]} are used as input", fontsize=15)
+ax.axis([-13, 25, -8, 10.2])
+#ax.text(-10, 9, r"What happens when we impose $\sigma_{\rm [Fe/H]}, \sigma_{\rm [X/Fe]}> 0.03$", fontsize=15)
 gs = gridspec.GridSpec(1, 3)
 gs.update(left=0.1, bottom=0.77, right=0.98, top=0.98,
            wspace=0.44, hspace=0.05)
@@ -117,10 +143,7 @@ for jj in range(3):
     ax = plt.Subplot(g, gs[0, jj])
     g.add_subplot(ax)
     for kk in np.arange(len(subsets)):
-        if mc:        
-            mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
-        else:        
-            mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+        mask = (classcol == subsets[kk])
         ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
                     xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
                    ms=0, mec="k", capthick=0, elinewidth=1,
@@ -132,7 +155,7 @@ for jj in range(3):
                    marker=sym[kk])
     ax.set_xlabel(labels[exinds[jj][0]], fontsize=12)
     ax.set_ylabel(labels[exinds[jj][1]], fontsize=12)
-plt.savefig("../im/harps_tsne-plot_test-nofeh.png", dpi=200)  
+plt.savefig("../im/harps_tsne-plot_test-errlim.png", dpi=200)  
 
 #------------------------------------------------------------
 # Plot the results
@@ -146,20 +169,11 @@ gs1.update(left=0.64, bottom=0.64, right=0.98, top=0.98)
 ax = plt.Subplot(f, gs1[0, 0])
 f.add_subplot(ax)
 for kk in np.arange(len(subsets)):
-    if mc:        
-        mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
-    else:        
-        mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
-    if mc:
-        ax.scatter(data["X_tsne_teffcut40_mc"][mask], data["Y_tsne_teffcut40_mc"][mask],
-                   s=size[kk], lw=lw[kk], edgecolors="k",
-                   c=col[kk], alpha=al[kk],
-                   marker=sym[kk])
-    else:
-        ax.scatter(data["X_tsne_teffcut40"][mask], data["Y_tsne_teffcut40"][mask],
-                   s=size[kk], lw=lw[kk], edgecolors="k",
-                   c=col[kk], alpha=al[kk],
-                   marker=sym[kk])
+    mask = (classcol == subsets[kk])
+    ax.scatter(Xt[mask], Yt[mask],
+               s=size[kk], lw=lw[kk], edgecolors="k",
+               c=col[kk], alpha=al[kk],
+               marker=sym[kk])
     # Annotate population names
     #ax.text(Xcoords[kk], Ycoords[kk], names[kk], fontsize=.92*fsize[kk])
 ax.get_xaxis().set_visible(False)
@@ -179,10 +193,7 @@ for ii in range(2):
             ax = plt.Subplot(f, gs2[ii, jj])
             f.add_subplot(ax)
             for kk in np.arange(len(subsets)):
-                if mc:        
-                    mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
-                else:        
-                    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+                mask = (classcol == subsets[kk])
                 ax.scatter(uvw[1-jj][mask], uvw[2-ii][mask],
                            s=size[kk], lw=lw[kk], edgecolors="k",
                            c=col[kk], alpha=al[kk],
@@ -210,10 +221,7 @@ for ii in range(2):
             ax = plt.Subplot(f, gs2[ii, jj])
             f.add_subplot(ax)
             for kk in np.arange(len(subsets)):
-                if mc:        
-                    mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
-                else:        
-                    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+                mask = (classcol == subsets[kk])
                 mask = mask * (data['JZ_st_m'] > 0)
                 ax.scatter(uvw[1-jj][mask], uvw[2-ii][mask],
                            s=size[kk], lw=lw[kk], edgecolors="k",
@@ -255,25 +263,11 @@ for ii in range(n_dim):
             ax = plt.Subplot(f, gs0[ii, jj])
             f.add_subplot(ax)
             for kk in np.arange(len(subsets)):
-                if mc:        
-                    mask = (np.char.rstrip(data["tSNE_class_mc"],' ') == subsets[kk])
-                else:        
-                    mask = (np.char.rstrip(data["tSNE_class"],' ') == subsets[kk])
+                mask = (classcol == subsets[kk])
                 ax.scatter(xx[jj][mask], xx[ii+1][mask],
                            s=size[kk], lw=lw[kk], edgecolors="k",
                            c=col[kk], alpha=al[kk],
                            marker=sym[kk])
-            #ax.set_ylim(1.01 * np.min(xx[ii]), 1.01 * np.max(xx[ii]))
-            #ax.set_xlim(1.01 * np.min(xx[jj]), 1.01 * np.max(xx[jj]))
-            """elif ii==jj:
-            # Make data histogram!
-            ax.set_ylim(0, 0.16)
-            ax.set_xlim(1.01 * np.min(X[:,jj]), 1.01 * np.max(X[:,jj]))
-            mask = (np.sqrt(exlist[ii]) < np.max(abs(xlist[ii])) )
-            weights = np.ones_like(X[:, ii][mask])/len(X[:, ii][mask])
-            ax.hist(X[:, ii][mask], weights=weights, bins=50,
-                    histtype='stepfilled', alpha=0.4)
-            xx = np.linspace(ax.get_xlim()[0], ax.get_xlim()[1], 100)"""
             # Beautify axes
             if ii == n_dim - 1:
                 ax.set_xlabel(labels[jj], fontsize=13)
@@ -286,4 +280,4 @@ for ii in range(n_dim):
         else:
             pass
 
-plt.savefig("../im/harps_tsne-summary-plot.png", dpi=200)  
+plt.savefig("../im/harps_tsne-summary-plot_" + sets + ".png", dpi=200)  
