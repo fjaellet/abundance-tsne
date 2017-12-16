@@ -15,7 +15,7 @@ from astroML.plotting.tools import draw_ellipse
 from astroML.plotting import setup_text_plots
 setup_text_plots(fontsize=10, usetex=True)
 
-from astropy.io import fits as pyfits
+import open_data
 from sklearn import manifold, datasets
 import scipy
 
@@ -31,19 +31,8 @@ teffcut  = True
 mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
 
 # READ DelGADO-MENA DATA
-hdu = pyfits.open(
-    '/home/friedel/Astro/Spectro/HARPS/DelgadoMena2017.fits',
-    names=True)
-data=hdu[1].data
-if teffcut:
-    data=data[ (data['Teff']>5300) * (data['Teff']<6000) * \
-               (data['logg_hip']>3) * (data['logg_hip']<5) ]
-data=data[ (data['nCu']>0) * (data['nZn']>0) * (data['nSr']>0) * (data['nY']>0) *
-           (data['nZrII']>0) * (data['nBa']>0) * (data['nCe']>0) * (data['errAl']<1) *
-           (data['nMg']>0) * (data['nSi']>0) * (data['nCa']>0) * (data['nTiI']>0) *
-           np.isfinite(data['meanage']) ] 
-#if age:
-#    data = data[ np.isfinite(data['meanage']) ]
+harps = open_data.harps(teffcut=teffcut, ages=True, abunds=True)
+data  = harps.data
 
 n_points = len(data)
 n_components = 2
@@ -84,7 +73,7 @@ colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
             data['MgFe']-data['TiIFe'],data['CuFe'],data['AlFe']-data['MgFe'],
             data['BaFe'], data['ZnFe'], 
             data['YFe']-data['BaFe'],data['YFe']-data['ZnFe'],data['CeFe'],
-            data['Teff'],data['logg'], data['vt_1'],np.log10(data['S/N']),
+            data['Teff'],data['logg'], data['vt'],np.log10(data['S/N']),
             data['meanage'],data['Ulsr'],data['Vlsr'],data['Wlsr']]
 titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Ca/Fe]$', r'$\rm [Mg/Fe]$',
           r'$\rm [Mg/Ti]$', r'$\rm [Cu/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Ba/Fe]$',

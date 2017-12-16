@@ -3,10 +3,10 @@ print(__doc__)
 from time import time
 
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from matplotlib.ticker import NullFormatter
-
+import matplotlib.gridspec as gridspec
+        
 import numpy as np
 
 from astroML.decorators import pickle_results
@@ -15,60 +15,23 @@ from astroML.plotting.tools import draw_ellipse
 from astroML.plotting import setup_text_plots
 setup_text_plots(fontsize=10, usetex=True)
 
-from astropy.io import fits as pyfits
 import scipy
+import open_data
 from sklearn import manifold, datasets
 
 # The dataset
-plot     = True
 age      = False
 kin      = False
 feh      = True
-mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
+mc       = 50
 
 # READ BENSBY DATA
-hdu = pyfits.open(
-    '/home/friedel/Astro/Spectro/Bensby/Bensby2014_SN_survey.fits',
-    names=True)
-data=hdu[1].data
-data=data[ (data['nO1']>0) * (data['nNa1']>0) * (data['nMg1']>0) * (data['nAl1']>0) *
-           (data['nSi1']>0) * (data['nCa1']>0) * (data['nTi1']>0) * (data['nCr1']>0) *
-           (data['nNi1']>0) * (data['nZn1']>0) * (data['nY2']>0) * (data['nBa2']>0) *
-           (data['nFe1']>0) ]
-
-n_points = len(data)
+ben = open_data.bensby()
+data=ben.data
+ben.get_ndimspace()
 n_components = 2
-verr = 10. * np.ones(len(data))
-X        = np.c_[data['Fe_H'],data['O_Fe'],data['Na_Fe'],data['Mg_Fe'],
-                 data['Al_Fe'],data['Si_Fe'],data['Ca_Fe'],data['Ti_Fe'],
-                 data['Cr_Fe'],data['Ni_Fe'],data['Zn_Fe'],data['Y_Fe'],
-                 data['Ba_Fe'],data['Age']]
-Xerr1    = np.c_[data['e_Fe_H'],data['e_O_Fe'],data['e_Na_Fe'],data['e_Mg_Fe'],
-                 data['e_Al_Fe'],data['e_Si_Fe'],data['e_Ca_Fe'],data['e_Ti_Fe'],
-                 data['e_Cr_Fe'],data['e_Ni_Fe'],data['e_Zn_Fe'],data['e_Y_Fe'],
-                 data['e_Ba_Fe'],0.5*(data['B_Age1']-data['b_Age'])]
-Xerr     = np.mean( Xerr1, axis=0)
 
-if mc > 1:
-    Y        = np.zeros(( mc*len(data), 14 ))
-    for ii in np.arange(mc):
-        Y[ii::mc, :] = scipy.random.normal(loc=X, size=X.shape,
-                                           scale=np.maximum(Xerr1, 0.02*np.ones(Xerr1.shape)))
-    X = Y
-
-if not age:
-    X = X[:,:-1]; Xerr = Xerr[:-1]
-if kin:
-    X    = np.append(X, np.vstack((data['Ulsr'],data['Vlsr'],data['Wlsr'])).T, axis=1)
-    Xerr = np.append(Xerr, np.array([10,10,10]).T, axis=0)
-if not feh:
-    X = X[:,1:]; Xerr = Xerr[1:]
-    
-Xnorm    = (X/Xerr[np.newaxis,:])
-#Xgood    = (np.sum(data['ELEMFLAG'][:, [0,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,
-#                                18,19]], axis=1)== 0) #* (data['NA_FE']>-0.8) 
-#X        = X[Xgood]
-print len(X), " good ones"
+print len(ben.Xnorm), " good ones"
 
 colors   = [data['Fe_H'], data['Ti_Fe'], data['Fe_H']+data['O_Fe'],
             data['Mg_Fe']-(data['Fe_H']+data['O_Fe']),
@@ -99,7 +62,6 @@ for p in [15, 30, 40, 50, 75, 100, 120, 150]:#[
 
         f = plt.figure(figsize=(12, 12))
         plt.suptitle("t-SNE manifold learning for the Bensby+2014 sample", fontsize=14)
-        import matplotlib.gridspec as gridspec
         gs0 = gridspec.GridSpec(5, 4)
         gs0.update(left=0.08, bottom=0.08, right=0.92, top=0.92,
                    wspace=0.05, hspace=0.12)

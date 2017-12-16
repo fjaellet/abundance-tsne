@@ -23,34 +23,60 @@ t     = open_data.harps()
 data  = t.data
 t.get_tsne_subsets( sets = sets )
 
-labels = [r'$\rm \tau \ [Gyr]$', r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$',
-          r'$\rm [Y/Mg]$', r'$\rm [Zr/Fe]$', r'$\rm [Al/Mg]$']
+labels = [r'$\rm \tau \ [Gyr]$', r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Y/Mg]$', 
+          r'$\rm [Zr/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Mg/Fe]$', r'$U$ [km/s]',
+          r'$V$ [km/s]', r'$W$ [km/s]', r'$T_{\rm eff}$ [K]', r'$\log g_{\rm HIP}$',
+          r'$R_{\rm Gal}$ [kpc]', r'$Z_{\rm Gal}$ [kpc]', r'$X_{\rm Gal}$ [kpc]', r'$Y_{\rm Gal}$ [kpc]',
+          r'$\rm [Ba/Fe]$', r'$\rm [Y/Al]$', r'$\rm [Nd/Fe]$', r'$\rm [Sr/Ba]$',
+          r'$\rm [Ce/Fe]$', r'$\rm [Zr/Ba]$', r'$\rm [Zn/Fe]$', r'$\rm [Eu/Fe]$',
+          r'$\rm [Cu/Fe]$', r'$\rm [O/H]$', r'$\rm [C/Fe]$', r'$\rm [C/O]$'
+          ]
 
-xx  = [data['meanage'], data['feh'],
+xx  = [data['meanage'], data['feh'],             # 0
        data['TiIFe'], data['YFe']-data['MgFe'],
        data['ZrIIFe'], data['AlFe']-data['MgFe'],
        data['MgFe'], data['Ulsr'],
        data['Vlsr'], data['Wlsr'], 
-       data['Teff'], data['logg_hip'], 
+       data['Teff'], data['logg_hip'],           # 10
        data['R_2'], data['Z'], 
        data['X'], data['Y'], 
        data['BaFe'], data['YFe']-data['AlFe'],
        data['NdFe'], data['SrFe']-data['BaFe'],
-       data['CeFe'], data['ZrFe']-data['BaFe'],
+       data['CeFe'], data['ZrIIFe']-data['BaFe'],  # 20
        data['ZnFe'], data['EuFe'],
-       data['CuFe'], data['[O/H]_6158_BdL15']-data['feh'],
+       data['CuFe'], data['[O/H]_6158_BdL15'],
        data['[C/H]_SA17']-data['feh'], data['[C/H]_SA17']-data['[O/H]_6158_BdL15'] ]
 
 xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         np.sqrt(data['errY']**2.+data['errMg']**2.), data['errZrII'],
-        np.sqrt(data['errAl']**2.+data['errMg']**2.) ]
+        np.sqrt(data['errAl']**2.+data['errMg']**2.),
+        data['errMg'], 9.8 * np.ones(len(data)),
+        9.8 * np.ones(len(data)), 9.8 * np.ones(len(data)), 
+        data['erTeff'], data['erlogg_hip'],           # 10
+        data['R_sig'], data['Z_sig'], 
+        data['X_sig'], data['Y_sig'], 
+        data['errBa'], np.sqrt(data['errY']**2.+data['errAl']**2.),
+        data['errNd'], np.sqrt(data['errSr']**2.+data['errBa']**2.),
+        data['errCe'], np.sqrt(data['errZrII']**2.+data['errBa']**2.),  # 20
+        data['errZn'], data['errEu'],
+        data['errCu'], data['e_[O/H]_6158_BdL15'],
+        np.sqrt(data['e_[C/H]_SA17']**2.+data['erfeh']**2.), np.sqrt(data['e_[C/H]_SA17']**2.+data['e_[O/H]_6158_BdL15']**2.) 
+        ]
 
 exinds = [ [0,2], [1,2], [1,6], [8,9], [7,9],
            [0,1], None,  None,  None,  [7,8],
            [0,3], None,  None,  None, [14,15],
            [0,5], None,  None,  None, [12,13],
-           [0,16], [5,8],        [10,11]
-           [2,3],  ,  , ]
+           [0,16],[1,24],[1,22],[1,23],[10,11],
+           [0,27],[25,27],[1,18],[1,20],[1,19] ]
+limits = [ None,  None,  None,  None,  None,
+           None,  None,  None,  None,  None,
+           None,  None,  None,  None,  [8.15, 8.4, -.1, .05],
+           None,  None,  None,  None,  [8.15, 8.4, -.06, .15],
+           None,  None,  None,  None,  [6030,5270, 5, 3],
+           None,  None,  None,  None,  None ]
+controlpanels = [3,4,9,14,19,24,25,26]
+controlpanels2= [0,5,10,15,20,23,27]
 
 #------------------------------------------------------------
 # Plot the results
@@ -63,30 +89,39 @@ g   = plt.figure(figsize=(12, 14))
 #################
 gs = gridspec.GridSpec(6, 5)
 gs.update(left=0.05, bottom=0.06, right=0.98, top=0.98,
-           wspace=0.44, hspace=0.05)
+           wspace=0.4, hspace=0.33)
 
-for jj in range(3):
-    ax = plt.Subplot(g, gs[0, jj])
-    g.add_subplot(ax)
-    for kk in np.arange(len(t.subsets)):
-        mask = (t.classcol == t.subsets[kk])
-        """ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
-                    xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
-                   ms=0, mec="k", capthick=0, elinewidth=1,
-                   mfc=t.col[kk], alpha=t.al[kk]/3., ecolor=t.col[kk], lw=0,
-                   marker=t.sym[kk], zorder=0)"""
-        ax.scatter(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
-                   s=t.size[kk], lw=t.lw[kk], edgecolors="k",
-                   c=t.col[kk], alpha=t.al[kk],
-                   marker=t.sym[kk])
-    ax.set_xlabel(labels[exinds[jj][0]], fontsize=12)
-    ax.set_ylabel(labels[exinds[jj][1]], fontsize=12)
+for jj in range(30):
+    print jj
+    ax = plt.Subplot(g, gs[jj/5, jj%5])
+    if exinds[jj] != None:
+        g.add_subplot(ax)
+        if jj in controlpanels:
+            ax.set_axis_bgcolor('aliceblue')
+        elif jj in controlpanels2:
+            ax.set_axis_bgcolor('cornsilk')
+        for kk in np.arange(len(t.subsets)):
+            mask = (t.classcol == t.subsets[kk]) * (xerr[exinds[jj][1]] < 9.9)
+            ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
+                        xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
+                       ms=0, mec="k", capthick=0, elinewidth=1,
+                       mfc=t.col[kk], alpha=t.al[kk]/4., ecolor=t.col[kk], lw=0,
+                       marker=t.sym[kk], zorder=0)
+            ax.scatter(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
+                       s=t.size[kk], lw=t.lw[kk], edgecolors="k",
+                       c=t.col[kk], alpha=t.al[kk],
+                       marker=t.sym[kk])
+        ax.set_xlabel(labels[exinds[jj][0]], fontsize=12)
+        ax.set_ylabel(labels[exinds[jj][1]], fontsize=12)
+        if limits[jj] != None:
+            ax.axis(limits[jj])
+        ax.locator_params(tight=True, nbins=4)
 
 #################
 # t-SNE plot in the center
 #################
 gs0 = gridspec.GridSpec(1, 1)
-gs0.update(left=0.25, bottom=0.45, right=0.78, top=0.78)
+gs0.update(left=0.25, bottom=0.4, right=0.78, top=0.81)
 ax  = plt.Subplot(g, gs0[0, 0])
 g.add_subplot(ax)
 if sets != "plain":
