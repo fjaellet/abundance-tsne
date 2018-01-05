@@ -1,64 +1,44 @@
 This is BibTeX, Version 0.99d (TeX Live 2016/TeX Live for SUSE Linux)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tsne_abunds.aux
+White space in argument---line 71 of file tsne_abunds.aux
+ : \citation{The
+ :               age determination is described in more detail in Appendix A.}
+I'm skipping whatever remains of this command
 The style file: aa.bst
 Database file #1: FA_library.bib
-Name 4 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1550 of file aa.bst
-Name 5 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1550 of file aa.bst
-Name 6 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1550 of file aa.bst
-Name 7 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1550 of file aa.bst
 Warning--empty publisher in Ivezic2013
 Warning--empty publisher in Pagel2009
-Name 4 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
-Name 5 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
-Name 6 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
-Name 7 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
-Name 4 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
-Name 5 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
-Name 6 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
-Name 7 in "{Queiroz}, A. B. and {Anders}, F. and {Santiago}, B. X. and {Chiappini}, C., and {Dal Ponte}, M., and {da Costa}, L. N., and {Maia}, M. A. G., and {Crestani}, J." has a comma at the end for entry Queiroz2017
-while executing---line 1633 of file aa.bst
 You've used 50 entries,
             2947 wiz_defined-function locations,
-            960 strings with 36760 characters,
-and the built_in function-call counts, 78088 in all, are:
-= -- 5451
-> -- 12239
+            962 strings with 36998 characters,
+and the built_in function-call counts, 78421 in all, are:
+= -- 5473
+> -- 12302
 < -- 16
-+ -- 4087
-- -- 4036
-* -- 7770
-:= -- 14832
++ -- 4108
+- -- 4057
+* -- 7806
+:= -- 14896
 add.period$ -- 50
 call.type$ -- 50
-change.case$ -- 1543
+change.case$ -- 1550
 chr.to.int$ -- 49
 cite$ -- 52
 duplicate$ -- 930
 empty$ -- 1322
-format.name$ -- 4157
-if$ -- 15065
+format.name$ -- 4178
+if$ -- 15129
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 46
 newline$ -- 154
 num.names$ -- 203
-pop$ -- 1545
+pop$ -- 1550
 preamble$ -- 1
-purify$ -- 1543
+purify$ -- 1550
 quote$ -- 0
-skip$ -- 806
+skip$ -- 807
 stack$ -- 0
 substring$ -- 973
 swap$ -- 28
@@ -69,5 +49,5 @@ type$ -- 444
 warning$ -- 2
 while$ -- 194
 width$ -- 0
-write$ -- 494
-(There were 12 error messages)
+write$ -- 495
+(There was 1 error message)

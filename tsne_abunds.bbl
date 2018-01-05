@@ -242,7 +242,8 @@
   {Simpson}, {Stello}, {Zucker}, {Zwitter}, {Anguiano}, {Da Costa}, {Horner},
   {Kafle}, {Lewis}, {Munari}, {Nataf}, {Ness}, {Reid}, {Schlesinger}, {Ting},
   \& {Wyse}}]{Kos2017}
-{Kos}, J., {Bland-Hawthorn}, J., {Freeman}, K., {et~al.} 2017, ArXiv e-prints
+{Kos}, J., {Bland-Hawthorn}, J., {Freeman}, K., {et~al.} 2017, MNRAS,
+  submitted, arXiv:1709.00794
 
 \bibitem[{Kullback \& Leibler(1951)}]{Kullback1951}
 Kullback, S. \& Leibler, R.~A. 1951, Ann. Math. Statist., 22, 79
@@ -316,9 +317,11 @@ Kullback, S. \& Leibler, R.~A. 1951, Ann. Math. Statist., 22, 79
 {Pedregosa}, F., {Varoquaux}, G., {Gramfort}, A., {et~al.} 2012, ArXiv e-prints
 
 \bibitem[{{Queiroz} {et~al.}(2017){Queiroz}, {Anders}, {Santiago}, {Chiappini},
-  {Dal Ponte}, {da Costa}, {Maia}, \& {Crestani}}]{Queiroz2017}
-{Queiroz}, A.~B., {Anders}, F., {Santiago}, B.~X., {et~al.} 2017, \aap,
-  submitted
+  {Steinmetz}, {Dal Ponte}, {Stassun}, {da Costa}, {Maia}, {Beers}, {Crestani},
+  {Fern{\'a}ndez-Trincado}, {An{\'{\i}}bal Garc{\'{\i}}a-Hern{\'a}ndez},
+  {Roman-Lopes}, \& {Zamora}}]{Queiroz2017}
+{Queiroz}, A.~B.~A., {Anders}, F., {Santiago}, B.~X., {et~al.} 2017, MNRAS,
+  submitted, arXiv:1710.09970
 
 \bibitem[{{Santiago} {et~al.}(2016){Santiago}, {Brauer}, {Anders}, {Chiappini},
   {Queiroz}, {Girardi}, {Rocha-Pinto}, {Balbinot}, {da Costa}, {Maia},

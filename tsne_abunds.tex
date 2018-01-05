@@ -137,7 +137,7 @@ A detailed discussion of these objects is likely premature, but our results, in 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure*}\centering
- \includegraphics[width=0.99\textwidth]{harps_tsne-summary-plot.png}
+ \includegraphics[width=0.99\textwidth]{harps_tsne-bigplot_errlim.png}
 \caption{The chemo-chrono-kinematic distribution of t-SNE-selected subsamples of the \citet{DelgadoMena2017} sample, in a similar style as Fig. \ref{bensby2}.}
 \label{harps2}
 \end{figure*}
@@ -150,7 +150,9 @@ In a recent series of papers, \citet{Adibekyan2011, Adibekyan2012, DelgadoMena20
 \label{harps3}
 \end{figure*}
 
-Our first tests showed that, in order to obtain reliable t-SNE abundance maps, the sample needed to be analysed in a more restricted temperature range, because certain abundance trends seem to be dominated by underlying temperature trends. Therefore, and similar to \citet{DelgadoMena2017}, we chose an effective temperature range of 5300 K $<T_{\rm eff}<$ 6000 K for our analysis. We furthermore restricted surface gravities to $3<\log g_{\rm HIP}<5$, required successful abundance determination for Mg, Al, Si, Ca, TiI, Fe, Cu, Zn, Sr, Y, ZrII, Ce and Ba that we use as input for t-SNE, leaving us with 523 stars. In our final sample of 455 stars we also discarded 50 stars for which no TGAS solution was released by \citet{GaiaCollaboration2016}, and 18 stars for which our age determination code, {\tt StarHorse} \citep{Santiago2016, Queiroz2017}, did not converge. We verified that this choice does not significantly affect the resulting t-SNE maps. 
+Our first tests showed that, in order to obtain reliable t-SNE abundance maps, the sample needed to be analysed in a more restricted temperature range, because certain abundance trends seem to be dominated by underlying temperature trends. Therefore, and similar to \citet{DelgadoMena2017}, we chose an effective temperature range of 5300 K $<T_{\rm eff}<$ 6000 K for our analysis. We furthermore restricted surface gravities to $3<\log g_{\rm HIP}<5$, required successful abundance determination for Mg, Al, Si, Ca, TiI, Fe, Cu, Zn, Sr, Y, ZrII, Ce and Ba that we use as input for t-SNE, leaving us with 533 stars. In our final sample of 530 stars we also discarded 3 stars for which our age determination code, {\tt StarHorse} \citep{Santiago2016, Queiroz2017}, did not converge\citep{The age determination is described in more detail in Appendix A.}. We verified that this choice does not significantly affect the resulting t-SNE maps. 
+
+The chemical abundances were complemented by astrometric data (parallaxes, proper motions) from the Gaia/TGAS catalogue \citet{GaiaCollaboration2016}, or when these were unavailable (135/1059 stars), from the re-reduced {\it Hipparcos} data \citep{vanLeeuwen2007}.
 
 Before we analyse the t-SNE results, some important differences of the HARPS GTO sample with respect to the Bensby sample should be stressed:
 \begin{itemize}

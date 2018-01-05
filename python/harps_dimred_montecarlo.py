@@ -24,7 +24,7 @@ import scipy
 
 # The dataset
 plot     = True
-age      = False
+age      = True
 kin      = False
 feh      = True
 teffcut  = True

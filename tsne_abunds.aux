@@ -67,19 +67,21 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4}Re-analysing the HARPS GTO sample}{6}}
 \newlabel{harps}{{4}{6}}
 \citation{DelgadoMena2017}
-\citation{GaiaCollaboration2016}
 \citation{Santiago2016,Queiroz2017}
+\citation{The age determination is described in more detail in Appendix A.}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The chemo-chrono-kinematic distribution of t-SNE-selected subsamples of the \citet  {DelgadoMena2017} sample, in a similar style as Fig. \ref  {bensby2}.}}{7}}
 \newlabel{harps2}{{6}{7}}
+\citation{GaiaCollaboration2016}
+\citation{vanLeeuwen2007}
 \citation{Anders2014}
 \citation{Bensby2014}
 \citation{Suarez-Andres2017}
 \citation{BertrandeLis2015}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Chemical-abundance patterns relative to iron for the t-SNE-selected subsamples of the HARPS survey (colours and symbols as in Fig. \ref  {harps2}, but note that the reference abundance is Fe instead of O). For visibility, we show only the median abundance ratios of each group.}}{8}}
+\newlabel{harps3}{{7}{8}}
 \citation{Bensby2014}
 \citation{Adibekyan2011,Adibekyan2012}
 \citation{DelgadoMena2017}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Chemical-abundance patterns relative to iron for the t-SNE-selected subsamples of the HARPS survey (colours and symbols as in Fig. \ref  {harps2}, but note that the reference abundance is Fe instead of O). For visibility, we show only the median abundance ratios of each group.}}{8}}
-\newlabel{harps3}{{7}{8}}
 \citation{Bensby2014}
 \citation{vanderMaaten2008}
 \citation{Wattenberg2016}
@@ -110,6 +112,15 @@
 \bibcite{Gratton1996}{{20}{1996}{{{Gratton} {et~al.}}}{{{Gratton}, {Carretta}, {Matteucci}, \& {Sneden}}}}
 \bibcite{Hayden2015}{{21}{2015}{{{Hayden} {et~al.}}}{{{Hayden}, {Bovy}, {Holtzman}, {Nidever}, {Bird}, {Weinberg}, {Andrews}, {Majewski}, {Allende Prieto}, {Anders}, {Beers}, {Bizyaev}, {Chiappini}, {Cunha}, {Frinchaboy}, {Garc{\'{\i }}a-Her{\'n}andez}, {Garc{\'{\i }}a P{\'e}rez}, {Girardi}, {Harding}, {Hearty}, {Johnson}, {M{\'e}sz{\'a}ros}, {Minchev}, {O\'{}Connell}, {Pan}, {Robin}, {Schiavon}, {Schneider}, {Schultheis}, {Shetrone}, {Skrutskie}, {Steinmetz}, {Smith}, {Wilson}, {Zamora}, \& {Zasowski}}}}
 \bibcite{Hinton2003}{{22}{2003}{{{Hinton} \& {Roweis}}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Caveats and possible improvements}{9}}
+\newlabel{caveats}{{5}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Choosing the abundance space}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Residual trends with stellar parameters}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}The effect of adding age and kinematics to the analysis}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{9}}
+\newlabel{conclusions}{{6}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet  {Bensby2014} sample. Each column row represents a combination of input information, while each row corresponds to a particular perplexity value, as indicated on the right side of the figure. The panel highlighted in yellow represents the results that we analyse in detail in this paper by defining chemical subpopulations based on this map.}}{9}}
+\newlabel{perplexitytest}{{8}{9}}
 \bibcite{Ivezic2013}{{23}{2013}{{{Ivezi{\'c}} {et~al.}}}{{{Ivezi{\'c}}, {Connolly}, {VanderPlas}, \& {Gray}}}}
 \bibcite{Kordopatis2015}{{24}{2015}{{{Kordopatis} {et~al.}}}{{{Kordopatis}, {Binney}, {Gilmore}, {Wyse}, {Belokurov}, {McMillan}, {Hatfield}, {Grebel}, {Steinmetz}, {Navarro}, {Seabroke}, {Minchev}, {Chiappini}, {Bienaym{\'e}}, {Bland-Hawthorn}, {Freeman}, {Gibson}, {Helmi}, {Munari}, {Parker}, {Reid}, {Siebert}, {Siviero}, \& {Zwitter}}}}
 \bibcite{Kos2017}{{25}{2017}{{{Kos} {et~al.}}}{{{Kos}, {Bland-Hawthorn}, {Freeman}, {Buder}, {Traven}, {De Silva}, {Sharma}, {Asplund}, {Duong}, {Lin}, {Lind}, {Martell}, {Simpson}, {Stello}, {Zucker}, {Zwitter}, {Anguiano}, {Da Costa}, {Horner}, {Kafle}, {Lewis}, {Munari}, {Nataf}, {Ness}, {Reid}, {Schlesinger}, {Ting}, \& {Wyse}}}}
@@ -125,21 +136,12 @@
 \bibcite{Nissen2017}{{35}{2017}{{{Nissen} {et~al.}}}{{{Nissen}, {Silva Aguirre}, {Christensen-Dalsgaard}, {Collet}, {Grundahl}, \& {Slumstrup}}}}
 \bibcite{Pagel2009}{{36}{2009}{{Pagel}}{{}}}
 \bibcite{Pedregosa2012}{{37}{2012}{{{Pedregosa} {et~al.}}}{{{Pedregosa}, {Varoquaux}, {Gramfort}, {Michel}, {Thirion}, {Grisel}, {Blondel}, {Louppe}, {Prettenhofer}, {Weiss}, {Dubourg}, {Vanderplas}, {Passos}, {Cournapeau}, {Brucher}, {Perrot}, \& {Duchesnay}}}}
-\bibcite{Queiroz2017}{{38}{2017}{{{Queiroz} {et~al.}}}{{{Queiroz}, {Anders}, {Santiago}, {Chiappini}, {Dal Ponte}, {da Costa}, {Maia}, \& {Crestani}}}}
+\bibcite{Queiroz2017}{{38}{2017}{{{Queiroz} {et~al.}}}{{{Queiroz}, {Anders}, {Santiago}, {Chiappini}, {Steinmetz}, {Dal Ponte}, {Stassun}, {da Costa}, {Maia}, {Beers}, {Crestani}, {Fern{\'a}ndez-Trincado}, {An{\'{\i }}bal Garc{\'{\i }}a-Hern{\'a}ndez}, {Roman-Lopes}, \& {Zamora}}}}
 \bibcite{Santiago2016}{{39}{2016}{{{Santiago} {et~al.}}}{{{Santiago}, {Brauer}, {Anders}, {Chiappini}, {Queiroz}, {Girardi}, {Rocha-Pinto}, {Balbinot}, {da Costa}, {Maia}, {Schultheis}, {Steinmetz}, {Miglio}, {Montalb{\'a}n}, {Schneider}, {Beers}, {Frinchaboy}, {Lee}, \& {Zasowski}}}}
 \bibcite{Steinmetz2006}{{40}{2006}{{{Steinmetz} {et~al.}}}{{{Steinmetz}, {Zwitter}, {Siebert}, {Watson}, {Freeman}, {Munari}, {Campbell}, {Williams}, {Seabroke}, {Wyse}, {Parker}, {Bienaym{\'e}}, {Roeser}, {Gibson}, {Gilmore}, {Grebel}, {Helmi}, {Navarro}, {Burton}, {Cass}, {Dawe}, {Fiegert}, {Hartley}, {Russell}, {Saunders}, {Enke}, {Bailin}, {Binney}, {Bland-Hawthorn}, {Boeche}, {Dehnen}, {Eisenstein}, {Evans}, {Fiorucci}, {Fulbright}, {Gerhard}, {Jauregi}, {Kelz}, {Mijovi{\'c}}, {Minchev}, {Parmentier}, {Pe{\~n}arrubia}, {Quillen}, {Read}, {Ruchti}, {Scholz}, {Siviero}, {Smith}, {Sordo}, {Veltz}, {Vidrih}, {von Berlepsch}, {Boyle}, \& {Schilbach}}}}
 \bibcite{Suarez-Andres2017}{{41}{2017}{{{Su{\'a}rez-Andr{\'e}s} {et~al.}}}{{{Su{\'a}rez-Andr{\'e}s}, {Israelian}, {Gonz{\'a}lez Hern{\'a}ndez}, {Adibekyan}, {Delgado Mena}, {Santos}, \& {Sousa}}}}
 \bibcite{Traven2017}{{42}{2017}{{{Traven} {et~al.}}}{{{Traven}, {Matijevi{\v c}}, {Zwitter}, {{\v Z}erjal}, {Kos}, {Asplund}, {Bland-Hawthorn}, {Casey}, {De Silva}, {Freeman}, {Lin}, {Martell}, {Schlesinger}, {Sharma}, {Simpson}, {Zucker}, {Anguiano}, {Da Costa}, {Duong}, {Horner}, {Hyde}, {Kafle}, {Munari}, {Nataf}, {Navin}, {Reid}, \& {Ting}}}}
 \bibcite{Tsantaki2013}{{43}{2013}{{{Tsantaki} {et~al.}}}{{{Tsantaki}, {Sousa}, {Adibekyan}, {Santos}, {Mortier}, \& {Israelian}}}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Caveats and possible improvements}{9}}
-\newlabel{caveats}{{5}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Choosing the abundance space}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Residual trends with stellar parameters}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}The effect of adding age and kinematics to the analysis}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{9}}
-\newlabel{conclusions}{{6}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet  {Bensby2014} sample. Each column row represents a combination of input information, while each row corresponds to a particular perplexity value, as indicated on the right side of the figure. The panel highlighted in yellow represents the results that we analyse in detail in this paper by defining chemical subpopulations based on this map.}}{9}}
-\newlabel{perplexitytest}{{8}{9}}
 \bibcite{TucciMaia2016}{{44}{2016}{{{Tucci Maia} {et~al.}}}{{{Tucci Maia}, {Ram{\'{\i }}rez}, {Mel{\'e}ndez}, {Bedell}, {Bean}, \& {Asplund}}}}
 \bibcite{Valentini2017}{{45}{2017}{{{Valentini} {et~al.}}}{{{Valentini}, {Chiappini}, {Davies}, {Elsworth}, {Mosser}, {Lund}, {Miglio}, {Chaplin}, {Rodrigues}, {Boeche}, {Steinmetz}, {Matijevi{\v c}}, {Kordopatis}, {Bland-Hawthorn}, {Munari}, {Bienaym{\'e}}, {Freeman}, {Gibson}, {Gilmore}, {Grebel}, {Helmi}, {Kunder}, {McMillan}, {Navarro}, {Parker}, {Reid}, {Seabroke}, {Sharma}, {Siviero}, {Watson}, {Wyse}, {Zwitter}, \& {Mott}}}}
 \bibcite{vanderMaaten2008}{{46}{2008}{{{van der Maaten} \& {Hinton}}}{{}}}

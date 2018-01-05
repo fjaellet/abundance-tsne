@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  27 OCT 2017 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  16 DEC 2017 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,12 +996,12 @@ Package pdftex.def Info: HARPS_tsne_plots_withteffcut40_rand0.png used on input
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 <./bensby2014_tsne_abundances-relto-O.png>]
-<harps_tsne-summary-plot.png, id=41, 867.24pt x 867.24pt>
-File: harps_tsne-summary-plot.png Graphic file (type png)
+<harps_tsne-bigplot_errlim.png, id=41, 867.24pt x 1011.78pt>
+File: harps_tsne-bigplot_errlim.png Graphic file (type png)
 
-<use harps_tsne-summary-plot.png>
-Package pdftex.def Info: harps_tsne-summary-plot.png used on input line 140.
-(pdftex.def)             Requested size: 518.29826pt x 518.32338pt.
+<use harps_tsne-bigplot_errlim.png>
+Package pdftex.def Info: harps_tsne-bigplot_errlim.png used on input line 140.
+(pdftex.def)             Requested size: 518.29826pt x 604.71059pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1009,6 +1009,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./HARPS_tsne_plots_withteffcut40_rand0.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 <harps_tsne_abundances-relto-Fe.png, id=46, 867.24pt x 578.16pt>
 File: harps_tsne_abundances-relto-Fe.png Graphic file (type png)
 
@@ -1017,31 +1020,33 @@ Package pdftex.def Info: harps_tsne_abundances-relto-Fe.png used on input line
 148.
 (pdftex.def)             Requested size: 518.29826pt x 345.5489pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package natbib Warning: Citation `The age determination is described in more de
+tail in Appendix A.' on page 7 undefined on input line 153.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <./harps_tsne-summary-plot.png>]
-Underfull \hbox (badness 2119) in paragraph at lines 161--162
+ [7 <./harps_tsne-bigplot_errlim.png>]
+Underfull \hbox (badness 2119) in paragraph at lines 163--164
 \T1/txr/m/n/10 abundance ra-tios, stel-lar pa-ram-e-ters, ages and kine-mat-ics
 .
  []
 
 [8 <./harps_tsne_abundances-relto-Fe.png>]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 187.
+(Font)              scaled to size 9.49997pt on input line 189.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 187.
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 189.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 187.
+(Font)              scaled to size 9.49997pt on input line 189.
 
 <bensby-tSNE_perplexitytest_withsubsets.png, id=56, 505.89pt x 867.24pt>
 File: bensby-tSNE_perplexitytest_withsubsets.png Graphic file (type png)
 
 <use bensby-tSNE_perplexitytest_withsubsets.png>
 Package pdftex.def Info: bensby-tSNE_perplexitytest_withsubsets.png used on inp
-ut line 192.
+ut line 194.
 (pdftex.def)             Requested size: 256.53291pt x 439.7723pt.
 
 <harps-tSNE_perplexitytest_withsubsets.png, id=57, 505.89pt x 722.7pt>
@@ -1049,38 +1054,39 @@ File: harps-tSNE_perplexitytest_withsubsets.png Graphic file (type png)
 
 <use harps-tSNE_perplexitytest_withsubsets.png>
 Package pdftex.def Info: harps-tSNE_perplexitytest_withsubsets.png used on inpu
-t line 198.
+t line 200.
 (pdftex.def)             Requested size: 256.53291pt x 366.4769pt.
 
-Underfull \hbox (badness 1924) in paragraph at lines 215--216
+Underfull \hbox (badness 1924) in paragraph at lines 217--218
 []\T1/txr/m/n/10 It is bet-ter to con-fine the anal-y-sis to nar-row re-gions
  []
 
 (./tsne_abunds.bbl [9 <./bensby-tSNE_perplexitytest_withsubsets.png>]
-(./tsne_abunds.llt)) [10
+(./tsne_abunds.llt))
 
- <./harps-tSNE_perplexitytest_withsubsets.png>]
-(./tsne_abunds.aux) ) 
+Package natbib Warning: There were undefined citations.
+
+[10 <./harps-tSNE_perplexitytest_withsubsets.png>] (./tsne_abunds.aux) ) 
 Here is how much of TeX's memory you used:
- 6403 strings out of 494041
- 82037 string characters out of 6158495
- 213025 words of memory out of 5000000
- 9568 multiletter control sequences out of 15000+600000
+ 6404 strings out of 494041
+ 82113 string characters out of 6158495
+ 212098 words of memory out of 5000000
+ 9569 multiletter control sequences out of 15000+600000
  91514 words of font info for 151 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 41i,12n,45p,7218b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/
-texmf/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texmf/fonts/type1/public/
-txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/s
-hare/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/pu
-blic/txfonts/t1xtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/txex.pfb></
-usr/share/texmf/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf/fonts/typ
-e1/public/txfonts/txsyc.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.p
-fb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/font
-s/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb
+ 41i,12n,45p,7218b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/s
+hare/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/txf
+onts/rtxi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxmi.pfb></usr/shar
+e/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/publi
+c/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/public/txfonts/t1xtt.pfb></usr
+/share/texmf/fonts/type1/public/txfonts/txex.pfb></usr/share/texmf/fonts/type1/
+public/txfonts/txsy.pfb></usr/share/texmf/fonts/type1/public/txfonts/txsyc.pfb>
+</usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fonts/t
+ype1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a.pfb
 ></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on tsne_abunds.pdf (10 pages, 5965263 bytes).
+e1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb>
+Output written on tsne_abunds.pdf (10 pages, 6941482 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
