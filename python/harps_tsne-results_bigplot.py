@@ -38,8 +38,8 @@ xx  = [data['meanage'], data['feh'],             # 0
        data['MgFe'], data['Ulsr'],
        data['Vlsr'], data['Wlsr'], 
        data['Teff'], data['logg_hip'],           # 10
-       data['R_2'], data['Z'], 
-       data['X'], data['Y'], 
+       data['Rg'], data['Zg'], 
+       data['Xg'], data['Yg'], 
        data['BaFe'], data['YFe']-data['AlFe'],
        data['NdFe'], data['SrFe']-data['BaFe'],
        data['CeFe'], data['ZrIIFe']-data['BaFe'],  # 20
@@ -53,8 +53,8 @@ xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         data['errMg'], 9.8 * np.ones(len(data)),
         9.8 * np.ones(len(data)), 9.8 * np.ones(len(data)), 
         data['erTeff'], data['erlogg_hip'],           # 10
-        data['R_sig'], data['Z_sig'], 
-        data['X_sig'], data['Y_sig'], 
+        data['Rg_sig'], data['Zg_sig'], 
+        data['Xg_sig'], data['Yg_sig'], 
         data['errBa'], np.sqrt(data['errY']**2.+data['errAl']**2.),
         data['errNd'], np.sqrt(data['errSr']**2.+data['errBa']**2.),
         data['errCe'], np.sqrt(data['errZrII']**2.+data['errBa']**2.),  # 20

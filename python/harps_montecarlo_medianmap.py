@@ -3,6 +3,7 @@ print(__doc__)
 from time import time
 
 import matplotlib.pyplot as plt
+from matplotlib import colors as mpcols
 from mpl_toolkits.mplot3d import Axes3D
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from matplotlib.ticker import NullFormatter
@@ -69,7 +70,7 @@ colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
             data['MgFe']-data['TiIFe'],data['CuFe'],data['AlFe']-data['MgFe'],
             data['BaFe'], data['ZnFe'], 
             data['YFe']-data['BaFe'],data['YFe']-data['ZnFe'],data['CeFe'],
-            data['Teff'],data['logg'], data['vt_1'],np.log10(data['S/N']),
+            data['Teff'],data['logg'], data['vt'],np.log10(data['S/N']),
             data['meanage'],data['Ulsr'],data['Vlsr'],data['Wlsr']]
 titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Ca/Fe]$', r'$\rm [Mg/Fe]$',
           r'$\rm [Mg/Ti]$', r'$\rm [Cu/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Ba/Fe]$',
@@ -87,10 +88,11 @@ gs0.update(left=0.08, bottom=0.08, right=0.92, top=0.92,
 
 for ii in range(5):
     for jj in range(4):
+        print jj
         ax = plt.Subplot(f, gs0[ii, jj])
         f.add_subplot(ax)
-        scat = plt.scatter(tsne['X'], tsne['Y'],
-                           c=np.repeat(colors[4*ii+jj],mc),
+        scat = plt.scatter(tsne['X'], tsne['Y'], 
+                           c=np.repeat(colors[4*ii+jj],mc), norm=None,
                            s=30./mc, cmap=plt.cm.jet, lw=0, alpha=0.1)
         """scat = plt.errorbar(means[:,1], means[:,4],
                             xerr=[abs(means[:,1]-means[:,0]),
@@ -99,7 +101,7 @@ for ii in range(5):
                                   abs(means[:,5]-means[:,4]) ],
                            c="grey", zorder=0, ms=0, lw=0)"""
         scat = plt.scatter(means[:,1], means[:,4],
-                           c=colors[4*ii+jj],
+                           c=tsne['X'], #colors[4*ii+jj],
                            s=15, cmap=plt.cm.jet, lw=0.01)
         if jj!=0:
             ax.yaxis.set_major_formatter(NullFormatter())
