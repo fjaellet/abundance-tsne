@@ -7,6 +7,7 @@ Prepares HARPS and Bensby datasets used in the t-SNE project
 
 import numpy as np
 from astropy.io import fits as pyfits
+import scipy
 
 class harps(object):
     def __init__(self, teffcut=True, abunds=True, ages=True):
@@ -32,7 +33,31 @@ class harps(object):
         """
         Get the names and indices of the t-sne-defined subsets
         """
-        if sets=="mc":
+        if sets=="teffcut":
+            self.Xt = self.data["X_tsne_teffcut40"]
+            self.Yt = self.data["Y_tsne_teffcut40"]
+            self.classcol= np.char.rstrip(self.data["tsne_class_teffcut40"],' ')
+            self.subsets = ["thin", "thick1", "thick2", "thick3", "thick4",
+                       "mpthin", "mpthintrans", "smr", "t4trans", "youngthin",
+                       "debris1", "debris2", "debris3", "debris4", "debris5", 
+                       "smr2", "t2trans1", "highTi","lowMg","highAlMg?"]
+            self.names   = ["Thin Disc", "Thick Disc I", "Thick Disc II", "Thick Disc III",
+                       "Thick Disc IV", "Metal-poor \n Thin Disc", "", "SMR", "Transition",
+                       "Young locals", "", "", "Satellite \n debris", "", "", r"", "", 
+                       r"Extreme-Ti star", r"Low-[Mg/Fe] star", "High-[Al/Mg] star"]
+            self.Xcoords = [10, 11, 4.5, -12,  18, -31, 22, 26,-22.5, -14, -2, -25]
+            self.Ycoords = [5.5,.5,  -2, -4,   6,  0,   1.5, -.5, -7, -2, -6, 14]
+            self.fsize   = [20 , 16,  12, 12,  15,  13, 11, 11, 11, 11, 11, 11]
+            self.sym = ["o", "v", "^", ">", "<", "s", "o", "*", "<", "o",
+                        "h", "d", "H", "v", "p", "*", "D", "p", "s", "8"]
+            self.al  = [.6, .8, .8, .8, .8, .8, .8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+            self.lw  = [0,.5,.5,.5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5, .5]
+            self.size= [9,12,12,12,12,15,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18,18]
+            self.col = ["k", "m", "hotpink", "crimson", "r",
+                        "g", "g", "orange", "gold", "grey",
+                        "yellow", "yellow", "yellow", "yellow", "yellow",
+                        "gold", "brown", "lime", "k", "royalblue"]
+        elif sets=="mc":
             self.Xt = self.data["X_tsne_teffcut40_mc"]
             self.Yt = self.data["Y_tsne_teffcut40_mc"]
             self.classcol= np.char.rstrip(self.data["tSNE_class_mc"],' ')
@@ -76,7 +101,7 @@ class harps(object):
             self.col = ["k", "m", "hotpink", "crimson", "r", "g", "lightgrey", "orange", "gold",
                   "yellow", "yellow", "yellow", "yellow", "green", "royalblue", "royalblue",
                    "lime", "green", "gold", "k"]
-        elif sets=="plain":
+        elif sets=="plainold":
             self.Xt = self.data["X_tsne_teffcut40"]
             self.Yt = self.data["Y_tsne_teffcut40"]
             self.classcol= np.char.rstrip(self.data["tSNE_class"],' ')
@@ -103,16 +128,29 @@ class harps(object):
 
         
 class bensby(object):
-    def __init__(self):
+    def __init__(self, teffcut=True, abunds=True):
         """
         Open the file of Bensby et al. (2014) and return a recarray
         """
         hdu = pyfits.open('../data/Bensby2014_with_tSNEandBattistini.fits',
                           names=True)
         self.data = hdu[1].data
+        # Mask out stars with non-detections in some of the elements considered
+        data = self.data[
+                 (self.data['nO1']>0) * (self.data['nNa1']>0) *
+                 (self.data['nMg1']>0) * (self.data['nAl1']>0) *
+                 (self.data['nSi1']>0) * (self.data['nCa1']>0) *
+                 (self.data['nTi1']>0) * (self.data['nCr1']>0) *
+                 (self.data['nNi1']>0) * (self.data['nZn1']>0) *
+                 (self.data['nY2']>0) * (self.data['nBa2']>0) *
+                 (self.data['nFe1']>0) ]
+        if teffcut:
+            data = data [(data['Teff']>5000) * (data['Teff']<6300)]
+        self.data= data
+        print len(data), " stars included."
         return None
 
-    def get_ndimspace(age=False, kin=False, feh=True, mc=50):
+    def get_ndimspace(self, age=False, kin=False, feh=True, mc=50):
         """
         Cut out missing data and prepare t-SNE input array
 
@@ -122,15 +160,8 @@ class bensby(object):
             feh: Bool  - include [Fe/H], default: True
             mc:  Int   - if ==1, then no MC magic will happen
         """
-        # Mask out stars with non-detections in some of the elements considered
-        mask = [ (self.data['nO1']>0) * (self.data['nNa1']>0) *
-                 (self.data['nMg1']>0) * (self.data['nAl1']>0) *
-                 (self.data['nSi1']>0) * (self.data['nCa1']>0) *
-                 (self.data['nTi1']>0) * (self.data['nCr1']>0) *
-                 (self.data['nNi1']>0) * (self.data['nZn1']>0) *
-                 (self.data['nY2']>0) * (self.data['nBa2']>0) *
-                 (data['nFe1']>0) ]
-        data = self.data[ mask ]
+        data = self.data
+        print len(data), " stars included."
         verr = 10. * np.ones(len(data))
         X        = np.c_[data['Fe_H'],data['O_Fe'],data['Na_Fe'],data['Mg_Fe'],
                          data['Al_Fe'],data['Si_Fe'],data['Ca_Fe'],data['Ti_Fe'],

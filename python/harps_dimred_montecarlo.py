@@ -19,20 +19,18 @@ import open_data
 from sklearn import manifold, datasets
 import scipy
 
-# Next line to silence pyflakes. This import is needed.
-#Axes3D
-
 # The dataset
 plot     = True
-age      = True
+age      = False
 kin      = False
 feh      = True
 teffcut  = True
-mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
+mc       = 1 # needs to be an integer >=1. If ==1, then no MC magic will happen
 
 # READ DelGADO-MENA DATA
 harps = open_data.harps(teffcut=teffcut, ages=True, abunds=True)
 data  = harps.data
+print len(data)
 
 n_points = len(data)
 n_components = 2
@@ -73,7 +71,7 @@ colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
             data['MgFe']-data['TiIFe'],data['CuFe'],data['AlFe']-data['MgFe'],
             data['BaFe'], data['ZnFe'], 
             data['YFe']-data['BaFe'],data['YFe']-data['ZnFe'],data['CeFe'],
-            data['Teff'],data['logg'], data['vt'],np.log10(data['S/N']),
+            data['Teff'],data['logg'], data['vt_1'],np.log10(data['S/N']),
             data['meanage'],data['Ulsr'],data['Vlsr'],data['Wlsr']]
 titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Ca/Fe]$', r'$\rm [Mg/Fe]$',
           r'$\rm [Mg/Ti]$', r'$\rm [Cu/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Ba/Fe]$',

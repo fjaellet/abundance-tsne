@@ -18,17 +18,21 @@ setup_text_plots(fontsize=10, usetex=True)
 from astropy.io import fits as pyfits
 from sklearn import manifold, datasets
 import scipy
+import open_data
 
+teffcut  = True
 age      = False
 kin      = False
 feh      = True
-p        = 75
+p        = 50
 i        = 0
-mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
+mc       = 10 # needs to be an integer >=1. If ==1, then no MC magic will happen
 
 add = ""
 if age or kin or mc>1 or not feh:
     add = add + "_with"
+    if teffcut:
+        add = add + "teffcut"
     if age:
         add = add + "age"
     if kin:
@@ -50,10 +54,8 @@ for ii in np.arange(means.shape[0]):
     means[ii,3:] = np.percentile(tsne["Y"][mc*ii:mc*(ii+1)], [16,50,84])
 
 # READ DelGADO-MENA DATA
-hdu = pyfits.open(
-    '/home/friedel/Astro/Spectro/Bensby/Bensby2014_SN_survey.fits',
-    names=True)
-data=hdu[1].data
+ben = open_data.bensby(teffcut=teffcut)
+data=ben.data
 #if teffcut:
 #    data=data[ (data['Teff']>5300) * (data['Teff']<6000) * \
 #               (data['logg_hip']>3) * (data['logg_hip']<5) ]

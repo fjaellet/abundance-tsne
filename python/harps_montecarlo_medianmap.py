@@ -19,6 +19,7 @@ setup_text_plots(fontsize=10, usetex=True)
 from astropy.io import fits as pyfits
 from sklearn import manifold, datasets
 import scipy
+import open_data
 
 age      = False
 kin      = False
@@ -47,30 +48,23 @@ print add
 tsne =  np.genfromtxt("../tsne_results/harps_tsne_results"+add+str(p)+
                            "_rand"+str(i)+".csv", delimiter=',',
                       dtype=[('Name', "|S14"), ('X', float), ('Y', float)])
-
+#tsne = tsne[np.argsort(tsne['Name'])]
+#print tsne['Name'][::50]
 means=  np.zeros((len(tsne)/mc, 6))
 for ii in np.arange(means.shape[0]):
     means[ii,:3] = np.percentile(tsne["X"][mc*ii:mc*(ii+1)], [16,50,84])
     means[ii,3:] = np.percentile(tsne["Y"][mc*ii:mc*(ii+1)], [16,50,84])
 
 # READ DelGADO-MENA DATA
-hdu = pyfits.open(
-    '/home/friedel/Astro/Spectro/HARPS/DelgadoMena2017.fits',
-    names=True)
-data=hdu[1].data
-if teffcut:
-    data=data[ (data['Teff']>5300) * (data['Teff']<6000) * \
-               (data['logg_hip']>3) * (data['logg_hip']<5) ]
-data=data[ (data['nCu']>0) * (data['nZn']>0) * (data['nSr']>0) * (data['nY']>0) *
-           (data['nZrII']>0) * (data['nBa']>0) * (data['nCe']>0) * (data['errAl']<1) *
-           (data['nMg']>0) * (data['nSi']>0) * (data['nCa']>0) * (data['nTiI']>0) *
-           np.isfinite(data['meanage']) ] 
-
+harps = open_data.harps(teffcut=teffcut, ages=True, abunds=True)
+data  = harps.data
+print data['Star']
+assert len(tsne)/mc == len(data)
 colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
             data['MgFe']-data['TiIFe'],data['CuFe'],data['AlFe']-data['MgFe'],
             data['BaFe'], data['ZnFe'], 
             data['YFe']-data['BaFe'],data['YFe']-data['ZnFe'],data['CeFe'],
-            data['Teff'],data['logg'], data['vt'],np.log10(data['S/N']),
+            data['Teff'],data['logg'], data['vt_1'],np.log10(data['S/N']),
             data['meanage'],data['Ulsr'],data['Vlsr'],data['Wlsr']]
 titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Ca/Fe]$', r'$\rm [Mg/Fe]$',
           r'$\rm [Mg/Ti]$', r'$\rm [Cu/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Ba/Fe]$',
@@ -101,7 +95,7 @@ for ii in range(5):
                                   abs(means[:,5]-means[:,4]) ],
                            c="grey", zorder=0, ms=0, lw=0)"""
         scat = plt.scatter(means[:,1], means[:,4],
-                           c=tsne['X'], #colors[4*ii+jj],
+                           c=colors[4*ii+jj],
                            s=15, cmap=plt.cm.jet, lw=0.01)
         if jj!=0:
             ax.yaxis.set_major_formatter(NullFormatter())

@@ -23,15 +23,15 @@ from sklearn import manifold, datasets
 age      = False
 kin      = False
 feh      = True
-mc       = 50
+teffcut  = True
+mc       = 1
 
 # READ BENSBY DATA
-ben = open_data.bensby()
-data=ben.data
-ben.get_ndimspace()
+ben = open_data.bensby(teffcut=teffcut)
+ben.get_ndimspace(age=age, kin=kin, feh=feh, mc=mc)
 n_components = 2
 
-print len(ben.Xnorm), " good ones"
+data = ben.data
 
 colors   = [data['Fe_H'], data['Ti_Fe'], data['Fe_H']+data['O_Fe'],
             data['Mg_Fe']-(data['Fe_H']+data['O_Fe']),
@@ -47,15 +47,15 @@ titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [O/H]$', r'$\rm [Mg/O]$',
           r'$T_{\rm eff}$', r'$\log g$', r'$\xi$', r'$TD/D$',
           r'$\tau$', r'$U$', r'$V$', r'$W$']
 
-for p in [15, 30, 40, 50, 75, 100, 120, 150]:#[
+for p in [5, 15, 30, 40, 50, 75, 100, 120, 150]:#[
     for i in [0]:
         t0 = time()
         # Use the recommendations of Linderman & Steinerberger 2017
         # for the learning rate and the exaggeration parameter
         tsne = manifold.TSNE(n_components=n_components, init='pca',
                              random_state=i, perplexity=p,
-                             learning_rate=1, early_exaggeration=len(X)/10)
-        Y = tsne.fit_transform(Xnorm)
+                             learning_rate=1, early_exaggeration=len(data)/10)
+        Y = tsne.fit_transform(ben.Xnorm)
         t1 = time()
         print "p=", p, " , random state ", i
         print("t-SNE: %.2g sec" % (t1 - t0))
@@ -91,8 +91,10 @@ for p in [15, 30, 40, 50, 75, 100, 120, 150]:#[
                                 dtype=[('ID','|S18'),('X_tsne','float'),
                                        ('Y_tsne','float')])
         add = ""
-        if age or kin or mc>1 or not feh:
+        if age or teffcut or kin or mc>1 or not feh:
             add = add + "_with"
+            if teffcut:
+                add = add + "teffcut"
             if age:
                 add = add + "age"
             if kin:
@@ -101,7 +103,7 @@ for p in [15, 30, 40, 50, 75, 100, 120, 150]:#[
                 add = add + "nofeh"
             if mc>1:
                 add = add + "mc" + str(mc)
-                
+        print add        
         np.savetxt("../tsne_results/bensby2014_tsne_results"+add+str(p)+
                            "_rand"+str(i)+".csv", rec, delimiter=',',
                fmt = ('%s, %.5e, %.5e'))
