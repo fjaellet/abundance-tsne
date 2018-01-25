@@ -13,7 +13,7 @@ from astroML.plotting.tools import draw_ellipse
 
 from astropy.io import fits as pyfits
 from astroML.plotting import setup_text_plots
-setup_text_plots(fontsize=10, usetex=True)
+setup_text_plots(fontsize=12, usetex=True)
 
 import open_data
 
@@ -66,6 +66,57 @@ xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         data['errSi']
         ]
 
+# MC test plot
+
+import matplotlib.gridspec as gridspec
+g   = plt.figure(figsize=(8, 4))
+plt.suptitle("Testing the influence of abundance uncertainties", fontsize=16)
+gs0 = gridspec.GridSpec(1, 2)
+#gs0.update(left=0.315, bottom=0.275, right=0.98, top=0.78)
+ax  = plt.Subplot(g, gs0[0, 0])
+g.add_subplot(ax)
+for kk in np.arange(len(t.subsets)):
+    mask = (t.classcol == t.subsets[kk])
+    ax.scatter(t.Xt[mask], t.Yt[mask], s=4*t.size[kk], lw=t.lw[kk], edgecolors="k",
+               c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
+ax.set_xlabel("t-SNE X dimension", fontsize=13)
+ax.set_ylabel("t-SNE Y dimension", fontsize=13)
+ax.text(6, 9, "Fiducial map", fontsize=13)
+
+ax  = plt.Subplot(g, gs0[0, 1])
+g.add_subplot(ax)
+# plot MC realisations
+mcres =  np.genfromtxt("../tsne_results/harps_tsne_results_withteffcutmc5040_rand0.csv", delimiter=',',
+                  dtype=[('Name', "|S14"), ('X', float), ('Y', float)])
+ax.scatter(mcres["X"], mcres["Y"], s=4, lw=0, c="grey", alpha=0.15)
+print len(mcres)
+for kk in np.arange(len(t.subsets)):
+    mask = (t.classcol == t.subsets[kk])
+    if "debris4" in t.subsets[kk]:
+        ax.plot(24.7, 9.7, marker=r"$\rightarrow$", zorder=0, ms=12, c='k')
+        ax.scatter(24, 9.7, s=4*t.size[kk], lw=t.lw[kk], edgecolors="k",
+                   c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
+    if "debris1" in t.subsets[kk]:
+        ax.plot(t.Xt[mask], 11.4, marker=r"$\uparrow$", zorder=0, ms=12, c='k')
+        ax.scatter(t.Xt[mask], 11, s=4*t.size[kk], lw=t.lw[kk], edgecolors="k",
+                   c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
+    else:
+        ax.scatter(data['X_tsne_teffcut40_errlim_mc'][mask],
+               data['Y_tsne_teffcut40_errlim_mc'][mask],
+               s=4*t.size[kk], lw=t.lw[kk], edgecolors="k",
+               c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
+    # Annotate population names
+    #if kk < len(t.names):
+    #    ax.text(t.Xcoords[kk], t.Ycoords[kk], t.names[kk], fontsize=1.25*t.fsize[kk])
+
+ax.text(-9, 10, "Monte-Carlo-sampled map", fontsize=13)
+ax.set_xlabel("t-SNE X dimension", fontsize=13)
+#ax.set_ylabel("t-SNE Y dimension", fontsize=13)
+ax.axis([-13, 27, -8, 12])
+
+plt.savefig("../im/harps_tsne-mctest_"+sets+".png", dpi=200)  
+
+
 # age plots
 
 exinds = [ [0,1], [0,6], [0,2], [0,22],
@@ -75,17 +126,16 @@ limits = [ None,  None,  None,  None,
 
 #------------------------------------------------------------
 # Plot the results
-import matplotlib.gridspec as gridspec
 
-g   = plt.figure(figsize=(12, 7))
-
-gs = gridspec.GridSpec(2, 4)
-gs.update(left=0.06, bottom=0.07, right=0.98, top=0.98,
-           wspace=0.3, hspace=0.2)
+g   = plt.figure(figsize=(6, 10))
+plt.suptitle("Abundance trends with age", fontsize=17)
+gs = gridspec.GridSpec(4, 2)
+gs.update(left=0.12, bottom=0.07, right=0.86, top=0.93,
+           wspace=0.06, hspace=0.11)
 
 for jj in range(8):
     print jj
-    ax = plt.Subplot(g, gs[jj/4, jj%4])
+    ax = plt.Subplot(g, gs[jj/2, jj%2])
     if exinds[jj] != None:
         g.add_subplot(ax)
         for kk in np.arange(len(t.subsets)):
@@ -99,8 +149,12 @@ for jj in range(8):
                        s=t.size[kk], lw=t.lw[kk], edgecolors="k",
                        c=t.col[kk], alpha=t.al[kk],
                        marker=t.sym[kk])
-        ax.set_xlabel(labels[exinds[jj][0]], fontsize=12)
-        ax.set_ylabel(labels[exinds[jj][1]], fontsize=12)
+        if jj>=6:
+            ax.set_xlabel(labels[exinds[jj][0]], fontsize=14)
+        ax.set_ylabel(labels[exinds[jj][1]], fontsize=14)
+        if jj%2 == 1:
+            ax.yaxis.tick_right()
+            ax.yaxis.set_label_position("right")
         if limits[jj] != None:
             ax.axis(limits[jj])
         ax.locator_params(tight=True, nbins=4)
@@ -131,7 +185,7 @@ g   = plt.figure(figsize=(12, 14))
 # abundance plots around
 #################
 gs = gridspec.GridSpec(5, 4)
-gs.update(left=0.06, bottom=0.06, right=0.98, top=0.98,
+gs.update(left=0.08, bottom=0.06, right=0.98, top=0.98,
            wspace=0.4, hspace=0.33)
 
 for jj in range(20):
@@ -150,8 +204,8 @@ for jj in range(20):
                        s=t.size[kk], lw=t.lw[kk], edgecolors="k",
                        c=t.col[kk], alpha=t.al[kk],
                        marker=t.sym[kk])
-        ax.set_xlabel(labels[exinds[jj][0]], fontsize=12)
-        ax.set_ylabel(labels[exinds[jj][1]], fontsize=12)
+        ax.set_xlabel(labels[exinds[jj][0]], fontsize=16)
+        ax.set_ylabel(labels[exinds[jj][1]], fontsize=16)
         if limits[jj] != None:
             ax.axis(limits[jj])
         ax.locator_params(tight=True, nbins=4)
@@ -160,7 +214,7 @@ for jj in range(20):
 # t-SNE plot in the center
 #################
 gs0 = gridspec.GridSpec(1, 1)
-gs0.update(left=0.315, bottom=0.275, right=0.98, top=0.78)
+gs0.update(left=0.33, bottom=0.275, right=0.98, top=0.78)
 ax  = plt.Subplot(g, gs0[0, 0])
 g.add_subplot(ax)
 if sets not in ["teffcut", "plain"]:
@@ -170,18 +224,13 @@ if sets not in ["teffcut", "plain"]:
     ax.scatter(mcres["X"], mcres["Y"], s=4, lw=0, c="grey", alpha=0.15)
 for kk in np.arange(len(t.subsets)):
     mask = (t.classcol == t.subsets[kk])
-    if t.subsets[kk] == "debris1" and sets=="errlim":
-        ax.plot(t.Xt[mask], 9.7, marker=r"$\uparrow$", zorder=0, ms=20)
-        ax.scatter(t.Xt[mask], 9.5, s=6*t.size[kk], lw=t.lw[kk], edgecolors="k",
-                   c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
-    else:
-        ax.scatter(t.Xt[mask], t.Yt[mask], s=6*t.size[kk], lw=t.lw[kk], edgecolors="k",
+    ax.scatter(t.Xt[mask], t.Yt[mask], s=8*t.size[kk], lw=t.lw[kk], edgecolors="k",
                c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
     # Annotate population names
     #if kk < len(t.names):
     #    ax.text(t.Xcoords[kk], t.Ycoords[kk], t.names[kk], fontsize=1.25*t.fsize[kk])
-ax.set_xlabel("t-SNE X dimension", fontsize=18)
-ax.set_ylabel("t-SNE Y dimension", fontsize=18)
+ax.set_xlabel("t-SNE X dimension", fontsize=20)
+ax.set_ylabel("t-SNE Y dimension", fontsize=20)
 #ax.axis([-13, 25, -8, 10.2])
 
 plt.savefig("../im/harps_tsne-abundsplot_"+sets+".png", dpi=200)  

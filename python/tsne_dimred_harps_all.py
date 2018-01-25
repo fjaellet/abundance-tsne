@@ -59,7 +59,8 @@ for ii in range(len(p)):
     bensb3 = np.genfromtxt("specialsets/harps_tsne_results_withageteffcut"+str(p[ii])+
                         "_rand0.csv", delimiter=',')
     data = [bensb0, bensb1, bensb2, bensb3]
-    title= [r"No $T_{\rm eff}$ cut, only [X/Fe]", "Only [X/Fe]", "[X/Fe] + [Fe/H]", "Abundances + age"]
+    title= [r"No $T_{\rm eff}$ cut, only [X/Fe]",
+            "Only [X/Fe]", "[X/Fe] + [Fe/H]", "Abundances + age"]
     #best = [1, 5, 4]
     for jj in range(4):
         ax = plt.Subplot(f, gs0[ii, jj])

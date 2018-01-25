@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  23 JAN 2018 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  25 JAN 2018 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,14 +752,17 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 (Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
 LaTeX Info: Redefining \not on input line 1043.
-) (./tsne_abunds.aux)
+) (./tsne_abunds.aux
+
+LaTeX Warning: Label `harps2' multiply defined.
+
+)
 \openout1 = `tsne_abunds.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 13.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 13.
 
-
-(/usr/share/texmf/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texmf/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 13.
@@ -944,156 +947,137 @@ LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 10.40245pt on input line 41.
 LaTeX Font Info:    Font shape `T1/txss/bx/n' will be
 (Font)              scaled to size 10.40245pt on input line 41.
+
+LaTeX Warning: Reference `bensby' on page 1 undefined on input line 53.
+
+
+LaTeX Warning: Reference `caveats' on page 1 undefined on input line 53.
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+<im/harps_tsne-abundsplot_teffcut.png, id=16, 867.24pt x 1011.78pt>
+File: im/harps_tsne-abundsplot_teffcut.png Graphic file (type png)
 
-LaTeX Warning: File `HARPS_tsne_plots_withteffcutmc5040_rand0.png' not found on
- input line 83.
+<use im/harps_tsne-abundsplot_teffcut.png>
+Package pdftex.def Info: im/harps_tsne-abundsplot_teffcut.png used on input lin
+e 86.
+(pdftex.def)             Requested size: 418.82616pt x 488.62851pt.
+
+<im/HARPS_tsne_plots_withteffcut40_rand0.png, id=18, 867.24pt x 867.24pt>
+File: im/HARPS_tsne_plots_withteffcut40_rand0.png Graphic file (type png)
+
+<use im/HARPS_tsne_plots_withteffcut40_rand0.png>
+Package pdftex.def Info: im/HARPS_tsne_plots_withteffcut40_rand0.png used on in
+put line 92.
+(pdftex.def)             Requested size: 518.29826pt x 518.32338pt.
+ [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./im/harps_tsne-abundsplot_teffcut.png>]
+LaTeX Font Info:    Font shape `T1/txss/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 111.
+LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 111.
+LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
+(Font)              scaled to size 9.49997pt on input line 111.
+
+<im/harps_tsne_abundances-relto-Fe_thin.png, id=28, 867.24pt x 578.16pt>
+File: im/harps_tsne_abundances-relto-Fe_thin.png Graphic file (type png)
+
+<use im/harps_tsne_abundances-relto-Fe_thin.png>
+Package pdftex.def Info: im/harps_tsne_abundances-relto-Fe_thin.png used on inp
+ut line 116.
+(pdftex.def)             Requested size: 256.53291pt x 154.19029pt.
+
+<im/harps_tsne_abundances-relto-Fe_thick.png, id=30, 867.24pt x 578.16pt>
+File: im/harps_tsne_abundances-relto-Fe_thick.png Graphic file (type png)
+
+<use im/harps_tsne_abundances-relto-Fe_thick.png>
+Package pdftex.def Info: im/harps_tsne_abundances-relto-Fe_thick.png used on in
+put line 117.
+(pdftex.def)             Requested size: 256.53291pt x 137.35728pt.
+
+<im/harps_tsne_abundances-relto-Fe_strange.png, id=32, 867.24pt x 578.16pt>
+File: im/harps_tsne_abundances-relto-Fe_strange.png Graphic file (type png)
+
+<use im/harps_tsne_abundances-relto-Fe_strange.png>
+Package pdftex.def Info: im/harps_tsne_abundances-relto-Fe_strange.png used on 
+input line 118.
+(pdftex.def)             Requested size: 256.53291pt x 154.19028pt.
+
+<im/harps_tsne-mctest_teffcut.png, id=34, 578.16pt x 289.08pt>
+File: im/harps_tsne-mctest_teffcut.png Graphic file (type png)
+
+<use im/harps_tsne-mctest_teffcut.png>
+Package pdftex.def Info: im/harps_tsne-mctest_teffcut.png used on input line 12
+6.
+(pdftex.def)             Requested size: 256.53291pt x 128.26305pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-! Package pdftex.def Error: File `HARPS_tsne_plots_withteffcutmc5040_rand0.png'
- not found.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.83 ...PS_tsne_plots_withteffcutmc5040_rand0.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ [4 <./im/HARPS_tsne_plots_withteffcut40_rand0.png>]
 
-<harps_tsne-bigplot_errlim.png, id=15, 867.24pt x 1011.78pt>
-File: harps_tsne-bigplot_errlim.png Graphic file (type png)
+LaTeX Warning: Reference `bensby1' on page 5 undefined on input line 140.
 
-<use harps_tsne-bigplot_errlim.png>
-Package pdftex.def Info: harps_tsne-bigplot_errlim.png used on input line 89.
-(pdftex.def)             Requested size: 518.29826pt x 604.71059pt.
+<im/harps_tsne-age-abundsplot_teffcut.png, id=40, 433.62pt x 722.7pt>
+File: im/harps_tsne-age-abundsplot_teffcut.png Graphic file (type png)
 
-<harps_tsne_abundances-relto-Fe.png, id=17, 867.24pt x 578.16pt>
-File: harps_tsne_abundances-relto-Fe.png Graphic file (type png)
+<use im/harps_tsne-age-abundsplot_teffcut.png>
+Package pdftex.def Info: im/harps_tsne-age-abundsplot_teffcut.png used on input
+ line 153.
+(pdftex.def)             Requested size: 256.53291pt x 427.56924pt.
 
-<use harps_tsne_abundances-relto-Fe.png>
-Package pdftex.def Info: harps_tsne_abundances-relto-Fe.png used on input line 
-97.
-(pdftex.def)             Requested size: 518.29826pt x 345.5489pt.
-
-
-Package natbib Warning: Citation `The age determination is described in more de
-tail in Appendix A.' on page 2 undefined on input line 102.
-
-[2]
-Underfull \hbox (badness 2119) in paragraph at lines 112--113
-\T1/txr/m/n/10 abundance ra-tios, stel-lar pa-ram-e-ters, ages and kine-mat-ics
-.
+Underfull \hbox (badness 2913) in paragraph at lines 154--154
+[]\T1/txr/bx/n/9 Fig. 5. |\T1/txr/m/n/9 Abundance trends with stel-lar age, mea
+-sured with the
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-[4 <./harps_tsne-bigplot_errlim.png>]
-<bensby2014_tsne-plot.png, id=31, 505.89pt x 650.43pt>
-File: bensby2014_tsne-plot.png Graphic file (type png)
-
-<use bensby2014_tsne-plot.png>
-Package pdftex.def Info: bensby2014_tsne-plot.png used on input line 138.
-(pdftex.def)             Requested size: 256.53291pt x 329.82921pt.
-
-<Bensby2014_tsne_plots15_rand0.png, id=32, 867.24pt x 867.24pt>
-File: Bensby2014_tsne_plots15_rand0.png Graphic file (type png)
-
-<use Bensby2014_tsne_plots15_rand0.png>
-Package pdftex.def Info: Bensby2014_tsne_plots15_rand0.png used on input line 1
-44.
-(pdftex.def)             Requested size: 518.29826pt x 518.32338pt.
-
-<bensby2014_tsne-summary-plot.png, id=33, 867.24pt x 867.24pt>
-File: bensby2014_tsne-summary-plot.png Graphic file (type png)
-
-<use bensby2014_tsne-summary-plot.png>
-Package pdftex.def Info: bensby2014_tsne-summary-plot.png used on input line 15
-2.
-(pdftex.def)             Requested size: 518.29826pt x 518.32338pt.
-
-<bensby2014_tsne_abundances-relto-O.png, id=34, 867.24pt x 578.16pt>
-File: bensby2014_tsne_abundances-relto-O.png Graphic file (type png)
-
-<use bensby2014_tsne_abundances-relto-O.png>
-Package pdftex.def Info: bensby2014_tsne_abundances-relto-O.png used on input l
-ine 158.
-(pdftex.def)             Requested size: 518.29826pt x 345.5489pt.
-
-Underfull \vbox (badness 1558) has occurred while \output is active []
-
- [5 <./harps_tsne_abundances-relto-Fe.png>]
-LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 189.
-LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 189.
-LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 189.
- [6 <./bensby2014_tsne-plot.png>]
-<bensby-tSNE_perplexitytest_withsubsets.png, id=45, 505.89pt x 867.24pt>
-File: bensby-tSNE_perplexitytest_withsubsets.png Graphic file (type png)
-
-<use bensby-tSNE_perplexitytest_withsubsets.png>
-Package pdftex.def Info: bensby-tSNE_perplexitytest_withsubsets.png used on inp
-ut line 194.
-(pdftex.def)             Requested size: 256.53291pt x 439.7723pt.
-
-<harps-tSNE_perplexitytest_withsubsets.png, id=46, 505.89pt x 722.7pt>
-File: harps-tSNE_perplexitytest_withsubsets.png Graphic file (type png)
-
-<use harps-tSNE_perplexitytest_withsubsets.png>
-Package pdftex.def Info: harps-tSNE_perplexitytest_withsubsets.png used on inpu
-t line 200.
-(pdftex.def)             Requested size: 256.53291pt x 366.4769pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./Bensby2014_tsne_plots15_rand0.png>]
-Underfull \hbox (badness 1924) in paragraph at lines 217--218
+Underfull \hbox (badness 1924) in paragraph at lines 242--243
 []\T1/txr/m/n/10 It is bet-ter to con-fine the anal-y-sis to nar-row re-gions
  []
 
-(./tsne_abunds.bbl [8 <./bensby2014_tsne-summary-plot.png>] (./tsne_abunds.llt)
-)
+(./tsne_abunds.bbl
+Underfull \vbox (badness 1348) has occurred while \output is active []
 
-Package natbib Warning: There were undefined citations.
+ [5 <./im/harps_tsne_abundances-relto-Fe_thin.png> <./im/harps_tsne_abundances-
+relto-Fe_thick.png> <./im/harps_tsne_abundances-relto-Fe_strange.png> <./im/har
+ps_tsne-mctest_teffcut.png>] (./tsne_abunds.llt)) [6 <./im/harps_tsne-age-abund
+splot_teffcut.png>] (./tsne_abunds.aux)
 
-[9 <./bensby2014_tsne_abundances-relto-O.png>] [10 <./bensby-tSNE_perplexitytes
-t_withsubsets.png> <./harps-tSNE_perplexitytest_withsubsets.png>]
-(./tsne_abunds.aux) ) 
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6400 strings out of 494041
- 81934 string characters out of 6158495
- 210691 words of memory out of 5000000
- 9565 multiletter control sequences out of 15000+600000
+ 6369 strings out of 494041
+ 81380 string characters out of 6158495
+ 209255 words of memory out of 5000000
+ 9535 multiletter control sequences out of 15000+600000
  91514 words of font info for 151 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 41i,12n,45p,7218b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/
-texmf/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texmf/fonts/type1/public/
-txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/s
-hare/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/pu
-blic/txfonts/t1xtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/txex.pfb></
-usr/share/texmf/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf/fonts/typ
-e1/public/txfonts/txsyc.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.p
-fb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/font
-s/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb
-></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on tsne_abunds.pdf (10 pages, 5969274 bytes).
+ 41i,11n,45p,7218b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/p
+ublic/txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb><
+/usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/ty
+pe1/public/txfonts/t1xtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/txex.
+pfb></usr/share/texmf/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf/fon
+ts/type1/public/txfonts/txsyc.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uh
+vb8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texm
+f/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr
+8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fon
+ts/type1/urw/times/utmri8a.pfb>
+Output written on tsne_abunds.pdf (6 pages, 3586094 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 

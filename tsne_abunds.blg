@@ -1,53 +1,50 @@
 This is BibTeX, Version 0.99d (TeX Live 2016/TeX Live for SUSE Linux)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tsne_abunds.aux
-White space in argument---line 43 of file tsne_abunds.aux
- : \citation{The
- :               age determination is described in more detail in Appendix A.}
-I'm skipping whatever remains of this command
 The style file: aa.bst
 Database file #1: FA_library.bib
 Warning--empty publisher in Ivezic2013
+Warning--empty journal in Linderman2017
 Warning--empty publisher in Pagel2009
-You've used 50 entries,
+You've used 43 entries,
             2947 wiz_defined-function locations,
-            962 strings with 36998 characters,
-and the built_in function-call counts, 78421 in all, are:
-= -- 5473
-> -- 12302
+            920 strings with 33578 characters,
+and the built_in function-call counts, 70345 in all, are:
+= -- 4887
+> -- 11143
 < -- 16
-+ -- 4108
-- -- 4057
-* -- 7806
-:= -- 14896
-add.period$ -- 50
-call.type$ -- 50
-change.case$ -- 1550
-chr.to.int$ -- 49
-cite$ -- 52
-duplicate$ -- 930
-empty$ -- 1322
-format.name$ -- 4178
-if$ -- 15129
++ -- 3720
+- -- 3676
+* -- 7015
+:= -- 13365
+add.period$ -- 43
+call.type$ -- 43
+change.case$ -- 1395
+chr.to.int$ -- 42
+cite$ -- 46
+duplicate$ -- 803
+empty$ -- 1138
+format.name$ -- 3782
+if$ -- 13565
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 46
-newline$ -- 154
-num.names$ -- 203
-pop$ -- 1550
+missing$ -- 39
+newline$ -- 133
+num.names$ -- 175
+pop$ -- 1401
 preamble$ -- 1
-purify$ -- 1550
+purify$ -- 1395
 quote$ -- 0
-skip$ -- 807
+skip$ -- 694
 stack$ -- 0
-substring$ -- 973
+substring$ -- 820
 swap$ -- 28
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 444
-warning$ -- 2
-while$ -- 194
+type$ -- 381
+warning$ -- 3
+while$ -- 166
 width$ -- 0
-write$ -- 495
-(There was 1 error message)
+write$ -- 424
+(There were 3 warnings)
