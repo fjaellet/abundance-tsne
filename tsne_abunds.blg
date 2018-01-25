@@ -6,45 +6,45 @@ Database file #1: FA_library.bib
 Warning--empty publisher in Ivezic2013
 Warning--empty journal in Linderman2017
 Warning--empty publisher in Pagel2009
-You've used 43 entries,
+You've used 44 entries,
             2947 wiz_defined-function locations,
-            920 strings with 33578 characters,
-and the built_in function-call counts, 70345 in all, are:
-= -- 4887
-> -- 11143
+            924 strings with 33794 characters,
+and the built_in function-call counts, 70833 in all, are:
+= -- 4924
+> -- 11192
 < -- 16
-+ -- 3720
-- -- 3676
-* -- 7015
-:= -- 13365
-add.period$ -- 43
-call.type$ -- 43
-change.case$ -- 1395
-chr.to.int$ -- 42
-cite$ -- 46
-duplicate$ -- 803
-empty$ -- 1138
-format.name$ -- 3782
-if$ -- 13565
++ -- 3736
+- -- 3691
+* -- 7059
+:= -- 13460
+add.period$ -- 44
+call.type$ -- 44
+change.case$ -- 1404
+chr.to.int$ -- 43
+cite$ -- 47
+duplicate$ -- 821
+empty$ -- 1159
+format.name$ -- 3800
+if$ -- 13655
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 39
-newline$ -- 133
-num.names$ -- 175
-pop$ -- 1401
+missing$ -- 40
+newline$ -- 136
+num.names$ -- 179
+pop$ -- 1412
 preamble$ -- 1
-purify$ -- 1395
+purify$ -- 1404
 quote$ -- 0
-skip$ -- 694
+skip$ -- 706
 stack$ -- 0
-substring$ -- 820
+substring$ -- 831
 swap$ -- 28
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 381
+type$ -- 390
 warning$ -- 3
-while$ -- 166
+while$ -- 169
 width$ -- 0
-write$ -- 424
+write$ -- 433
 (There were 3 warnings)

@@ -47,7 +47,7 @@ In spite of this recent conquista of the Milky Way in terms of number of spectro
 
 The wealth of new data, especially the high dimensionality of chemo-kinematics space, requires new statistical analysis methods to efficiently constrain detailed Milky-Way formation models (including e.g. stellar evolution, stellar chemical feedback, chemical evolution, and dynamical evolution). Traditionally, the metallicity distribution function and 2D chemical-abundance diagrams ([X/Fe] vs. [Fe/H]), and abundance gradients have been used to constrain the chemical evolution of stellar populations \citep[e.g.][]{Pagel2009}. On the other hand, it is also possible to {\it define} a stellar population by chemistry (e.g. carbon-enhanced metal-poor stars - \citealt{Beers2005}; the chemical thick disc - \citealt{Gratton1996, Fuhrmann1998}; high-[$\alpha$/Fe] metal-rich stars - \citealt{Adibekyan2011}), and to then study their structural and chemo-kinematic properties in detail. This is usually done in a simple fashion, by looking at only one 2D abundance diagram. In this paper we explore the possibility of combining the information contained in various measured abundance ratios using t-distributed stochastic neighbour embedding (t-SNE) to define more robust subpopulations and better identify outliers. 
 
-In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017}). 
+In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2017}). 
 During the writing of this paper, \citet{Kos2017} demonstrated in a complementary analysis that abundance-space t-SNE is indeed a reliable chemical-tagging tool: the authors were able to recover 7 out of 9 known open and globular clusters with high efficiency and low contamination using 13 chemical abundances from the GALAH survey \citep{Martell2017}, and they also found two new field member stars to known clusters with this technique. 
 
 The paper is structured as follows: Sec. \ref{method} introduces t-SNE. Sections \ref{harps} and \ref{bensby} describe and discuss the results for the high-resolution spectroscopic solar-vicinity surveys of \citet{DelgadoMena2017} and \citet{Bensby2014}. We reconsider possible caveats of our results in Sec. \ref{caveats} and finish with a summary and conclusions in Sec. \ref{conclusions}.
@@ -121,6 +121,12 @@ We now proceed to the discussion of these results.
 \end{figure}
 
 \subsection{The robustness of the t-SNE results}
+
+\begin{figure}\centering
+ \includegraphics[width=0.49\textwidth]{im/harps-tSNE_perplexitytest_withsubsets.png}
+\caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{DelgadoMena2017} sample. Each column row represents a combination of input information, while each row corresponds to a particular perplexity value, as indicated on the right side of the figure. The panel highlighted in yellow represents the results that we analyse in detail in this paper by defining chemical subpopulations based on this map.}
+\label{perplexitytest2}
+\end{figure}
 
 \begin{figure}\centering
  \includegraphics[width=0.49\textwidth]{im/harps_tsne-mctest_teffcut.png}
@@ -217,15 +223,10 @@ We find a clear and obvious gap between the chemical thin- and thick-disc popula
 % 
 % \begin{figure}\centering
 %  \includegraphics[width=0.49\textwidth]{bensby-tSNE_perplexitytest_withsubsets.png}
-% \caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{Bensby2014} sample. Each column row represents a combination of input information, while each row corresponds to a particular perplexity value, as indicated on the right side of the figure. The panel highlighted in yellow represents the results that we analyse in detail in this paper by defining chemical subpopulations based on this map.}
+% \caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{Bensby2014} sample. }
 % \label{perplexitytest}
 % \end{figure}
 % 
-% \begin{figure}\centering
-%  \includegraphics[width=0.49\textwidth]{harps-tSNE_perplexitytest_withsubsets.png}
-% \caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{DelgadoMena2017} sample, in the same style as Fig. \ref{perplexitytest}.}
-% \label{perplexitytest2}
-% \end{figure}
 % 
 % 
 % \subsection{Residual trends with stellar parameters}

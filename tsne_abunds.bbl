@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{44}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -284,6 +284,11 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Roman-Lopes}, \& {Zamora}}]{Queiroz2017}
 {Queiroz}, A.~B.~A., {Anders}, F., {Santiago}, B.~X., {et~al.} 2017, MNRAS,
   submitted, arXiv:1710.09970
+
+\bibitem[{{Reis} {et~al.}(2017){Reis}, {Poznanski}, {Baron}, {Zasowski}, \&
+  {Shahaf}}]{Reis2017}
+{Reis}, I., {Poznanski}, D., {Baron}, D., {Zasowski}, G., \& {Shahaf}, S. 2017,
+  ArXiv e-prints
 
 \bibitem[{{Santiago} {et~al.}(2016){Santiago}, {Brauer}, {Anders}, {Chiappini},
   {Queiroz}, {Girardi}, {Rocha-Pinto}, {Balbinot}, {da Costa}, {Maia},

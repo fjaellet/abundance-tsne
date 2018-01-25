@@ -15,66 +15,59 @@ from astroML.plotting.tools import draw_ellipse
 from astroML.plotting import setup_text_plots
 setup_text_plots(fontsize=10, usetex=True)
 
-import sample
+import open_data
 from astropy.io import fits as pyfits
 from sklearn import manifold, datasets
 
 p = [15, 30, 40, 50, 75]
 # The datasets
+sets = "teffcut"
 
 f = plt.figure(figsize=(7, 2*len(p)))
-#plt.suptitle("t-SNE manifold learning in chemical-abundance space", fontsize=14)
+plt.suptitle("Sensitivity of abundance-space t-SNE to input parameters",
+             fontsize=14)
 import matplotlib.gridspec as gridspec
 gs0 = gridspec.GridSpec(len(p), 4)
-gs0.update(left=0.08, bottom=0.08, right=0.92, top=0.96,
+gs0.update(left=0.08, bottom=0.08, right=0.92, top=0.9,
            wspace=0.05, hspace=0.12)
 
 plotsubsets = True
 
 if plotsubsets:
-    hdu = pyfits.open(
-            '/home/friedel/Astro/Spectro/HARPS/DelgadoMena2017.fits',
-            names=True)
-    refdata=hdu[1].data
-    subsets = ["thin", "thick1", "thick2", "thick3",
-               "mpthin", "smr",
-               "t1trans", "debris", "highAlMg",
-               "t3trans", "highTioutlier","lowalphaoutlier"]
-    sym = ["o", "v", "^", ">", "s", "*", "<", "D", "p", "8", "P", "X"]
-    al  = [.4, .6, .8, .8, .75, 1,1,1,1,1,1,1]
-    lw  = [0,0,.5,.5, .5, .5, .5, .5, .5, .5, .5, .5]
-    size= [6,9,9,9,12,20,18,18,18,18,22,25]
-    col = ["k", "r", "orange", "gold", "g", "orange",
-          "brown", "yellow", "royalblue", "hotpink", 
-          "lime", "black"]
+    t     = open_data.harps()
+    refdata  = t.data
+    t.get_tsne_subsets( sets = sets )
+
 for ii in range(len(p)):
     print ii
     # READ DATA
-    bensb0 = np.genfromtxt("specialsets/harps_tsne_results_withnofeh"+str(p[ii])+
+    #bensb0 = np.genfromtxt("../tsne_results/harps_tsne_results"+str(p[ii])+
+    #                    "_rand0.csv", delimiter=',')
+    bensb1 = np.genfromtxt("../tsne_results/harps_tsne_results_withnofehteffcut"+str(p[ii])+
                         "_rand0.csv", delimiter=',')
-    bensb1 = np.genfromtxt("specialsets/harps_tsne_results_withnofehteffcut"+str(p[ii])+
+    bensb2 = np.genfromtxt("../tsne_results/harps_tsne_results_withteffcut"+str(p[ii])+
                         "_rand0.csv", delimiter=',')
-    bensb2 = np.genfromtxt("specialsets/harps_tsne_results_withteffcut"+str(p[ii])+
+    bensb3 = np.genfromtxt("../tsne_results/harps_tsne_results_withageteffcut"+str(p[ii])+
                         "_rand0.csv", delimiter=',')
-    bensb3 = np.genfromtxt("specialsets/harps_tsne_results_withageteffcut"+str(p[ii])+
+    bensb4 = np.genfromtxt("../tsne_results/harps_tsne_results_withageteffcut"+str(p[ii])+
                         "_rand0.csv", delimiter=',')
-    data = [bensb0, bensb1, bensb2, bensb3]
-    title= [r"No $T_{\rm eff}$ cut, only [X/Fe]",
-            "Only [X/Fe]", "[X/Fe] + [Fe/H]", "Abundances + age"]
+    data = [bensb1, bensb2, bensb3, bensb4]
+    title= ["Only [X/Fe]", "[X/Fe] + [Fe/H]", "Abundances + age",
+            "Abundances + age + kin."]
     #best = [1, 5, 4]
     for jj in range(4):
         ax = plt.Subplot(f, gs0[ii, jj])
         f.add_subplot(ax)
-        if jj == 2 and ii == 2:
+        if jj == 1 and ii == 2:
             ax.set_axis_bgcolor('yellow')
-        if jj == 0:
+        if jj == 0 and ii == 4:
             data[jj][:, 1] = -data[jj][:, 1]
         if plotsubsets:
-            for kk in np.arange(len(subsets)):
-                mask = (np.char.rstrip(refdata["tSNE_class"],' ') == subsets[kk])
+            for kk in np.arange(len(t.subsets)):
+                mask = (t.classcol == t.subsets[kk])
                 scat = plt.scatter(data[jj][mask, 1], data[jj][mask, 2],
-                                   s=size[kk], lw=lw[kk], edgecolors="k",
-                                   c=col[kk], alpha=al[kk], marker=sym[kk])
+                                   s=t.size[kk], lw=t.lw[kk], edgecolors="k",
+                                   c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
         else:
             scat = plt.scatter(data[jj][:, 1], data[jj][:, 2], c='k', marker="o",
                            lw=0, s=6, alpha=.5)
@@ -94,7 +87,7 @@ for ii in range(len(p)):
         plt.axis('tight')
 
 if plotsubsets:
-    plt.savefig("../tSNE/harps-tSNE_perplexitytest_withsubsets.png", dpi=200)
+    plt.savefig("../im/harps-tSNE_perplexitytest_withsubsets.png", dpi=200)
 else:
-    plt.savefig("../tSNE/harps-tSNE_perplexitytest.png", dpi=200)
+    plt.savefig("../im/harps-tSNE_perplexitytest.png", dpi=200)
 plt.show()
