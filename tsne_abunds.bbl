@@ -1,4 +1,4 @@
-\begin{thebibliography}{44}
+\begin{thebibliography}{50}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -33,6 +33,22 @@
   {Adibekyan}, {Santos}, \& {Sousa}}]{BertrandeLis2015}
 {Bertran de Lis}, S., {Delgado Mena}, E., {Adibekyan}, V.~Z., {Santos}, N.~C.,
   \& {Sousa}, S.~G. 2015, \aap, 576, A89
+
+\bibitem[{{Bressan} {et~al.}(2012){Bressan}, {Marigo}, {Girardi}, {Salasnich},
+  {Dal Cero}, {Rubele}, \& {Nanni}}]{Bressan2012}
+{Bressan}, A., {Marigo}, P., {Girardi}, L., {et~al.} 2012, \mnras, 427, 127
+
+\bibitem[{{Chen} {et~al.}(2015){Chen}, {Bressan}, {Girardi}, {Marigo}, {Kong},
+  \& {Lanza}}]{Chen2015}
+{Chen}, Y., {Bressan}, A., {Girardi}, L., {et~al.} 2015, ArXiv e-prints
+
+\bibitem[{{Cutri} {et~al.}(2003){Cutri}, {Skrutskie}, {van Dyk}, {Beichman},
+  {Carpenter}, {Chester}, {Cambresy}, {Evans}, {Fowler}, {Gizis}, {Howard},
+  {Huchra}, {Jarrett}, {Kopan}, {Kirkpatrick}, {Light}, {Marsh}, {McCallon},
+  {Schneider}, {Stiening}, {Sykes}, {Weinberg}, {Wheaton}, {Wheelock}, \&
+  {Zacarias}}]{Cutri2003}
+{Cutri}, R.~M., {Skrutskie}, M.~F., {van Dyk}, S., {et~al.} 2003, {2MASS All
+  Sky Catalog of point sources.}
 
 \bibitem[{{Delgado Mena} {et~al.}(2015){Delgado Mena}, {Bertr{\'a}n de Lis},
   {Adibekyan}, {Sousa}, {Figueira}, {Mortier}, {Gonz{\'a}lez Hern{\'a}ndez},
@@ -196,6 +212,10 @@
   the Galactic Halo...Inside and Out, ed. H.~L. {Morrison} \& A.~{Sarajedini},
   307
 
+\bibitem[{{Henden} \& {Munari}(2014)}]{Henden2014}
+{Henden}, A. \& {Munari}, U. 2014, Contributions of the Astronomical
+  Observatory Skalnate Pleso, 43, 518
+
 \bibitem[{{Hinton} \& {Roweis}(2003)}]{Hinton2003}
 {Hinton}, G.~E. \& {Roweis}, S.~T. 2003, in Advances in neural information
   processing systems, 857--864
@@ -263,6 +283,10 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 {Matijevi{\v c}}, G., {Zwitter}, T., {Bienaym{\'e}}, O., {et~al.} 2012, \apjs,
   200, 14
 
+\bibitem[{{Michalik} {et~al.}(2015){Michalik}, {Lindegren}, \&
+  {Hobbs}}]{Michalik2015}
+{Michalik}, D., {Lindegren}, L., \& {Hobbs}, D. 2015, \aap, 574, A115
+
 \bibitem[{{Nissen}(2015)}]{Nissen2015}
 {Nissen}, P.~E. 2015, \aap, 579, A52
 
@@ -278,12 +302,12 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Duchesnay}}]{Pedregosa2012}
 {Pedregosa}, F., {Varoquaux}, G., {Gramfort}, A., {et~al.} 2012, ArXiv e-prints
 
-\bibitem[{{Queiroz} {et~al.}(2017){Queiroz}, {Anders}, {Santiago}, {Chiappini},
+\bibitem[{{Queiroz} {et~al.}(2018){Queiroz}, {Anders}, {Santiago}, {Chiappini},
   {Steinmetz}, {Dal Ponte}, {Stassun}, {da Costa}, {Maia}, {Beers}, {Crestani},
   {Fern{\'a}ndez-Trincado}, {An{\'{\i}}bal Garc{\'{\i}}a-Hern{\'a}ndez},
-  {Roman-Lopes}, \& {Zamora}}]{Queiroz2017}
-{Queiroz}, A.~B.~A., {Anders}, F., {Santiago}, B.~X., {et~al.} 2017, MNRAS,
-  submitted, arXiv:1710.09970
+  {Roman-Lopes}, \& {Zamora}}]{Queiroz2018}
+{Queiroz}, A.~B.~A., {Anders}, F., {Santiago}, B.~X., {et~al.} 2018, MNRAS,
+  accepted, arXiv:1710.09970
 
 \bibitem[{{Reis} {et~al.}(2017){Reis}, {Poznanski}, {Baron}, {Zasowski}, \&
   {Shahaf}}]{Reis2017}
@@ -312,6 +336,10 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Santos}, \& {Sousa}}]{Suarez-Andres2017}
 {Su{\'a}rez-Andr{\'e}s}, L., {Israelian}, G., {Gonz{\'a}lez Hern{\'a}ndez},
   J.~I., {et~al.} 2017, \aap, 599, A96
+
+\bibitem[{{Tang} {et~al.}(2014){Tang}, {Bressan}, {Rosenfield}, {Slemer},
+  {Marigo}, {Girardi}, \& {Bianchi}}]{Tang2014}
+{Tang}, J., {Bressan}, A., {Rosenfield}, P., {et~al.} 2014, \mnras, 445, 4287
 
 \bibitem[{{Traven} {et~al.}(2017){Traven}, {Matijevi{\v c}}, {Zwitter}, {{\v
   Z}erjal}, {Kos}, {Asplund}, {Bland-Hawthorn}, {Casey}, {De Silva}, {Freeman},

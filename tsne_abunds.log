@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  8 FEB 2018 18:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  8 FEB 2018 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -976,9 +976,11 @@ put line 93.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 7451) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3 <./im/harps_tsne-abundsplot_teffcut.png>]
+Underfull \vbox (badness 4531) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 112.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
@@ -1009,8 +1011,8 @@ File: im/harps_tsne_abundances-relto-Fe_strange.png Graphic file (type png)
 Package pdftex.def Info: im/harps_tsne_abundances-relto-Fe_strange.png used on 
 input line 119.
 (pdftex.def)             Requested size: 256.53291pt x 154.19028pt.
-
-<im/harps-tSNE_perplexitytest_withsubsets.png, id=34, 505.89pt x 722.7pt>
+ [4 <./im/HARPS_tsne_plots_withteffcut40_rand0.png>]
+<im/harps-tSNE_perplexitytest_withsubsets.png, id=38, 505.89pt x 722.7pt>
 File: im/harps-tSNE_perplexitytest_withsubsets.png Graphic file (type png)
 
 <use im/harps-tSNE_perplexitytest_withsubsets.png>
@@ -1018,7 +1020,7 @@ Package pdftex.def Info: im/harps-tSNE_perplexitytest_withsubsets.png used on i
 nput line 127.
 (pdftex.def)             Requested size: 256.53291pt x 366.4769pt.
 
-<im/harps_tsne-mctest_teffcut.png, id=35, 578.16pt x 289.08pt>
+<im/harps_tsne-mctest_teffcut.png, id=39, 578.16pt x 289.08pt>
 File: im/harps_tsne-mctest_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-mctest_teffcut.png>
@@ -1026,15 +1028,18 @@ Package pdftex.def Info: im/harps_tsne-mctest_teffcut.png used on input line 13
 3.
 (pdftex.def)             Requested size: 256.53291pt x 128.26305pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2073) has occurred while \output is active []
 
- [4 <./im/HARPS_tsne_plots_withteffcut40_rand0.png>]
+
 
 LaTeX Warning: Reference `bensby1' on page 5 undefined on input line 147.
 
-[5 <./im/harps_tsne_abundances-relto-Fe_thin.png> <./im/harps_tsne_abundances-r
-elto-Fe_thick.png> <./im/harps_tsne_abundances-relto-Fe_strange.png> <./im/harp
-s-tSNE_perplexitytest_withsubsets.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./im/harps_tsne_abundances-relto-Fe_thin.png> <./im/harps_tsne_abundances-
+relto-Fe_thick.png> <./im/harps_tsne_abundances-relto-Fe_strange.png> <./im/har
+ps-tSNE_perplexitytest_withsubsets.png>]
 <im/harps_tsne-age-abundsplot_teffcut.png, id=51, 433.62pt x 722.7pt>
 File: im/harps_tsne-age-abundsplot_teffcut.png Graphic file (type png)
 
@@ -1056,11 +1061,6 @@ Package pdftex.def Info: im/harps_tsne-kin-abundsplot_teffcut.png used on input
  line 169.
 (pdftex.def)             Requested size: 256.53291pt x 427.56924pt.
 
-Underfull \hbox (badness 2913) in paragraph at lines 170--170
-[]\T1/txr/bx/n/9 Fig. 7. |\T1/txr/m/n/9 Abundance trends with stel-lar age, mea
--sured with the
- []
-
 
 LaTeX Warning: Reference `perplexitytest' on page 6 undefined on input line 232
 .
@@ -1081,13 +1081,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6383 strings out of 494041
- 81905 string characters out of 6158495
- 213877 words of memory out of 5000000
- 9547 multiletter control sequences out of 15000+600000
+ 6401 strings out of 494041
+ 82223 string characters out of 6158495
+ 210400 words of memory out of 5000000
+ 9565 multiletter control sequences out of 15000+600000
  91514 words of font info for 151 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 41i,12n,48p,7218b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,48p,7218b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/p
 ublic/txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb><
 /usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/ty
@@ -1098,7 +1098,7 @@ vb8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texm
 f/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr
 8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on tsne_abunds.pdf (7 pages, 4554958 bytes).
+Output written on tsne_abunds.pdf (7 pages, 4554332 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

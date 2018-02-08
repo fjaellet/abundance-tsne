@@ -3,48 +3,49 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tsne_abunds.aux
 The style file: aa.bst
 Database file #1: FA_library.bib
+Warning--empty publisher in Cutri2003
 Warning--empty publisher in Ivezic2013
 Warning--empty journal in Linderman2017
 Warning--empty publisher in Pagel2009
-You've used 44 entries,
+You've used 50 entries,
             2947 wiz_defined-function locations,
-            924 strings with 33794 characters,
-and the built_in function-call counts, 70833 in all, are:
-= -- 4924
-> -- 11192
-< -- 16
-+ -- 3736
-- -- 3691
-* -- 7059
-:= -- 13460
-add.period$ -- 44
-call.type$ -- 44
-change.case$ -- 1404
-chr.to.int$ -- 43
-cite$ -- 47
-duplicate$ -- 821
-empty$ -- 1159
-format.name$ -- 3800
-if$ -- 13655
+            957 strings with 35672 characters,
+and the built_in function-call counts, 74927 in all, are:
+= -- 5239
+> -- 11658
+< -- 17
++ -- 3892
+- -- 3841
+* -- 7431
+:= -- 14230
+add.period$ -- 50
+call.type$ -- 50
+change.case$ -- 1478
+chr.to.int$ -- 49
+cite$ -- 54
+duplicate$ -- 929
+empty$ -- 1317
+format.name$ -- 3966
+if$ -- 14451
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 40
-newline$ -- 136
-num.names$ -- 179
-pop$ -- 1412
+missing$ -- 46
+newline$ -- 154
+num.names$ -- 203
+pop$ -- 1490
 preamble$ -- 1
-purify$ -- 1404
+purify$ -- 1478
 quote$ -- 0
-skip$ -- 706
+skip$ -- 799
 stack$ -- 0
-substring$ -- 831
+substring$ -- 943
 swap$ -- 28
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 390
-warning$ -- 3
-while$ -- 169
+type$ -- 441
+warning$ -- 4
+while$ -- 191
 width$ -- 0
-write$ -- 433
-(There were 3 warnings)
+write$ -- 491
+(There were 4 warnings)
