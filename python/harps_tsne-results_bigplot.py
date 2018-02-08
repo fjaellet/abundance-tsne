@@ -30,14 +30,15 @@ labels = [r'$\rm \tau \ [Gyr]$', r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Y/Mg
           r'$\rm [Ba/Fe]$', r'$\rm [Y/Al]$', r'$\rm [Nd/Fe]$', r'$\rm [Sr/Ba]$',
           r'$\rm [Ce/Fe]$', r'$\rm [Zr/Ba]$', r'$\rm [Zn/Fe]$', r'$\rm [Eu/Fe]$',
           r'$\rm [Cu/Fe]$', r'$\rm [O/H]$', r'$\rm [C/Fe]$', r'$\rm [C/O]$',
-          r'$\rm [Si/Fe]$'
+          r'$\rm [Si/Fe]$', r'$\rm L_Z$', r'$\rm J_R$', r'$\rm J_Z$',
+          r'$\sqrt{U^2+W^2}$ [km/s]'
           ]
 
 xx  = [data['meanage'], data['feh'],             # 0
        data['TiIFe'], data['YFe']-data['MgFe'],
        data['ZrIIFe'], data['AlFe']-data['MgFe'],
-       data['MgFe'], data['Ulsr'],
-       data['Vlsr'], data['Wlsr'], 
+       data['MgFe'], -data['vXg'],
+       data['vYg'], data['vZg'], 
        data['Teff'], data['logg_hip'],           # 10
        data['Rg'], data['Zg'], 
        data['Xg'], data['Yg'], 
@@ -47,13 +48,15 @@ xx  = [data['meanage'], data['feh'],             # 0
        data['ZnFe'], data['EuFe'],
        data['CuFe'], data['[O/H]_6158_BdL15'],
        data['[C/H]_SA17']-data['feh'],data['[C/H]_SA17']-data['[O/H]_6158_BdL15'],
-       data['SiFe'] ]
+       data['SiFe'], data['Lz'],                
+       data['JR_st_m'], data['JZ_st_m'],                 # 30
+       np.sqrt( data['vXg']**2. + data['vZg']**2. )]
 
 xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         np.sqrt(data['errY']**2.+data['errMg']**2.), data['errZrII'],
         np.sqrt(data['errAl']**2.+data['errMg']**2.),
-        data['errMg'], 9.8 * np.ones(len(data)),
-        9.8 * np.ones(len(data)), 9.8 * np.ones(len(data)), 
+        data['errMg'], data['vXg_sig'],
+        data['vYg_sig'], data['vZg_sig'], 
         data['erTeff'], data['erlogg_hip'],           # 10
         data['Rg_sig'], data['Zg_sig'], 
         data['Xg_sig'], data['Yg_sig'], 
@@ -63,8 +66,9 @@ xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         data['errZn'], data['errEu'],
         data['errCu'], data['e_[O/H]_6158_BdL15'],
         np.sqrt(data['e_[C/H]_SA17']**2.+data['erfeh']**2.), np.sqrt(data['e_[C/H]_SA17']**2.+data['e_[O/H]_6158_BdL15']**2.),
-        data['errSi']
-        ]
+        data['errSi'], data['Lz_sig'],                
+        0.5*abs(data['JR_st_U']-data['JR_st_L']), 0.5*abs(data['JZ_st_U']-data['JZ_st_L']), #30
+        np.sqrt( data['vXg_sig']**2. + data['vZg_sig']**2. )]
 
 # MC test plot
 
@@ -117,15 +121,12 @@ ax.axis([-13, 27, -8, 12])
 plt.savefig("../im/harps_tsne-mctest_"+sets+".png", dpi=200)  
 
 
-# age plots
+################# age plots #########################
 
 exinds = [ [0,1], [0,6], [0,2], [0,22],
            [0,3], [0,17],[0,22],[0,16] ]
 limits = [ None,  None,  None,  None, 
            None,  None,  None,  None]
-
-#------------------------------------------------------------
-# Plot the results
 
 g   = plt.figure(figsize=(6, 10))
 plt.suptitle("Abundance trends with age", fontsize=17)
@@ -160,6 +161,50 @@ for jj in range(8):
         ax.locator_params(tight=True, nbins=4)
 
 plt.savefig("../im/harps_tsne-age-abundsplot_"+sets+".png", dpi=200)  
+
+################### kinematics plots ######################
+
+exinds = [ [14,15], [12,13], [7,8], [8,9],
+           [8,32], [0,32], [0,30],[0,31] ]
+limits = [ None,  None,  None,  None, 
+           None,  None,  [-.1,15.1,0,0.5],  [-.1,15.1, 0, .5]]
+
+g   = plt.figure(figsize=(6, 10))
+plt.suptitle("Kinematic trends", fontsize=17)
+gs = gridspec.GridSpec(4, 2)
+gs.update(left=0.12, bottom=0.07, right=0.86, top=0.93,
+           wspace=0.06, hspace=0.31)
+
+for jj in range(8):
+    print jj
+    ax = plt.Subplot(g, gs[jj/2, jj%2])
+    if exinds[jj] != None:
+        g.add_subplot(ax)
+        for kk in np.arange(len(t.subsets)):
+            mask = (t.classcol == t.subsets[kk]) * (xerr[exinds[jj][0]] > -9.)* (xerr[exinds[jj][1]] > -9.)
+            ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
+                        xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
+                       ms=0, mec="k", capthick=0, elinewidth=1,
+                       mfc=t.col[kk], alpha=t.al[kk]/4., ecolor=t.col[kk], lw=0,
+                       marker=t.sym[kk], zorder=0)
+            ax.scatter(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
+                       s=t.size[kk], lw=t.lw[kk], edgecolors="k",
+                       c=t.col[kk], alpha=t.al[kk],
+                       marker=t.sym[kk])
+        if jj>=6:
+            ax.set_yscale("log", nonposy='clip')
+            ax.set_ylim([0.000001, .4])
+
+        ax.set_xlabel(labels[exinds[jj][0]], fontsize=14)
+        ax.set_ylabel(labels[exinds[jj][1]], fontsize=14)
+        if jj%2 == 1:
+            ax.yaxis.tick_right()
+            ax.yaxis.set_label_position("right")
+        #if limits[jj] != None:
+        #    ax.axis(limits[jj])
+        #ax.locator_params(tight=True, nbins=4)
+
+plt.savefig("../im/harps_tsne-kin-abundsplot_"+sets+".png", dpi=200)  
 
 
 # t-SNE + abundances plot

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  25 JAN 2018 23:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  1 FEB 2018 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,6 +756,9 @@ LaTeX Info: Redefining \not on input line 1043.
 
 LaTeX Warning: Label `harps2' multiply defined.
 
+
+LaTeX Warning: Label `harps2' multiply defined.
+
 )
 \openout1 = `tsne_abunds.aux'.
 
@@ -1048,15 +1051,28 @@ Underfull \hbox (badness 2913) in paragraph at lines 160--160
 -sured with the
  []
 
+<im/harps_tsne-kin-abundsplot_teffcut.png, id=52, 433.62pt x 722.7pt>
+File: im/harps_tsne-kin-abundsplot_teffcut.png Graphic file (type png)
 
-Underfull \hbox (badness 1924) in paragraph at lines 243--244
+<use im/harps_tsne-kin-abundsplot_teffcut.png>
+Package pdftex.def Info: im/harps_tsne-kin-abundsplot_teffcut.png used on input
+ line 168.
+(pdftex.def)             Requested size: 256.53291pt x 427.56924pt.
+
+Underfull \hbox (badness 2913) in paragraph at lines 169--169
+[]\T1/txr/bx/n/9 Fig. 7. |\T1/txr/m/n/9 Abundance trends with stel-lar age, mea
+-sured with the
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 252--253
 []\T1/txr/m/n/10 It is bet-ter to con-fine the anal-y-sis to nar-row re-gions
  []
 
 (./tsne_abunds.bbl [6 <./im/harps_tsne-mctest_teffcut.png> <./im/harps_tsne-age
 -abundsplot_teffcut.png>] (./tsne_abunds.llt)) [7
 
-] (./tsne_abunds.aux)
+ <./im/harps_tsne-kin-abundsplot_teffcut.png>] (./tsne_abunds.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1065,10 +1081,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6378 strings out of 494041
- 81681 string characters out of 6158495
- 211052 words of memory out of 5000000
- 9543 multiletter control sequences out of 15000+600000
+ 6383 strings out of 494041
+ 81897 string characters out of 6158495
+ 211542 words of memory out of 5000000
+ 9547 multiletter control sequences out of 15000+600000
  91514 words of font info for 151 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  41i,12n,45p,7218b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1082,10 +1098,10 @@ vb8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texm
 f/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr
 8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on tsne_abunds.pdf (7 pages, 4174834 bytes).
+Output written on tsne_abunds.pdf (7 pages, 4553524 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 64 words of extra memory for PDF output out of 10000 (max. 10000000)
 

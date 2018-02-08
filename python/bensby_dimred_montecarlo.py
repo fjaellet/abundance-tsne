@@ -47,7 +47,7 @@ titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [O/H]$', r'$\rm [Mg/O]$',
           r'$T_{\rm eff}$', r'$\log g$', r'$\xi$', r'$TD/D$',
           r'$\tau$', r'$U$', r'$V$', r'$W$']
 
-for p in [5, 15, 30, 40, 50, 75, 100, 120, 150]:#[
+for p in [20, 25]: #[5, 15, 30, 40, 50, 75, 100, 120, 150]:#[
     for i in [0]:
         t0 = time()
         # Use the recommendations of Linderman & Steinerberger 2017

@@ -195,7 +195,7 @@ Lc = (Rc/_Rsun) * (vcirc_c/_vc_sun)
 
 '''In order to derive actions, we have to know that the orbits are bound..'''
 mask = (E<-0.8)
-
+"""
 # Adiabatic Approximation (Binney 2010)
 from galpy.actionAngle import actionAngleAdiabatic
 aAA= actionAngleAdiabatic(pot=MWPotential2014)
@@ -214,7 +214,7 @@ JR_adi_m[mask] = adiabatic_actions_m[0]
 JPhi_adi_m[mask] = adiabatic_actions_m[1]
 JZ_adi_m[mask] = adiabatic_actions_m[2]
 
-"""
+
 '''Estimate VERY CONSERVATIVE uncertainties just by varying the input values
 in the same direction'''
 
