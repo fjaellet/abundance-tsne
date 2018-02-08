@@ -6,7 +6,7 @@
 \usepackage{natbib}
 
 \bibpunct{(}{)}{;}{a}{}{,}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% cris was here
 %\usepackage[options]{hyperref}
 % To add links in your PDF file, use the package "hyperref"
 % with options according to your LaTeX or PDFLaTeX drivers.
@@ -47,10 +47,11 @@ In spite of this recent conquista of the Milky Way in terms of number of spectro
 
 The wealth of new data, especially the high dimensionality of chemo-kinematics space, requires new statistical analysis methods to efficiently constrain detailed Milky-Way formation models (including e.g. stellar evolution, stellar chemical feedback, chemical evolution, and dynamical evolution). Traditionally, the metallicity distribution function and 2D chemical-abundance diagrams ([X/Fe] vs. [Fe/H]), and abundance gradients have been used to constrain the chemical evolution of stellar populations \citep[e.g.][]{Pagel2009}. On the other hand, it is also possible to {\it define} a stellar population by chemistry (e.g. carbon-enhanced metal-poor stars - \citealt{Beers2005}; the chemical thick disc - \citealt{Gratton1996, Fuhrmann1998}; high-[$\alpha$/Fe] metal-rich stars - \citealt{Adibekyan2011}), and to then study their structural and chemo-kinematic properties in detail. This is usually done in a simple fashion, by looking at only one 2D abundance diagram. In this paper we explore the possibility of combining the information contained in various measured abundance ratios using t-distributed stochastic neighbour embedding (t-SNE) to define more robust subpopulations and better identify outliers. 
 
-In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017}). 
+In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2017}). 
 During the writing of this paper, \citet{Kos2017} demonstrated in a complementary analysis that abundance-space t-SNE is indeed a reliable chemical-tagging tool: the authors were able to recover 7 out of 9 known open and globular clusters with high efficiency and low contamination using 13 chemical abundances from the GALAH survey \citep{Martell2017}, and they also found two new field member stars to known clusters with this technique. 
+Here we apply abundance-space t-SNE to the high-resolution solar-vicinity HARPS-GTO survey data of \citet{DelgadoMena2017}, and show that this method provides a powerful visualisation and clustering tool for chemical-tagging studies. We identify, in a robust way, several distinct chemical-abundance substructures of the solar-vicinity disc population, as well as some peculiar stars. In an acompanying letter (Chiappini et al., in prep.) we discuss the main result of chemical subpopulations in the high-[$\alpha$/Fe] regime, which is ubiquitous in other surveys as well, and points to a different origin of the metal-poor and metal-rich part of the chemical thick disc.
 
-The paper is structured as follows: Sec. \ref{method} introduces t-SNE. Sections \ref{harps} and \ref{bensby} describe and discuss the results for the high-resolution spectroscopic solar-vicinity surveys of \citet{DelgadoMena2017} and \citet{Bensby2014}. We reconsider possible caveats of our results in Sec. \ref{caveats} and finish with a summary and conclusions in Sec. \ref{conclusions}.
+This paper is structured as follows: Sec. \ref{method} introduces t-SNE. Sections \ref{harps} and \ref{bensby} describe and discuss the results for the high-resolution spectroscopic solar-vicinity surveys of \citet{DelgadoMena2017} and \citet{Bensby2014}. We reconsider possible caveats of our results in Sec. \ref{caveats} and finish with a summary and conclusions in Sec. \ref{conclusions}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dissecting chemistry space with t-SNE}\label{method}
@@ -110,7 +111,7 @@ We now proceed to the discussion of these results.
 
 \subsection{The overall appearance of the t-SNE map}
 
-Since t-SNE is a highly non-linear projection method, and since sample and its abundance determination method differ significantly from the stars studied by \citet{Bensby2014}, the overall morphologies of the t-SNE maps in Figs. \ref{bensby1} and \ref{harps1} are also expected to be dissimilar. While this is indeed the case, there are some features that appear in both maps, and can therefore be suggested to be generic properties of the solar-neighbourhood abundance space:
+
 
 \begin{figure}\centering
  \includegraphics[trim=0cm 2cm 0cm 0cm, clip=true, width=0.49\textwidth]{im/harps_tsne_abundances-relto-Fe_thin.png}
@@ -123,8 +124,14 @@ Since t-SNE is a highly non-linear projection method, and since sample and its a
 \subsection{The robustness of the t-SNE results}
 
 \begin{figure}\centering
+ \includegraphics[width=0.49\textwidth]{im/harps-tSNE_perplexitytest_withsubsets.png}
+\caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{DelgadoMena2017} sample. Each column row represents a combination of input information, while each row corresponds to a particular perplexity value, as indicated on the right side of the figure. The panel highlighted in yellow represents the results that we analyse in detail in this paper by defining chemical subpopulations based on this map.}
+\label{perplexitytest2}
+\end{figure}
+
+\begin{figure}\centering
  \includegraphics[width=0.49\textwidth]{im/harps_tsne-mctest_teffcut.png}
-\caption{Robustness test of our t-SNE-selected subsamples. The right panel shows the fiducial map, while the left panel shows the result of our Monte-Carlo test. For each star, 50 random stars were drawn from the a Gaussian centered on the measured abundance, and with widths corresponding to the measured uncertainties. The resulting map demonstrates that our selected subgroups are robust to measurement errors.}
+\caption{Robustness test of our t-SNE-selected subsamples to abundance errors. The right panel shows the fiducial map, while the left panel shows the result of our Monte-Carlo test. For each star, 50 random stars were drawn from the a Gaussian centered on the measured abundance, and with widths corresponding to the measured uncertainties. The resulting map demonstrates that our selected subgroups are robust to measurement errors.}
 \label{harps2}
 \end{figure}
 
@@ -132,11 +139,12 @@ We tested the robustness of our reference map with a simple Monte-Carlo experime
 
 \subsection{The thin-thick disc dichotomy} 
 
-As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} or \citet{DelgadoMena2017}, there is a clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram. This discontinuity is reflected in a very clear manner in the t-SNE projection. 
+As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} or \citet{DelgadoMena2017}, there is a clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram. This discontinuity is reflected in a very clear manner in the t-SNE projection:
+We find a clear and obvious gap between the chemical thin- and thick-disc populations in the t-SNE diagram that remains very robust for different choices of the t-SNE hyper-parameters. Primarily, this means that the chemical patterns of thin and thick disc are indeed distinct, and can be disentangled by high-resolution spectroscopy. Secondly, our analysis of the full chemical information results in a much more accurate division of the chemically-thin and thick populations. Indeed, if one only relies on one diagnostic, such as the [Mg/Fe] vs. [Fe/H] diagram \citep{Adibekyan2011, DelgadoMena2017}, several thin-disc stars would (most probably incorrectly) be identified as belonging chemical thick disc (see Fig. \ref{harps0}). 
 
-\subsection{Subpopulations and chemically peculiar stars}
+\subsection{Sub-populations and chemically peculiar stars}
 
-{\it Thick-disc sub-populations:} 
+{\it Thick-disc sub-populations:} \citet{Adibekyan2011} first discovered a clear discontinuity between the metal-poor and metal-rich $[\alpha$/Fe]-enhanced (or h$\alpha$mr) disc populations. In our t-SNE analysis of the \citet{Bensby2014} sample, similar to the original paper, we only see a hint of a difference between the two populations (dubbed Thick Disc I and II in Fig. \ref{bensby1}). The bimodality is better seen when slightly higher perplexity values are chosen ($p\sim 30$). Even if ages and/or kinematics are included as additional dimensions in the analysis, this picture does not change much. 
 
 {\it Thin-thick transition stars:} 
 
@@ -150,6 +158,15 @@ As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} or \citet{Delg
 
 \begin{figure}\centering
  \includegraphics[width=0.49\textwidth]{im/harps_tsne-age-abundsplot_teffcut.png}
+\caption{Abundance trends with stellar age, measured with the \texttt{StarHorse} code \citep{Queiroz2017}.}
+\label{harps2}
+\end{figure}
+
+
+\subsection{Kinematic trends}
+
+\begin{figure}\centering
+ \includegraphics[width=0.49\textwidth]{im/harps_tsne-kin-abundsplot_teffcut.png}
 \caption{Abundance trends with stellar age, measured with the \texttt{StarHorse} code \citep{Queiroz2017}.}
 \label{harps2}
 \end{figure}
@@ -185,7 +202,7 @@ As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} or \citet{Delg
 % \label{bensby3}
 % \end{figure*}
 % 
-
+% Since t-SNE is a highly non-linear projection method, and since sample and its abundance determination method differ significantly from the stars studied by \citet{Bensby2014}, the overall morphologies of the t-SNE maps in Figs. \ref{bensby1} and \ref{harps1} are also expected to be dissimilar. While this is indeed the case, there are some features that appear in both maps, and can therefore be suggested to be generic properties of the solar-neighbourhood abundance space:
 % 
 % In Fig. \ref{bensby2} we identify some of the substructures that appear in Fig. \ref{bensby1}, and discuss them below. In addition, Fig. \ref{bensby3} shows the corresponding [X/O] abundance trends versus proton number, for each of the subpopulations defined in Fig. \ref{bensby2}.
 % 
@@ -216,15 +233,10 @@ As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} or \citet{Delg
 % 
 % \begin{figure}\centering
 %  \includegraphics[width=0.49\textwidth]{bensby-tSNE_perplexitytest_withsubsets.png}
-% \caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{Bensby2014} sample. Each column row represents a combination of input information, while each row corresponds to a particular perplexity value, as indicated on the right side of the figure. The panel highlighted in yellow represents the results that we analyse in detail in this paper by defining chemical subpopulations based on this map.}
+% \caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{Bensby2014} sample. }
 % \label{perplexitytest}
 % \end{figure}
 % 
-% \begin{figure}\centering
-%  \includegraphics[width=0.49\textwidth]{harps-tSNE_perplexitytest_withsubsets.png}
-% \caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{DelgadoMena2017} sample, in the same style as Fig. \ref{perplexitytest}.}
-% \label{perplexitytest2}
-% \end{figure}
 % 
 % 
 % \subsection{Residual trends with stellar parameters}

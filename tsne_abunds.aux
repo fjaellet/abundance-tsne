@@ -15,15 +15,13 @@
 \citation{Kos2017}
 \citation{Martell2017}
 \citation{DelgadoMena2017}
-\citation{Bensby2014}
-\citation{Matijevivc2012,Ivezic2013}
+\citation{DelgadoMena2017}
 \select@language{english}
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
 \@writefile{lot}{\select@language{english}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Dissecting chemistry space with t-SNE}{1}}
-\newlabel{method}{{2}{1}}
+\citation{Matijevivc2012,Ivezic2013}
 \citation{Bensby2014}
 \citation{DelgadoMena2017}
 \citation{Hinton2003,vanderMaaten2008}
@@ -43,6 +41,8 @@
 \citation{DelgadoMena2017}
 \citation{Suarez-Andres2017,BertrandeLis2015}
 \citation{Santiago2016,Queiroz2017}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Dissecting chemistry space with t-SNE}{2}}
+\newlabel{method}{{2}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Re-analysing the HARPS GTO sample}{2}}
 \newlabel{harps}{{3}{2}}
 \citation{GaiaCollaboration2016}
@@ -67,6 +67,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Sub-populations and chemically peculiar stars}{5}}
 \citation{Queiroz2017}
 \citation{Queiroz2017}
+\citation{Bensby2014}
+\citation{vanderMaaten2008}
+\citation{Wattenberg2016}
 \citation{Kos2017}
 \bibstyle{aa}
 \bibdata{FA_library}
@@ -92,6 +95,19 @@
 \bibcite{Ivezic2013}{{20}{2013}{{{Ivezi{\'c}} {et~al.}}}{{{Ivezi{\'c}}, {Connolly}, {VanderPlas}, \& {Gray}}}}
 \bibcite{Kos2017}{{21}{2017}{{{Kos} {et~al.}}}{{{Kos}, {Bland-Hawthorn}, {Freeman}, {Buder}, {Traven}, {De Silva}, {Sharma}, {Asplund}, {Duong}, {Lin}, {Lind}, {Martell}, {Simpson}, {Stello}, {Zucker}, {Zwitter}, {Anguiano}, {Da Costa}, {Horner}, {Kafle}, {Lewis}, {Munari}, {Nataf}, {Ness}, {Reid}, {Schlesinger}, {Ting}, \& {Wyse}}}}
 \bibcite{Kullback1951}{{22}{1951}{{Kullback \& Leibler}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Robustness test of our t-SNE-selected subsamples to abundance errors. The right panel shows the fiducial map, while the left panel shows the result of our Monte-Carlo test. For each star, 50 random stars were drawn from the a Gaussian centered on the measured abundance, and with widths corresponding to the measured uncertainties. The resulting map demonstrates that our selected subgroups are robust to measurement errors.}}{6}}
+\newlabel{harps2}{{5}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Abundance trends with age}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Kinematic trends}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Caveats and possible improvements}{6}}
+\newlabel{caveats}{{4}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Choosing the abundance space}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Residual trends with stellar parameters}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}The effect of adding age and kinematics to the analysis}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{6}}
+\newlabel{conclusions}{{5}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Abundance trends with stellar age, measured with the \texttt  {StarHorse} code \citep  {Queiroz2017}.}}{6}}
+\newlabel{harps2}{{6}{6}}
 \bibcite{Lindegren2013}{{23}{2013}{{{Lindegren} \& {Feltzing}}}{{}}}
 \bibcite{Linderman2017}{{24}{2017}{{Linderman \& Steinerberger}}{{}}}
 \bibcite{Majewski2017}{{25}{2017}{{{Majewski} {et~al.}}}{{{Majewski}, {Schiavon}, {Frinchaboy}, {Allende Prieto}, {Barkhouser}, {Bizyaev}, {Blank}, {Brunner}, {Burton}, {Carrera}, {Chojnowski}, {Cunha}, {Epstein}, {Fitzgerald}, {Garc{\'{\i }}a P{\'e}rez}, {Hearty}, {Henderson}, {Holtzman}, {Johnson}, {Lam}, {Lawler}, {Maseman}, {M{\'e}sz{\'a}ros}, {Nelson}, {Nguyen}, {Nidever}, {Pinsonneault}, {Shetrone}, {Smee}, {Smith}, {Stolberg}, {Skrutskie}, {Walker}, {Wilson}, {Zasowski}, {Anders}, {Basu}, {Beland}, {Blanton}, {Bovy}, {Brownstein}, {Carlberg}, {Chaplin}, {Chiappini}, {Eisenstein}, {Elsworth}, {Feuillet}, {Fleming}, {Galbraith-Frew}, {Garc{\'{\i }}a}, {Garc{\'{\i }}a-Hern{\'a}ndez}, {Gillespie}, {Girardi}, {Gunn}, {Hasselquist}, {Hayden}, {Hekker}, {Ivans}, {Kinemuchi}, {Klaene}, {Mahadevan}, {Mathur}, {Mosser}, {Muna}, {Munn}, {Nichol}, {O'Connell}, {Parejko}, {Robin}, {Rocha-Pinto}, {Schultheis}, {Serenelli}, {Shane}, {Silva Aguirre}, {Sobeck}, {Thompson}, {Troup}, {Weinberg}, \& {Zamora}}}}
@@ -110,14 +126,6 @@
 \bibcite{Traven2017}{{38}{2017}{{{Traven} {et~al.}}}{{{Traven}, {Matijevi{\v c}}, {Zwitter}, {{\v Z}erjal}, {Kos}, {Asplund}, {Bland-Hawthorn}, {Casey}, {De Silva}, {Freeman}, {Lin}, {Martell}, {Schlesinger}, {Sharma}, {Simpson}, {Zucker}, {Anguiano}, {Da Costa}, {Duong}, {Horner}, {Hyde}, {Kafle}, {Munari}, {Nataf}, {Navin}, {Reid}, \& {Ting}}}}
 \bibcite{Tsantaki2013}{{39}{2013}{{{Tsantaki} {et~al.}}}{{{Tsantaki}, {Sousa}, {Adibekyan}, {Santos}, {Mortier}, \& {Israelian}}}}
 \bibcite{Valentini2017}{{40}{2017}{{{Valentini} {et~al.}}}{{{Valentini}, {Chiappini}, {Davies}, {Elsworth}, {Mosser}, {Lund}, {Miglio}, {Chaplin}, {Rodrigues}, {Boeche}, {Steinmetz}, {Matijevi{\v c}}, {Kordopatis}, {Bland-Hawthorn}, {Munari}, {Bienaym{\'e}}, {Freeman}, {Gibson}, {Gilmore}, {Grebel}, {Helmi}, {Kunder}, {McMillan}, {Navarro}, {Parker}, {Reid}, {Seabroke}, {Sharma}, {Siviero}, {Watson}, {Wyse}, {Zwitter}, \& {Mott}}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Robustness test of our t-SNE-selected subsamples. The right panel shows the fiducial map, while the left panel shows the result of our Monte-Carlo test. For each star, 50 random stars were drawn from the a Gaussian centered on the measured abundance, and with widths corresponding to the measured uncertainties. The resulting map demonstrates that our selected subgroups are robust to measurement errors.}}{6}}
-\newlabel{harps2}{{5}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Abundance trends with age}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Kinematic trends}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions}{6}}
-\newlabel{conclusions}{{4}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Abundance trends with stellar age, measured with the \texttt  {StarHorse} code \citep  {Queiroz2017}.}}{6}}
-\newlabel{harps2}{{6}{6}}
 \bibcite{vanderMaaten2008}{{41}{2008}{{{van der Maaten} \& {Hinton}}}{{}}}
 \bibcite{vanLeeuwen2007}{{42}{2007}{{van Leeuwen}}{{}}}
 \bibcite{Wattenberg2016}{{43}{2016}{{Wattenberg {et~al.}}}{{Wattenberg, Vi\IeC {\'e}gas, \& Johnson}}}

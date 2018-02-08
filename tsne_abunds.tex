@@ -49,8 +49,9 @@ The wealth of new data, especially the high dimensionality of chemo-kinematics s
 
 In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2017}). 
 During the writing of this paper, \citet{Kos2017} demonstrated in a complementary analysis that abundance-space t-SNE is indeed a reliable chemical-tagging tool: the authors were able to recover 7 out of 9 known open and globular clusters with high efficiency and low contamination using 13 chemical abundances from the GALAH survey \citep{Martell2017}, and they also found two new field member stars to known clusters with this technique. 
+Here we apply abundance-space t-SNE to the high-resolution solar-vicinity HARPS-GTO survey data of \citet{DelgadoMena2017}, and show that this method provides a powerful visualisation and clustering tool for chemical-tagging studies. We identify, in a robust way, several distinct chemical-abundance substructures of the solar-vicinity disc population, as well as some peculiar stars. In an acompanying letter (Chiappini et al., in prep.) we discuss the main result of chemical subpopulations in the high-[$\alpha$/Fe] regime, which is ubiquitous in other surveys as well, and points to a different origin of the metal-poor and metal-rich part of the chemical thick disc.
 
-The paper is structured as follows: Sec. \ref{method} introduces t-SNE. Sections \ref{harps} and \ref{bensby} describe and discuss the results for the high-resolution spectroscopic solar-vicinity surveys of \citet{DelgadoMena2017} and \citet{Bensby2014}. We reconsider possible caveats of our results in Sec. \ref{caveats} and finish with a summary and conclusions in Sec. \ref{conclusions}.
+This paper is structured as follows: Sec. \ref{method} introduces t-SNE. Section \ref{harps} describes and discuss the results for the high-resolution spectroscopic solar-vicinity survey of \citet{DelgadoMena2017}. We reconsider possible caveats of our results in Sec. \ref{caveats} and finish with a summary and conclusions in Sec. \ref{conclusions}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dissecting chemistry space with t-SNE}\label{method}
@@ -130,7 +131,7 @@ We now proceed to the discussion of these results.
 
 \begin{figure}\centering
  \includegraphics[width=0.49\textwidth]{im/harps_tsne-mctest_teffcut.png}
-\caption{Robustness test of our t-SNE-selected subsamples. The right panel shows the fiducial map, while the left panel shows the result of our Monte-Carlo test. For each star, 50 random stars were drawn from the a Gaussian centered on the measured abundance, and with widths corresponding to the measured uncertainties. The resulting map demonstrates that our selected subgroups are robust to measurement errors.}
+\caption{Robustness test of our t-SNE-selected subsamples to abundance errors. The right panel shows the fiducial map, while the left panel shows the result of our Monte-Carlo test. For each star, 50 random stars were drawn from the a Gaussian centered on the measured abundance, and with widths corresponding to the measured uncertainties. The resulting map demonstrates that our selected subgroups are robust to measurement errors.}
 \label{harps2}
 \end{figure}
 
@@ -222,24 +223,16 @@ We find a clear and obvious gap between the chemical thin- and thick-disc popula
 % 
 % 
 % 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Caveats and possible improvements}\label{caveats}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% \subsection{Choosing the abundance space}
-% 
-% The t-SNE results for the \citet{Bensby2014} dataset are shown in Fig. \ref{perplexitytest}, for a range of perplexity values and different input. Following the recommendations of \citet{vanderMaaten2008} and \citet{Wattenberg2016}, we use this figure to choose the optimal perplexity value for each dataset (yellow-highlighted panels). In the following subsections, we analyse these results in detail.
-% 
-% \begin{figure}\centering
-%  \includegraphics[width=0.49\textwidth]{bensby-tSNE_perplexitytest_withsubsets.png}
-% \caption{t-SNE representations of the chrono-chemo-kinematics space spanned by the \citet{Bensby2014} sample. }
-% \label{perplexitytest}
-% \end{figure}
-% 
-% 
-% 
-% \subsection{Residual trends with stellar parameters}
-% \subsection{The effect of adding age and kinematics to the analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Caveats and possible improvements}\label{caveats}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Choosing the abundance space}
+
+The t-SNE results for the \citet{Bensby2014} dataset are shown in Fig. \ref{perplexitytest}, for a range of perplexity values and different input. Following the recommendations of \citet{vanderMaaten2008} and \citet{Wattenberg2016}, we use this figure to choose the optimal perplexity value for each dataset (yellow-highlighted panels). In the following subsections, we analyse these results in detail.
+
+\subsection{Residual trends with stellar parameters}
+\subsection{The effect of adding age and kinematics to the analysis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}\label{conclusions}
