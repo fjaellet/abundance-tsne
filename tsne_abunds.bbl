@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{54}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -11,6 +11,18 @@
   {Khachatryan}}]{Adibekyan2012}
 {Adibekyan}, V.~Z., {Sousa}, S.~G., {Santos}, N.~C., {et~al.} 2012, \aap, 545,
   A32
+
+\bibitem[{{Anders} {et~al.}(2017){Anders}, {Chiappini}, {Rodrigues}, {Miglio},
+  {Montalb{\'a}n}, {Mosser}, {Girardi}, {Valentini}, {Noels}, {Morel},
+  {Johnson}, {Schultheis}, {Baudin}, {de Assis Peralta}, {Hekker},
+  {Theme{\ss}l}, {Kallinger}, {Garc{\'{\i}}a}, {Mathur}, {Baglin}, {Santiago},
+  {Martig}, {Minchev}, {Steinmetz}, {da Costa}, {Maia}, {Allende Prieto},
+  {Cunha}, {Beers}, {Epstein}, {Garc{\'{\i}}a P{\'e}rez},
+  {Garc{\'{\i}}a-Hern{\'a}ndez}, {Harding}, {Holtzman}, {Majewski},
+  {M{\'e}sz{\'a}ros}, {Nidever}, {Pan}, {Pinsonneault}, {Schiavon},
+  {Schneider}, {Shetrone}, {Stassun}, {Zamora}, \& {Zasowski}}]{Anders2017}
+{Anders}, F., {Chiappini}, C., {Rodrigues}, T.~S., {et~al.} 2017, \aap, 597,
+  A30
 
 \bibitem[{{Anders} {et~al.}(2014){Anders}, {Chiappini}, {Santiago},
   {Rocha-Pinto}, {Girardi}, {da Costa}, {Maia}, {Steinmetz}, {Minchev},
@@ -37,6 +49,13 @@
 \bibitem[{{Bressan} {et~al.}(2012){Bressan}, {Marigo}, {Girardi}, {Salasnich},
   {Dal Cero}, {Rubele}, \& {Nanni}}]{Bressan2012}
 {Bressan}, A., {Marigo}, P., {Girardi}, L., {et~al.} 2012, \mnras, 427, 127
+
+\bibitem[{{Casagrande} {et~al.}(2016){Casagrande}, {Silva Aguirre},
+  {Schlesinger}, {Stello}, {Huber}, {Serenelli}, {Sch{\"o}nrich}, {Cassisi},
+  {Pietrinferni}, {Hodgkin}, {Milone}, {Feltzing}, \&
+  {Asplund}}]{Casagrande2016}
+{Casagrande}, L., {Silva Aguirre}, V., {Schlesinger}, K.~J., {et~al.} 2016,
+  \mnras, 455, 987
 
 \bibitem[{{Chen} {et~al.}(2015){Chen}, {Bressan}, {Girardi}, {Marigo}, {Kong},
   \& {Lanza}}]{Chen2015}
@@ -287,6 +306,27 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Hobbs}}]{Michalik2015}
 {Michalik}, D., {Lindegren}, L., \& {Hobbs}, D. 2015, \aap, 574, A115
 
+\bibitem[{{Miglio} {et~al.}(2017){Miglio}, {Chiappini}, {Mosser}, {Davies},
+  {Freeman}, {Girardi}, {Jofr{\'e}}, {Kawata}, {Rendle}, {Valentini},
+  {Casagrande}, {Chaplin}, {Gilmore}, {Hawkins}, {Holl}, {Appourchaux},
+  {Belkacem}, {Bossini}, {Brogaard}, {Goupil}, {Montalb{\'a}n}, {Noels},
+  {Anders}, {Rodrigues}, {Piotto}, {Pollacco}, {Rauer}, {Prieto}, {Avelino},
+  {Babusiaux}, {Barban}, {Barbuy}, {Basu}, {Baudin}, {Benomar}, {Bienaym{\'e}},
+  {Binney}, {Bland-Hawthorn}, {Bressan}, {Cacciari}, {Campante}, {Cassisi},
+  {Christensen-Dalsgaard}, {Combes}, {Creevey}, {Cunha}, {Jong}, {Laverny},
+  {Degl'Innocenti}, {Deheuvels}, {Depagne}, {Ridder}, {Matteo}, {Mauro},
+  {Dupret}, {Eggenberger}, {Elsworth}, {Famaey}, {Feltzing}, {Garc{\'{\i}}a},
+  {Gerhard}, {Gibson}, {Gizon}, {Haywood}, {Handberg}, {Heiter}, {Hekker},
+  {Huber}, {Ibata}, {Katz}, {Kawaler}, {Kjeldsen}, {Kurtz}, {Lagarde},
+  {Lebreton}, {Lund}, {Majewski}, {Marigo}, {Martig}, {Mathur}, {Minchev},
+  {Morel}, {Ortolani}, {Pinsonneault}, {Plez}, {Moroni}, {Pricopi},
+  {Recio-Blanco}, {Reyl{\'e}}, {Robin}, {Roxburgh}, {Salaris}, {Santiago},
+  {Schiavon}, {Serenelli}, {Sharma}, {Aguirre}, {Soubiran}, {Steinmetz},
+  {Stello}, {Strassmeier}, {Ventura}, {Ventura}, {Walton}, \&
+  {Worley}}]{Miglio2017}
+{Miglio}, A., {Chiappini}, C., {Mosser}, B., {et~al.} 2017, Astronomische
+  Nachrichten, 338, 644
+
 \bibitem[{{Nissen}(2015)}]{Nissen2015}
 {Nissen}, P.~E. 2015, \aap, 579, A52
 
@@ -313,6 +353,12 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Shahaf}}]{Reis2017}
 {Reis}, I., {Poznanski}, D., {Baron}, D., {Zasowski}, G., \& {Shahaf}, S. 2017,
   ArXiv e-prints
+
+\bibitem[{{Rodrigues} {et~al.}(2017){Rodrigues}, {Bossini}, {Miglio},
+  {Girardi}, {Montalb{\'a}n}, {Noels}, {Trabucchi}, {Coelho}, \&
+  {Marigo}}]{Rodrigues2017}
+{Rodrigues}, T.~S., {Bossini}, D., {Miglio}, A., {et~al.} 2017, \mnras, 467,
+  1433
 
 \bibitem[{{Santiago} {et~al.}(2016){Santiago}, {Brauer}, {Anders}, {Chiappini},
   {Queiroz}, {Girardi}, {Rocha-Pinto}, {Balbinot}, {da Costa}, {Maia},
