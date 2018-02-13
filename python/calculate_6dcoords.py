@@ -252,6 +252,9 @@ from galpy.actionAngle import actionAngleStaeckel
 aAS= actionAngleStaeckel(pot=MWPotential2014,delta=0.4) #optimal value for MWP14
 print 'Calculating Actions in Staeckel approximation...'
 
+e, zmax, rperi, rap = aAS.EccZmaxRperiRap(Rg/_Rsun, Zg/_Rsun,
+                          vPhig/_vc_sun, vRg/_vc_sun, vZg/_vc_sun,Phig )
+
 staeckel_actions_m = aAS(Rg[mask]/_Rsun, Zg[mask]/_Rsun,
                           vPhig[mask]/_vc_sun, vRg[mask]/_vc_sun, vZg[mask]/_vc_sun,
                           Phig[mask] )
@@ -326,10 +329,10 @@ c30=pyfits.Column( name='E', format='E', array=E)
 c31=pyfits.Column( name='Ec', format='E', array=Ec)
 c32=pyfits.Column( name='Rc', format='E', array=Rc)
 c33=pyfits.Column( name='Rc_sig', format='E', array=Rc_sig)
-#c34=pyfits.Column( name='JR_adi_m', format='E', array=JR_adi_m)
-#c35=pyfits.Column( name='JR_adi_L', format='E', array=JR_adi_L)
-#c36=pyfits.Column( name='JR_adi_U', format='E', array=JR_adi_U)
-#c37=pyfits.Column( name='JPhi_adi_m', format='E', array=JPhi_adi_m)
+c34=pyfits.Column( name='ecc', format='E', array=e)
+c35=pyfits.Column( name='zmax', format='E', array=zmax)
+c36=pyfits.Column( name='rperi', format='E', array=rperi)
+c37=pyfits.Column( name='rap', format='E', array=rap)
 #c38=pyfits.Column( name='JPhi_adi_L', format='E', array=JPhi_adi_L)
 #c39=pyfits.Column( name='JPhi_adi_U', format='E', array=JPhi_adi_U)
 #c40=pyfits.Column( name='JZ_adi_m', format='E', array=JZ_adi_m)
@@ -348,7 +351,7 @@ c51=pyfits.Column( name='JZ_st_U', format='E', array=JZ_st_U)
 columns= pyfits.ColDefs( [c01,c03,c04,c05,c06,c07,c08,c09,c10, \
                           c11,c12,c13,c14,c15,c16,c17,c18,c19,c20, \
                           c21,c22,c23,c24,c25,c26,c27,c28,c29,c30, \
-                          c31,c32,c33,#c34,c35,c36,c37,c38,c39,c40,c41,c42,
+                          c31,c32,c33,c34,c35,c36,c37,#c38,c39,c40,c41,c42,
                           c43,c44,c45,c46,c47,c48,c49,c50, \
                           c51] )
 newHDU= pyfits.BinTableHDU.from_columns(columns)
