@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  18 FEB 2018 10:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  18 FEB 2018 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1046,23 +1046,20 @@ File: im/harps_tsne-kin-abundsplot_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-kin-abundsplot_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-kin-abundsplot_teffcut.png used on input
- line 179.
-(pdftex.def)             Requested size: 256.53291pt x 427.56924pt.
+ line 181.
+(pdftex.def)             Requested size: 345.53217pt x 575.91116pt.
 
 
-LaTeX Warning: Reference `perplexitytest' on page 7 undefined on input line 234
+LaTeX Warning: Reference `perplexitytest' on page 7 undefined on input line 235
 .
 
 
-Underfull \hbox (badness 1924) in paragraph at lines 247--248
+Underfull \hbox (badness 1924) in paragraph at lines 248--249
 []\T1/txr/m/n/10 It is bet-ter to con-fine the anal-y-sis to nar-row re-gions
  []
 
 (./tsne_abunds.bbl (./tsne_abunds.llt)) [7] [8 <./im/harps_tsne-age-abundsplot_
-teffcut.png>] [9
-
-
- <./im/harps_tsne-kin-abundsplot_teffcut.png>]
+teffcut.png>] [9 <./im/harps_tsne-kin-abundsplot_teffcut.png>]
 (./tsne_abunds.aux)
 
 LaTeX Warning: There were undefined references.
@@ -1071,7 +1068,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  6455 strings out of 494041
  83218 string characters out of 6158495
- 223767 words of memory out of 5000000
+ 223702 words of memory out of 5000000
  9619 multiletter control sequences out of 15000+600000
  91514 words of font info for 151 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
@@ -1087,7 +1084,7 @@ mf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf
 /fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on tsne_abunds.pdf (9 pages, 4571714 bytes).
+Output written on tsne_abunds.pdf (9 pages, 4571731 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
