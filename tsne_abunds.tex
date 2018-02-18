@@ -129,30 +129,39 @@ We now proceed to the discussion of these results.
 \label{perplexitytest2}
 \end{figure}
 
+As discussed in Sec. \ref{method}, the overall appearance of the maps produced by t-SNE depend mainly on the perplexity parameter $p$, as well as on the chosen parameter space. In Fig. \ref{perplexitytest2}, we show the t-SNE maps for different perplexity values and different sets of input parameters, using the same colours and symbols as in Fig. \ref{harps0}. This experiment shows that: 
+\begin{enumerate}
+ \item The main features (i.e. neighbourhood relations between points) of the map are preserved for a wide range of perplexities.
+ \item The groups defined in Fig. \ref{harps0} are also robustly recovered for different perplexities.
+ \item Using only [X/Fe] abundance ratios results in slightly different maps, which can be explained by the higher abundance precision of [Fe/H] with respect to the [X/Fe], and the thus heigher weight of this dimension in the t-SNE projection.
+ \item Adding ages and/or kinematics to the input parameter space does not significantly aid the t-SNE projection, at least in this special case of HARPS high-signal-to-noise data.
+\end{enumerate}
+  
+
 \begin{figure}\centering
  \includegraphics[width=0.49\textwidth]{im/harps_tsne-mctest_teffcut.png}
 \caption{Robustness test of our t-SNE-selected subsamples to abundance errors. The right panel shows the fiducial map, while the left panel shows the result of our Monte-Carlo test. For each star, 50 random stars were drawn from the a Gaussian centered on the measured abundance, and with widths corresponding to the measured uncertainties. The resulting map demonstrates that our selected subgroups are robust to measurement errors.}
-\label{harps2}
+\label{mctest}
 \end{figure}
 
-We tested the robustness of our reference map with a simple Monte-Carlo experiment: For each star, we created 50 mock stars with abundances drawn from a multi-dimensional Gaussian distribution centered on the measured abundance, and variance corresponding to the measured abundance uncertainties. Although t-SNE does not take into account uncertainties in the data, this procedure allows us to assure that the groups that we identified in the t-SNE map are not due to chance groupings.\footnote{In general, adding uncertainties to measured (i.e. already noisy) data will blur the true values even more. This means that if a signal disappears in the Monte-Carlo test, the test does not rule out the existence of the signal. On the other hand, if the signal persists, the signal is very unlikely to be due to a chance grouping.} 
-
-\subsection{The thin-thick disc dichotomy} 
-
-As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} or \citet{DelgadoMena2017}, there is a clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram. This discontinuity is reflected in a very clear manner in the t-SNE projection:
-We find a clear and obvious gap between the chemical thin- and thick-disc populations in the t-SNE diagram that remains very robust for different choices of the t-SNE hyper-parameters. Primarily, this means that the chemical patterns of thin and thick disc are indeed distinct, and can be disentangled by high-resolution spectroscopy. Secondly, our analysis of the full chemical information results in a much more accurate division of the chemically-thin and thick populations. Indeed, if one only relies on one diagnostic, such as the [Mg/Fe] vs. [Fe/H] diagram \citep{Adibekyan2011, DelgadoMena2017}, several thin-disc stars would (most probably incorrectly) be identified as belonging chemical thick disc (see Fig. \ref{harps0}). 
+We tested the robustness of our reference map to abundance errors with a simple Monte-Carlo experiment: For each star, we created 50 mock stars with abundances drawn from a multi-dimensional Gaussian distribution centered on the measured abundance, and variance corresponding to the measured abundance uncertainties. Although t-SNE does not take into account uncertainties in the data, this procedure allows us to assure that the groups that we identified in the t-SNE map are not due to chance groupings.\footnote{In general, adding uncertainties to measured (i.e. already noisy) data will blur the true values even more. This means that if a signal disappears in the Monte-Carlo test, the test does not rule out the existence of the signal. On the other hand, if the signal persists, the signal is very unlikely to be due to a chance grouping.} 
 
 \subsection{Sub-populations and chemically peculiar stars}
 
-{\it Thick-disc sub-populations:} \citet{Adibekyan2011} first discovered a clear discontinuity between the metal-poor and metal-rich $[\alpha$/Fe]-enhanced (or h$\alpha$mr) disc populations. In our t-SNE analysis of the \citet{DelgadoMena2017} sample, similar to the original paper, we also see a clear difference between the two populations (dubbed Thick Disc I and II in Fig. \ref{harps0}). The bimodality is better seen when slightly higher perplexity values are chosen ($p\sim 30$). Even if ages and/or kinematics are included as additional dimensions in the analysis, this picture does not change much. 
+{\it The thin-thick disc dichotomy:} As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} or \citet{DelgadoMena2017}, there is a clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram. This discontinuity is reflected in a very clear manner in the t-SNE projection:
+We find a clear and obvious gap between the chemical thin- and thick-disc populations in the t-SNE diagram that remains very robust for different choices of the t-SNE hyper-parameters. Primarily, this means that the chemical patterns of thin and thick disc are indeed distinct, and can be disentangled by high-resolution spectroscopy. Secondly, our analysis of the full chemical information results in a much more accurate division of the chemically-thin and thick populations. Indeed, if one only relies on one diagnostic, such as the [Mg/Fe] vs. [Fe/H] diagram \citep{Adibekyan2011, DelgadoMena2017}, several thin-disc stars would (most probably incorrectly) be identified as belonging chemical thick disc (see Fig. \ref{harps0}).
 
-{\it Thin-thick transition stars:} 
+{\it Thick-disc sub-populations:} \citet{Adibekyan2011} first discovered a clear discontinuity between the metal-poor and metal-rich $[\alpha$/Fe]-enhanced (or h$\alpha$mr) disc populations. In our t-SNE analysis of the \citet{DelgadoMena2017} sample, similar to the original paper, we also see a clear difference between at least two, maybe three or four populations (dubbed Thick Discs I/II and III/IV in Fig. \ref{harps0}). The multimodality is better seen when slightly higher perplexity values are chosen ($p\sim 30$). Even if ages and/or kinematics are included as additional dimensions in the analysis, this picture does not change much. The implications of this result, which we can also confirm with other high-resolution data, are discussed in depth in Chiappini et al. (in prep.).
 
-{\it Super-metal-rich stars:} 
+{\it Super-metal-rich stars:} SMR stars ([Fe/H] $\gtrsim0.3$ -- the western-most stars in the t-SNE plane; orange stars in Fig. \ref{harps0}) have only slightly different abundance patterns from the bulk of the thin disc stars (black dots; see Fig. \ref{harps3}); however, Fig. \ref{harps1} shows that they are enhanced in [Y/Ba] and [Cu/Fe] with respect to the local thin disc, indicative of an origin in the inner Milky-Way disc. Most of them have ages between 4 and 8 Gyr, and are on cold orbits ($e<0.12$), which again supports the idea that they have radially migrated from the inner disc (see e.g. \citealt{Casagrande2011, Minchev2012, Vera-Ciro2014, Kordopatis2015, Grand2016, Anders2017}).
 
-{\it The metal-poor thin disc:} 
+{\it The transition from h$\alpha$mr to SMR stars:} Most literature measurements agree that the high- and low-[$\alpha$/Fe] sequences in the [$\alpha$/Fe] vs. [Fe/H] diagram merge at super-solar metallicities (e.g. \citealt{Adibekyan2011, Anders2014, Hayden2015}). In other words, the upper metallicity limit of the high-[$\alpha$/Fe]/h$\alpha$mr population is not yet firmly established. Our analysis shows that including the full chemistry information does not allow us to completely solve this question, since the border between thin-disc-like and thick-disc-like chemistry remains debatable in the t-SNE projection (e.g. the light-orange triangles in Fig. \ref{harps0} have intermediate characteristics between Thick Disc II and Thin disc). 
 
-{\it Satellite debris} 
+{\it The metal-poor thin disc:} The green squares in Fig. \ref{harps0} correspond to the metal-poor thin disc ([Fe/H] $\sim-0.5$). Apart from metallicity, its main abundance differences with respect to the bulk of the chemical thin-disc population are: 1. a light elevation of [$\alpha$/Fe], as a consequence of the slower star-formation history in the outer disc, where this population is most likely to originate from (e.g. \citealt{Anders2014, Hayden2015}; see also kinematic diagnostics in Fig. \ref{harps0}, especially the eccentricity-mean radius diagram), 2. a systematic deficiency in [Al/Mg], in conjunction with a rather striking correlation between [Al/Mg] and age for this group. A strong correlation between age and [Al/Mg] has recently been found in solar-metallicity solar twins \citep{Nissen2015, Nissen2016, TucciMaia2016, Nissen2017}. Here we find that this correlation persists for a broader range of stellar parameters, lower signal-to-noise ratios, and more uncertain age estimates, and appears much stronger for the metal-poor thin-disc stars.
+
+{\it Possible satellite debris:} Another observation of Fig. \ref{harps0} is that our method clearly singles out a small group of stars with dwarf-galaxy or globular-cluster-like abundance pattern (some more were lost due to the temperature and abundance quality cuts). These five stars (; yellow diamonds in Fig. \ref{harps0}) are all on highly eccentric orbits, have low [Al/Mg] and high [Zn/O] abundances, and four of them are [Ti/Fe]-poor, placing them in the typical dwarf-galaxy regime.
+
+{\it Other peculiar stars:} 
 
 \subsection{Abundance trends with age}
 
@@ -160,7 +169,7 @@ We find a clear and obvious gap between the chemical thin- and thick-disc popula
 \sidecaption
  \includegraphics[width=0.66\textwidth]{im/harps_tsne-age-abundsplot_teffcut.png}
 \caption{Abundance trends with stellar age, measured with the \texttt{StarHorse} code \citep{Queiroz2018}.}
-\label{harps2}
+\label{age}
 \end{figure*}
 
 
@@ -169,7 +178,7 @@ We find a clear and obvious gap between the chemical thin- and thick-disc popula
 \begin{figure}\centering
  \includegraphics[width=0.49\textwidth]{im/harps_tsne-kin-abundsplot_teffcut.png}
 \caption{Kinematic trends.}
-\label{harps2}
+\label{kin}
 \end{figure}
 
 
@@ -203,24 +212,16 @@ We find a clear and obvious gap between the chemical thin- and thick-disc popula
 % \label{bensby3}
 % \end{figure*}
 % 
-% Since t-SNE is a highly non-linear projection method, and since sample and its abundance determination method differ significantly from the stars studied by \citet{Bensby2014}, the overall morphologies of the t-SNE maps in Figs. \ref{bensby1} and \ref{harps1} are also expected to be dissimilar. While this is indeed the case, there are some features that appear in both maps, and can therefore be suggested to be generic properties of the solar-neighbourhood abundance space:
+%Below we will show that the APOGEE-TGAS sample does reveal a clear distinction between the metal-rich and the metal-poor high-[$\alpha$/Fe] population, which is why we have also divided the Bensby sample in this manner (red vs. yellow triangles in Fig. \ref{bensby2}), along the apparent slight paucity of points in the t-SNE thick-disc sequence. This fact already indicates that, despite being derived from lower-resolution spectra, the APOGEE abundances might be better suited to disentangle chemically distinct stellar populations in the disc, most likely due to the availability of carbon and nitrogen abundances. 
 % 
-% In Fig. \ref{bensby2} we identify some of the substructures that appear in Fig. \ref{bensby1}, and discuss them below. In addition, Fig. \ref{bensby3} shows the corresponding [X/O] abundance trends versus proton number, for each of the subpopulations defined in Fig. \ref{bensby2}.
+% {\it Super-metal-rich stars:} 
 % 
-% {\it The thin-thick discontinuity}: We find a clear and obvious dichotomy of thin and thick disc in the t-SNE diagram (upper left vs. lower right) that remains robust for different choices of the perplexity value. Primarily, this means that the chemical patterns of thin and thick disc are indeed distinct, and can be disentangled by high-resolution spectroscopy. Secondly, our analysis of the full chemical information results in a much more accurate division of the chemically-thin and thick populations. Indeed, if one only relies on one diagnostic, such as the [Ti/Fe] vs. [Fe/H] diagram \citep{Bensby2014}, several stars (e.g. thin-disc stars that have an unusual [Ti/$\alpha$] ratio -- limegreen hexagons in Fig. \ref{bensby2}, or low-[Fe/H] thin disc stars -- green squares) will be incorrectly identified as chemical thick disc. 
-% 
-% {\it h$\alpha$mr stars \& substructure in the thick disc:} \citet{Adibekyan2011} first discovered a clear discontinuity between the metal-poor and metal-rich $[\alpha$/Fe]-enhanced (or h$\alpha$mr) disc populations. In our t-SNE analysis of the \citet{Bensby2014} sample, similar to the original paper, we only see a hint of a difference between the two populations (dubbed Thick Disc I and II in Fig. \ref{bensby1}). The bimodality is better seen when slightly higher perplexity values are chosen ($p\sim 30$). Even if ages and/or kinematics are included as additional dimensions in the analysis, this picture does not change much. %Below we will show that the APOGEE-TGAS sample does reveal a clear distinction between the metal-rich and the metal-poor high-[$\alpha$/Fe] population, which is why we have also divided the Bensby sample in this manner (red vs. yellow triangles in Fig. \ref{bensby2}), along the apparent slight paucity of points in the t-SNE thick-disc sequence. This fact already indicates that, despite being derived from lower-resolution spectra, the APOGEE abundances might be better suited to disentangle chemically distinct stellar populations in the disc, most likely due to the availability of carbon and nitrogen abundances. 
-% 
-% {\it Thin-thick transition:} Most literature measurements agree that the high- and low-[$\alpha$/Fe] sequences in the [$\alpha$/Fe] vs. [Fe/H] diagram merge at super-solar metallicities (e.g. \citealt{Adibekyan2011, Anders2014, Hayden2015}). In other words, the upper metallicity limit of the high-[$\alpha$/Fe] or the h$\alpha$mr population is not yet firmly established. Out analysis shows that including the full chemistry information does not allow us to completely solve this question, since the border between thin-disc-like and thick-disc-like chemistry remains debatable in the t-SNE projection (e.g. the pink hexagons in Fig. \ref{bensby1} have intermediate characteristics between Thick Disc II and Thin disc). 
-% 
-% {\it Super-metal-rich stars:} SMR stars ([Fe/H] $>0.3$ -- the western-most stars in the t-SNE plane; orange stars in Fig. \ref{bensby2}) have only slightly different abundance patterns from the bulk of the thin disc stars (grey dots): they are slightly enhanced in [Y/Ba], for example, and slightly [Ti/Fe]-enhanced with respect to the thin disc, indicative of an origin in the inner Milky-Way disc. All but one have ages smaller than 5 Gyr, and are on cold orbits ($e<0.12$), which means that they have likely suffered from radial migration (see e.g. \citealt{Minchev2012, Vera-Ciro2014, Kordopatis2015, Grand2016, Anders2017}).
-% 
-% {\it The metal-poor thin disc:} The green squares in Fig. \ref{bensby2} correspond to the metal-poor thin disc ([Fe/H] $\sim-0.5$). Apart from metallicity, its main abundance differences with respect to the bulk of the chemical thin-disc population are: 1. a light elevation of [$\alpha$/Fe], as a consequence of the slower star-formation history in the outer disc, where this population is most likely to originate from (e.g. \citealt{Anders2014, Hayden2015}; see also kinematic diagnostics in Fig. \ref{bensby2}, especially the eccentricity-mean radius diagram), 2. a systematic deficiency in [Al/Mg], in conjunction with a rather striking correlation between [Al/Mg] and age for this group. A strong correlation between age and [Al/Mg] has recently been found in solar-metallicity solar twins \citep{Nissen2015, Nissen2016, TucciMaia2016, Nissen2017}. Here we find that this correlation persists for a broader range of stellar parameters, lower signal-to-noise ratios, and more uncertain age estimates, and appears much stronger for the metal-poor thin-disc stars. 
+% {\it The metal-poor thin disc:}  
 % 
 % {\it Other potential groups and substructures in the thin disc:} In Fig. \ref{bensby2} we also highlight several other smaller groups of stars that can be viewed as sub-populations of the chemical thin disc, but are peculiar in some respect. These are: a) a group of stars with high zinc abundances (cyan octagons), but otherwise typical thin-disc-like abundances (see Fig. \ref{bensby3}); b) a group of four SMR stars ([Fe/H] $\approx0.2$, [O/H] $\approx0.25$) with slightly elevated [Y/Ba], [Ti/Fe], and [O/Mg] abundance ratios (with respect to stars of similar metallicities); c) a group of slightly s-process-enhanced solar-metallicity stars (most notably enhanced in [Ba/Zn]; blue pentagons); and a group of five stars with enhanced [Ti/$\alpha$], [Al/Mg], and [Y/Ba] ratios (limegreen hexagons). 
 % A detailed discussion of these objects is likely premature, but our results, in conjunction with the cluster experiment of \citet{Kos2017}, already demonstrate the potential of t-SNE for chemical-tagging studies. 
 % 
-% {\it Satellite debris:} Another observation of Fig. \ref{bensby2} is that our method clearly singles out a small group of five stars with dwarf-galaxy or globular-cluster-like abundance pattern (some more were lost due to the abundance quality cut). These five stars (HIP 34285, HIP 55592, HIP 58962, HIP 61802, HIP 90261; yellow diamonds in Fig. \ref{bensby2}) are all on highly eccentric orbits, have low [Al/Mg] and high [Zn/O] abundances, and four of them are [Ti/Fe]-poor, placing them in the typical dwarf-galaxy regime.
+% {\it Satellite debris:} 
 % 
 % 
 % 
@@ -252,7 +253,7 @@ It is better to confine the analysis to narrow regions in atmospheric-parameter 
 
 
 \begin{acknowledgements}
-FA would like to thank Elisa Delgado-Mena for sharing the re-reduced HARPS-GTO data, and Guillaume Guiglion, Katia Cunha, Paula Jofr\'e, Bertrand Lemasle and the other participants of the IAU symposium 334 in Potsdam, as well as David W. Hogg, for their encouragement and critical thoughts. 
+FA would like to thank Elisa Delgado-Mena for sharing the re-reduced HARPS-GTO data prior to publication, and Guillaume Guiglion, Katia Cunha, Paula Jofr\'e, Bertrand Lemasle and the other participants of the IAU symposium 334 in Potsdam, as well as David W. Hogg, for their encouragement and critical thoughts. 
 
 \end{acknowledgements}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  15 FEB 2018 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  18 FEB 2018 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,20 +752,14 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
 (Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
 LaTeX Info: Redefining \not on input line 1043.
-) (./tsne_abunds.aux
-
-LaTeX Warning: Label `harps2' multiply defined.
-
-
-LaTeX Warning: Label `harps2' multiply defined.
-
-)
+) (./tsne_abunds.aux)
 \openout1 = `tsne_abunds.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 13.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 13.
 
- (/usr/share/texmf/tex/latex/txfonts/omltxmi.fd
+
+(/usr/share/texmf/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 13.
@@ -972,7 +966,11 @@ File: im/HARPS_tsne_plots_withteffcut40_rand0.png Graphic file (type png)
 Package pdftex.def Info: im/HARPS_tsne_plots_withteffcut40_rand0.png used on in
 put line 97.
 (pdftex.def)             Requested size: 518.29826pt x 518.32338pt.
- [2]
+
+
+LaTeX Warning: Reference `harps2' on page 2 undefined on input line 98.
+
+[2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -982,7 +980,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 4531) has occurred while \output is active []
+Underfull \vbox (badness 4479) has occurred while \output is active []
 
  [4 <./im/HARPS_tsne_plots_withteffcut40_rand0.png>]
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
@@ -1028,75 +1026,71 @@ nput line 127.
 File: im/harps_tsne-mctest_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-mctest_teffcut.png>
-Package pdftex.def Info: im/harps_tsne-mctest_teffcut.png used on input line 13
-3.
+Package pdftex.def Info: im/harps_tsne-mctest_teffcut.png used on input line 14
+2.
 (pdftex.def)             Requested size: 256.53291pt x 128.26305pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [5 <./im/harps_tsne_abundances-relto-Fe_thin.png> <./im/harps_tsne_abundances-
-relto-Fe_thick.png> <./im/harps_tsne_abundances-relto-Fe_strange.png>]
-<im/harps_tsne-age-abundsplot_teffcut.png, id=50, 433.62pt x 722.7pt>
+relto-Fe_thick.png> <./im/harps_tsne_abundances-relto-Fe_strange.png>] [6 <./im
+/harps-tSNE_perplexitytest_withsubsets.png> <./im/harps_tsne-mctest_teffcut.png
+>]
+<im/harps_tsne-age-abundsplot_teffcut.png, id=56, 433.62pt x 722.7pt>
 File: im/harps_tsne-age-abundsplot_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-age-abundsplot_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-age-abundsplot_teffcut.png used on input
- line 162.
+ line 171.
 (pdftex.def)             Requested size: 345.53217pt x 575.91116pt.
 
-<im/harps_tsne-kin-abundsplot_teffcut.png, id=51, 433.62pt x 722.7pt>
+<im/harps_tsne-kin-abundsplot_teffcut.png, id=57, 433.62pt x 722.7pt>
 File: im/harps_tsne-kin-abundsplot_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-kin-abundsplot_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-kin-abundsplot_teffcut.png used on input
- line 170.
+ line 179.
 (pdftex.def)             Requested size: 256.53291pt x 427.56924pt.
 
 
-LaTeX Warning: Reference `perplexitytest' on page 6 undefined on input line 233
+LaTeX Warning: Reference `perplexitytest' on page 7 undefined on input line 234
 .
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 1924) in paragraph at lines 246--247
+Underfull \hbox (badness 1924) in paragraph at lines 247--248
 []\T1/txr/m/n/10 It is bet-ter to con-fine the anal-y-sis to nar-row re-gions
  []
 
-(./tsne_abunds.bbl [6 <./im/harps-tSNE_perplexitytest_withsubsets.png> <./im/ha
-rps_tsne-mctest_teffcut.png>] [7 <./im/harps_tsne-age-abundsplot_teffcut.png>]
-(./tsne_abunds.llt)) [8 <./im/harps_tsne-kin-abundsplot_teffcut.png>]
+(./tsne_abunds.bbl (./tsne_abunds.llt)) [7] [8 <./im/harps_tsne-age-abundsplot_
+teffcut.png>] [9
+
+
+ <./im/harps_tsne-kin-abundsplot_teffcut.png>]
 (./tsne_abunds.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 6428 strings out of 494041
- 82726 string characters out of 6158495
- 212611 words of memory out of 5000000
- 9592 multiletter control sequences out of 15000+600000
+ 6455 strings out of 494041
+ 83218 string characters out of 6158495
+ 223767 words of memory out of 5000000
+ 9619 multiletter control sequences out of 15000+600000
  91514 words of font info for 151 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 41i,11n,45p,7218b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,45p,7218b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/p
 ublic/txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb><
 /usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/ty
 pe1/public/txfonts/t1xtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/txex.
 pfb></usr/share/texmf/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf/fon
-ts/type1/public/txfonts/txsyc.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uh
-vb8a.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texm
-f/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr
-8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fon
-ts/type1/urw/times/utmri8a.pfb>
-Output written on tsne_abunds.pdf (8 pages, 4565611 bytes).
+ts/type1/public/txfonts/txsya.pfb></usr/share/texmf/fonts/type1/public/txfonts/
+txsyc.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
+mf/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/
+utmb8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on tsne_abunds.pdf (9 pages, 4571714 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 116 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
