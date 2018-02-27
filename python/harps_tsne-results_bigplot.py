@@ -30,8 +30,9 @@ labels = [r'$\rm \tau \ [Gyr]$', r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Y/Mg
           r'$\rm [Ba/Fe]$', r'$\rm [Y/Al]$', r'$\rm [Nd/Fe]$', r'$\rm [Sr/Ba]$',
           r'$\rm [Ce/Fe]$', r'$\rm [Zr/Ba]$', r'$\rm [Zn/Fe]$', r'$\rm [Eu/Fe]$',
           r'$\rm [Cu/Fe]$', r'$\rm [O/H]$', r'$\rm [C/Fe]$', r'$\rm [C/O]$',
-          r'$\rm [Si/Fe]$', r'$\rm L_Z$', r'$\rm J_R$', r'$\rm J_Z$',
-          r'$\sqrt{U^2+W^2}$ [km/s]'
+          r'$\rm [Si/Fe]$', r'$\rm L_Z$', r'$ e$', r'$Z_{\rm max}$',
+          r'$\sqrt{U^2+W^2}$ [km/s]', r'$\rm [Mg/Y]$', r'$\rm [Ba/Y]$',
+          r'$R_{\rm Gal}-R_{\rm guide}$ [kpc]', r'$R_{\rm guide}-R_{\rm birth}$ [kpc]'
           ]
 
 xx  = [data['meanage'], data['feh'],             # 0
@@ -49,8 +50,10 @@ xx  = [data['meanage'], data['feh'],             # 0
        data['CuFe'], data['[O/H]_6158_BdL15'],
        data['[C/H]_SA17']-data['feh'],data['[C/H]_SA17']-data['[O/H]_6158_BdL15'],
        data['SiFe'], data['Lz'],                
-       data['JR_st_m'], data['JZ_st_m'],                 # 30
-       np.sqrt( data['vXg']**2. + data['vZg']**2. )]
+       data['ecc'], data['zmax'],                 # 30
+       np.sqrt( data['vXg']**2. + data['vZg']**2. ),
+       data['MgFe']-data['YFe'], data['BaFe']-data['YFe'],
+       data['Rg']-data['Rc'], data['Rc']-data['rb']] #35
 
 xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         np.sqrt(data['errY']**2.+data['errMg']**2.), data['errZrII'],
@@ -68,7 +71,12 @@ xerr = [data['agestd'], data['erfeh'], data['errTiI'],
         np.sqrt(data['e_[C/H]_SA17']**2.+data['erfeh']**2.), np.sqrt(data['e_[C/H]_SA17']**2.+data['e_[O/H]_6158_BdL15']**2.),
         data['errSi'], data['Lz_sig'],                
         0.5*abs(data['JR_st_U']-data['JR_st_L']), 0.5*abs(data['JZ_st_U']-data['JZ_st_L']), #30
-        np.sqrt( data['vXg_sig']**2. + data['vZg_sig']**2. )]
+        np.sqrt( data['vXg_sig']**2. + data['vZg_sig']**2. ),
+        np.sqrt(data['errY']**2.+data['errMg']**2.),
+        np.sqrt(data['errY']**2.+data['errBa']**2.),
+        np.sqrt(data['Rg_sig']**2.+data['Rc_sig']**2.), #35
+        np.sqrt(data['rb_err']**2.+data['Rc_sig']**2.)
+        ]
 
 # MC test plot
 
@@ -124,7 +132,7 @@ plt.savefig("../im/harps_tsne-mctest_"+sets+".png", dpi=200)
 ################# age plots #########################
 
 exinds = [ [0,1], [0,6], [0,2], [0,22],
-           [0,3], [0,17],[0,22],[0,16] ]
+           [0,33], [0,34],[0,27],[0,16] ]
 limits = [ None,  None,  None,  None, 
            None,  None,  None,  None]
 
@@ -142,10 +150,10 @@ for jj in range(8):
         for kk in np.arange(len(t.subsets)):
             mask = (t.classcol == t.subsets[kk]) * (xerr[exinds[jj][1]] < 9.9)
             ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
-                        xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
-                       ms=0, mec="k", capthick=0, elinewidth=1,
-                       mfc=t.col[kk], alpha=t.al[kk]/4., ecolor=t.col[kk], lw=0,
-                       marker=t.sym[kk], zorder=0)
+                            xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
+                           ms=0, mec="k", capthick=0, elinewidth=1,
+                           mfc=t.col[kk], alpha=t.al[kk]/4., ecolor=t.col[kk], lw=0,
+                           marker=t.sym[kk], zorder=0)
             ax.scatter(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
                        s=t.size[kk], lw=t.lw[kk], edgecolors="k",
                        c=t.col[kk], alpha=t.al[kk],
@@ -164,10 +172,10 @@ plt.savefig("../im/harps_tsne-age-abundsplot_"+sets+".png", dpi=200)
 
 ################### kinematics plots ######################
 
-exinds = [ [14,15], [12,13], [7,8], [8,9],
-           [8,32], [0,32], [0,30],[0,31] ]
+exinds = [ [7,8], [8,9], [8,32], [0,32],
+           [0,30],[0,31], [0,35], [0,36] ]
 limits = [ None,  None,  None,  None, 
-           None,  None,  [-.1,15.1,0,0.5],  [-.1,15.1, 0, .5]]
+           None,  None,  [-.1,15.1,-6,8],  [-.1,15.1, -6,8]]
 
 g   = plt.figure(figsize=(6, 10))
 plt.suptitle("Kinematic trends", fontsize=17)
@@ -182,7 +190,8 @@ for jj in range(8):
         g.add_subplot(ax)
         for kk in np.arange(len(t.subsets)):
             mask = (t.classcol == t.subsets[kk]) * (xerr[exinds[jj][0]] > -9.)* (xerr[exinds[jj][1]] > -9.)
-            ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
+            if jj<4:
+                ax.errorbar(xx[exinds[jj][0]][mask], xx[exinds[jj][1]][mask],
                         xerr=xerr[exinds[jj][0]][mask], yerr=xerr[exinds[jj][1]][mask],
                        ms=0, mec="k", capthick=0, elinewidth=1,
                        mfc=t.col[kk], alpha=t.al[kk]/4., ecolor=t.col[kk], lw=0,
@@ -191,9 +200,9 @@ for jj in range(8):
                        s=t.size[kk], lw=t.lw[kk], edgecolors="k",
                        c=t.col[kk], alpha=t.al[kk],
                        marker=t.sym[kk])
-        if jj>=6:
-            ax.set_yscale("log", nonposy='clip')
-            ax.set_ylim([0.000001, .4])
+        #if jj>=6:
+        #    ax.set_yscale("log", nonposy='clip')
+        #    ax.set_ylim([0.000001, .4])
 
         ax.set_xlabel(labels[exinds[jj][0]], fontsize=14)
         ax.set_ylabel(labels[exinds[jj][1]], fontsize=14)
@@ -270,12 +279,20 @@ if sets not in ["teffcut", "plain"]:
 for kk in np.arange(len(t.subsets)):
     mask = (t.classcol == t.subsets[kk])
     ax.scatter(t.Xt[mask], t.Yt[mask], s=8*t.size[kk], lw=t.lw[kk], edgecolors="k",
-               c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
+               c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk], label=t.names[kk])
     # Annotate population names
     #if kk < len(t.names):
     #    ax.text(t.Xcoords[kk], t.Ycoords[kk], t.names[kk], fontsize=1.25*t.fsize[kk])
 ax.set_xlabel("t-SNE X dimension", fontsize=20)
 ax.set_ylabel("t-SNE Y dimension", fontsize=20)
+ax.text(8, 3, "Thin Disc", fontsize=30)
+ax.text(12, 0, "Thick Disc I+II", fontsize=24)
+ax.text(-14, -9, "Thick Disc III", fontsize=22)
+ax.text(-22.2, -6.3, "Thick Disc IV", fontsize=22)
+ax.text(-22, 7, "SMR stars", fontsize=22)
+ax.text(-22.5, -3, "Transition", fontsize=18)
+ax.text(8, -8.4, "Metal-poor thin disc", fontsize=22)
+ax.legend(loc='upper right')
 #ax.axis([-13, 25, -8, 10.2])
 
 plt.savefig("../im/harps_tsne-abundsplot_"+sets+".png", dpi=200)  
