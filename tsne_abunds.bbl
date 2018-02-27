@@ -1,4 +1,4 @@
-\begin{thebibliography}{59}
+\begin{thebibliography}{67}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -52,6 +52,12 @@
 \bibitem[{{Bressan} {et~al.}(2012){Bressan}, {Marigo}, {Girardi}, {Salasnich},
   {Dal Cero}, {Rubele}, \& {Nanni}}]{Bressan2012}
 {Bressan}, A., {Marigo}, P., {Girardi}, L., {et~al.} 2012, \mnras, 427, 127
+
+\bibitem[{{Casagrande} {et~al.}(2011){Casagrande}, {Sch{\"o}nrich}, {Asplund},
+  {Cassisi}, {Ram{\'{\i}}rez}, {Mel{\'e}ndez}, {Bensby}, \&
+  {Feltzing}}]{Casagrande2011}
+{Casagrande}, L., {Sch{\"o}nrich}, R., {Asplund}, M., {et~al.} 2011, \aap, 530,
+  A138
 
 \bibitem[{{Casagrande} {et~al.}(2016){Casagrande}, {Silva Aguirre},
   {Schlesinger}, {Stello}, {Huber}, {Serenelli}, {Sch{\"o}nrich}, {Cassisi},
@@ -237,12 +243,25 @@
   Milky Way, ed. W.~{Aoki}, M.~{Ishigaki}, T.~{Suda}, T.~{Tsujimoto}, \&
   N.~{Arimoto}, 147
 
+\bibitem[{{Grand} \& {Kawata}(2016)}]{Grand2016}
+{Grand}, R.~J.~J. \& {Kawata}, D. 2016, Astronomische Nachrichten, 337, 957
+
 \bibitem[{{Gratton} {et~al.}(1996){Gratton}, {Carretta}, {Matteucci}, \&
   {Sneden}}]{Gratton1996}
 {Gratton}, R., {Carretta}, E., {Matteucci}, F., \& {Sneden}, C. 1996, in
   Astronomical Society of the Pacific Conference Series, Vol.~92, Formation of
   the Galactic Halo...Inside and Out, ed. H.~L. {Morrison} \& A.~{Sarajedini},
   307
+
+\bibitem[{{Hayden} {et~al.}(2015){Hayden}, {Bovy}, {Holtzman}, {Nidever},
+  {Bird}, {Weinberg}, {Andrews}, {Majewski}, {Allende Prieto}, {Anders},
+  {Beers}, {Bizyaev}, {Chiappini}, {Cunha}, {Frinchaboy},
+  {Garc{\'{\i}}a-Her{\'n}andez}, {Garc{\'{\i}}a P{\'e}rez}, {Girardi},
+  {Harding}, {Hearty}, {Johnson}, {M{\'e}sz{\'a}ros}, {Minchev},
+  {O\'{}Connell}, {Pan}, {Robin}, {Schiavon}, {Schneider}, {Schultheis},
+  {Shetrone}, {Skrutskie}, {Steinmetz}, {Smith}, {Wilson}, {Zamora}, \&
+  {Zasowski}}]{Hayden2015}
+{Hayden}, M.~R., {Bovy}, J., {Holtzman}, J.~A., {et~al.} 2015, \apj, 808, 132
 
 \bibitem[{{Henden} \& {Munari}(2014)}]{Henden2014}
 {Henden}, A. \& {Munari}, U. 2014, Contributions of the Astronomical
@@ -261,6 +280,13 @@
   {Foley}}]{Jofre2017}
 {Jofr{\'e}}, P., {Das}, P., {Bertranpetit}, J., \& {Foley}, R. 2017, \mnras,
   467, 1140
+
+\bibitem[{{Kordopatis} {et~al.}(2015){Kordopatis}, {Binney}, {Gilmore}, {Wyse},
+  {Belokurov}, {McMillan}, {Hatfield}, {Grebel}, {Steinmetz}, {Navarro},
+  {Seabroke}, {Minchev}, {Chiappini}, {Bienaym{\'e}}, {Bland-Hawthorn},
+  {Freeman}, {Gibson}, {Helmi}, {Munari}, {Parker}, {Reid}, {Siebert},
+  {Siviero}, \& {Zwitter}}]{Kordopatis2015}
+{Kordopatis}, G., {Binney}, J., {Gilmore}, G., {et~al.} 2015, \mnras, 447, 3526
 
 \bibitem[{{Kos} {et~al.}(2017){Kos}, {Bland-Hawthorn}, {Freeman}, {Buder},
   {Traven}, {De Silva}, {Sharma}, {Asplund}, {Duong}, {Lin}, {Lind}, {Martell},
@@ -345,11 +371,20 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 {Miglio}, A., {Chiappini}, C., {Mosser}, B., {et~al.} 2017, Astronomische
   Nachrichten, 338, 644
 
+\bibitem[{{Minchev} {et~al.}(2012){Minchev}, {Famaey}, {Quillen}, {Dehnen},
+  {Martig}, \& {Siebert}}]{Minchev2012}
+{Minchev}, I., {Famaey}, B., {Quillen}, A.~C., {et~al.} 2012, \aap, 548, A127
+
 \bibitem[{{Nissen}(2015)}]{Nissen2015}
 {Nissen}, P.~E. 2015, \aap, 579, A52
 
 \bibitem[{{Nissen}(2016)}]{Nissen2016}
 {Nissen}, P.~E. 2016, \aap, 593, A65
+
+\bibitem[{{Nissen} {et~al.}(2017){Nissen}, {Silva Aguirre},
+  {Christensen-Dalsgaard}, {Collet}, {Grundahl}, \& {Slumstrup}}]{Nissen2017}
+{Nissen}, P.~E., {Silva Aguirre}, V., {Christensen-Dalsgaard}, J., {et~al.}
+  2017, ArXiv e-prints
 
 \bibitem[{{Pagel}(2009)}]{Pagel2009}
 {Pagel}, B.~E.~J. 2009, {Nucleosynthesis and Chemical Evolution of Galaxies}
@@ -423,6 +458,11 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 {Tsantaki}, M., {Sousa}, S.~G., {Adibekyan}, V.~Z., {et~al.} 2013, \aap, 555,
   A150
 
+\bibitem[{{Tucci Maia} {et~al.}(2016){Tucci Maia}, {Ram{\'{\i}}rez},
+  {Mel{\'e}ndez}, {Bedell}, {Bean}, \& {Asplund}}]{TucciMaia2016}
+{Tucci Maia}, M., {Ram{\'{\i}}rez}, I., {Mel{\'e}ndez}, J., {et~al.} 2016,
+  \aap, 590, A32
+
 \bibitem[{{Valentini} {et~al.}(2017){Valentini}, {Chiappini}, {Davies},
   {Elsworth}, {Mosser}, {Lund}, {Miglio}, {Chaplin}, {Rodrigues}, {Boeche},
   {Steinmetz}, {Matijevi{\v c}}, {Kordopatis}, {Bland-Hawthorn}, {Munari},
@@ -439,6 +479,11 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 \bibitem[{{van Leeuwen}(2007)}]{vanLeeuwen2007}
 {van Leeuwen}, F., ed. 2007, Astrophysics and Space Science Library, Vol. 350,
   {Hipparcos, the New Reduction of the Raw Data}
+
+\bibitem[{{Vera-Ciro} {et~al.}(2014){Vera-Ciro}, {D'Onghia}, {Navarro}, \&
+  {Abadi}}]{Vera-Ciro2014}
+{Vera-Ciro}, C., {D'Onghia}, E., {Navarro}, J., \& {Abadi}, M. 2014, \apj, 794,
+  173
 
 \bibitem[{Wattenberg {et~al.}(2016)Wattenberg, Viégas, \&
   Johnson}]{Wattenberg2016}
