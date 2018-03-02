@@ -14,7 +14,8 @@
 
    \title{Dissecting stellar chemical abundance space with t-SNE}
 
-   \author{F. Anders\inst{1, 2}, C. Chiappini\inst{1, 2}, B. X. Santiago\inst{3, 2}, G. Matijevi\v{c}\inst{1}, A. B. Queiroz\inst{3, 2}, B. Barbuy\inst{4, 2}}
+   \author{F. Anders\inst{1, 2}, C. Chiappini\inst{1, 2}, B. X. Santiago\inst{3, 2}, G. Matijevi\v{c}\inst{1}, A. B. Queiroz\inst{3, 2}%, B. Barbuy\inst{4, 2}
+   }
    
    \authorrunning{F. Anders et al.}      
    \titlerunning{t-SNE analysis of the chemistry space of the solar neighbourhood}      
@@ -24,7 +25,7 @@
      \and{Laborat\'orio Interinstitucional de e-Astronomia, - LIneA, Rua Gal. Jos\'e Cristino 77, Rio de Janeiro, RJ - 20921-400, Brazil}
      \and{Instituto de F\'\i sica, Universidade Federal do Rio Grande do Sul, Caixa 
 Postal 15051, Porto Alegre, RS - 91501-970, Brazil}
-     \and{Universidade de S\~{a}o Paulo, IAG, Rua do Mat\~{a}o 1226, Cidade Universit\'aria, 05508-900, S\~{a}o Paulo, Brazil}
+%      \and{Universidade de S\~{a}o Paulo, IAG, Rua do Mat\~{a}o 1226, Cidade Universit\'aria, 05508-900, S\~{a}o Paulo, Brazil}
 	}
 
    \date{Received \today; accepted ...}
@@ -52,10 +53,10 @@ More thorough multi-dimensional abundance-space studies using data-mining techni
 In this paper we explore the possibility of combining the information contained in various measured abundance ratios using the dimensionality reduction technique t-SNE (t-distributed stochastic neighbour embedding) to define more robust subpopulations and better identify outliers. We show how the use of several abundance ratios simultaneously can unveil differences and similarities that can trace substructures even without the knowledge of stellar ages. Some of the identified groups/objects each have their own star-formation and enrichment history that should be disentangled before trying to infer the global star-formation history of the Milky-Way disc.
 
 In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2017}). 
-During the writing of this paper, \citet{Kos2017} demonstrated in a complementary analysis that abundance-space t-SNE is indeed a reliable chemical-tagging tool: the authors were able to recover 7 out of 9 known open and globular clusters with high efficiency and low contamination using 13 chemical abundances from the GALAH survey \citep{Martell2017}, and they also found two new field member stars to known clusters with this technique. 
-Here we apply abundance-space t-SNE to the high-resolution solar-vicinity HARPS-GTO survey data of \citet{DelgadoMena2017}, and show that this method provides a powerful visualisation and clustering tool for chemical-tagging studies. We identify, in a robust way, several distinct chemical-abundance substructures of the solar-vicinity disc population, as well as some peculiar stars. In an acompanying letter (Chiappini et al., in prep.) we discuss the main result of chemical subpopulations in the high-[$\alpha$/Fe] regime, which is ubiquitous in other surveys as well, and points to a different origin of the metal-poor and metal-rich part of the chemical thick disc.
+During the writing of this paper, \citet{Kos2018} demonstrated in a complementary analysis that abundance-space t-SNE is indeed a reliable chemical-tagging tool: the authors were able to recover 7 out of 9 known open and globular clusters with high efficiency and low contamination using 13 chemical abundances from the GALAH survey \citep{Martell2017}, and they also found two new field member stars to known clusters with this technique. 
+Here we apply abundance-space t-SNE to the high-resolution solar-vicinity HARPS-GTO survey data of \citet{DelgadoMena2017}, and show that this method provides a powerful visualisation and clustering tool for chemical-tagging studies. We identify, in a robust way, several distinct chemical-abundance substructures of the solar-vicinity disc population, as well as some peculiar stars. In an acompanying letter (Chiappini et al., in prep.) we discuss the main result of chemical subpopulations in the high-[$\alpha$/Fe] regime, which is ubiquitous in other surveys as well, and points to a different origin of the metal-poor and metal-rich part of the chemical thick disc. 
 
-This paper is structured as follows: Sec. \ref{method} introduces t-SNE. Section \ref{harps} describes and discuss the results for the high-resolution spectroscopic solar-vicinity survey of \citet{DelgadoMena2017}. We reconsider possible caveats of our results in Sec. \ref{caveats} and finish with a summary and conclusions in Sec. \ref{conclusions}.
+This paper is structured as follows: Sec. \ref{method} introduces t-SNE. Section \ref{harps} describes the t-SNE results for the high-resolution spectroscopic solar-vicinity survey of \citet{DelgadoMena2017}, considering possible caveats in our analysis and characterising each of the found subpopulations. We finish with a discussion and conclusions in Sec. \ref{conclusions}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dissecting chemistry space with t-SNE}\label{method}
@@ -95,16 +96,16 @@ In addition, t-SNE, as a genuine machine-learning technique, does have two drawb
 
 \begin{figure*}\centering
  \includegraphics[width=0.99\textwidth]{im/HARPS_tsne_plots_withteffcut40_rand0.png}
-\caption{Fiducial t-SNE projection ($p=40$) of the \citet{DelgadoMena2017} sample, colour-coded by chemical abundances (top three rows), stellar atmospheric parameters and signal-to-noise ratio (fourth row), age (fifth row, first panel) and UVW velocities (fifth row). We note that only [Fe/H] and the [X/Fe] ratios were used as input for the t-SNE run. The distinct populations appearing in these diagrams are studied in detail in Fig. \ref{harps2}.}
+\caption{Fiducial t-SNE projection of the \citet{DelgadoMena2017} sample (see big panel in Fig. \ref{harps0}), colour-coded by chemical abundances (top three rows), stellar atmospheric parameters and signal-to-noise ratio (fourth row), age (fifth row, first panel) and UVW velocities (fifth row). We note that only [Fe/H] and the [X/Fe] ratios were used as input for the t-SNE run.}
 \label{harps1}
 \end{figure*}
 
-In an extensive series of papers, \citet{Adibekyan2011, Adibekyan2012, DelgadoMena2014, DelgadoMena2015, BertrandeLis2015, Suarez-Andres2017, DelgadoMena2017, DelgadoMena2017a} studied the chemical abundances of a sample of 1111 solar-vicinity FGK stars using the very high resolution of the HARPS spectrograph ($R\sim 115,000$). This sample mostly contains metal-rich warm dwarf and subgiant stars, but also includes a wide range of effective temperatures, gravities and metallicities. The HARPS sample initially served to detect and characterise exoplanets and may therefore contain some metallicity-related selection bias; however, e.g. \citet{Anders2014} have shown that the HARPS metallicity distribution (MDF) matches the MDF of high-quality local ($d<1$ kpc) APOGEE DR10 red-giant stars that could be considered less chemically biased. The HARPS MDF also agrees with the MDF of the volume-complete sample of \citet{Fuhrmann2011}.
+In an extensive series of papers, \citet{Adibekyan2011, Adibekyan2012, DelgadoMena2014, DelgadoMena2015, BertrandeLis2015, Suarez-Andres2017, DelgadoMena2017, DelgadoMena2018} studied the chemical abundances of a sample of 1111 solar-vicinity FGK stars using the very high resolution of the HARPS spectrograph ($R\sim 115,000$). This sample mostly contains metal-rich warm dwarf and subgiant stars, but also includes a wide range of effective temperatures, gravities and metallicities. The HARPS sample initially served to detect and characterise exoplanets and may therefore contain some metallicity-related selection bias; however, e.g. \citet{Anders2014} have shown that the HARPS metallicity distribution (MDF) matches the MDF of high-quality local ($d<1$ kpc) APOGEE DR10 red-giant stars that could be considered less chemically biased. The HARPS MDF also agrees with the MDF of the volume-complete sample of \citet{Fuhrmann2011}.
 
-\citet{DelgadoMena2017} recently reanalysed this sample, employing a revised linelist \citep{Tsantaki2013}, improving the effective temperature calibration, and correcting spectroscopic gravities using the {\it Hipparcos} parallaxes of \citet{vanLeeuwen2007}. They report chemical abundances for Mg, Al, Si, Ca, Ti, Fe, Cu, Zn, Sr, Y, Zr and Ba for 1059 stars (Ce, Nd and Eu are available for a substantial subset of these), derived using standard Local Thermodynamic Equilibrium (LTE) analysis using ARES to measure equivalent widths and MOOG to measure abundances by comparing to Kurucz ATLAS9 atmospheres. These chemical abundances were complemented by photometry from {\it Gaia} DR1 \citep{GaiaCollaboration2016}, APASS DR9\citep{Henden2014}, and 2MASS \citep{Cutri2003}, and by astrometry (parallaxes, proper motions) from the {\it Gaia} DR1/TGAS catalogue \citep{Michalik2015, GaiaCollaboration2016}, or when these were unavailable (135/1059 stars), from the re-reduced {\it Hipparcos} data \citep{vanLeeuwen2007}. Using the combined spectroscopic, photometric, and astrometric data, we computed precise stellar masses, ages, distances, and extinctions using the {\tt StarHorse} code \citep{Queiroz2018}. For this run, we employed a fine grid ($\Delta \log\tau=0.01$ dex, $\Delta$[Z/H]=0.02 dex) of PARSEC 1.2S stellar models \citep{Bressan2012, Tang2014, Chen2015}, which significantly improved the precision of our ages with respect to the default grid ($\Delta \log\tau=0.05$ dex, $\Delta$[Z/H]=0.05 dex). The median age precision of the final t-SNE sample is 14\%.
+\citet{DelgadoMena2017} recently reanalysed this sample, employing a revised linelist \citep{Tsantaki2013}, improving the effective temperature calibration, and correcting spectroscopic gravities using the {\it Hipparcos} parallaxes of \citet{vanLeeuwen2007}. They report chemical abundances for Mg, Al, Si, Ca, Ti, Fe, Cu, Zn, Sr, Y, Zr and Ba for 1059 stars (Ce, Nd and Eu are available for a substantial subset of these), derived using standard Local Thermodynamic Equilibrium (LTE) analysis using ARES to measure equivalent widths and MOOG to measure abundances by comparing to Kurucz ATLAS9 atmospheres. These chemical abundances were complemented by photometry from {\it Gaia} DR1 \citep{GaiaCollaboration2016}, APASS DR9 \citep{Henden2014}, and 2MASS \citep{Cutri2003}, and by astrometry (parallaxes, proper motions) from the {\it Gaia} DR1/TGAS catalogue \citep{Michalik2015, GaiaCollaboration2016}, or when these were unavailable (135/1059 stars), from the re-reduced {\it Hipparcos} data \citep{vanLeeuwen2007}. Using the combined spectroscopic, photometric, and astrometric data, we computed precise stellar masses, ages, distances, and extinctions using the {\tt StarHorse} code \citep{Queiroz2018}. For this run, we employed a fine grid ($\Delta \log\tau=0.01$ dex, $\Delta$[Z/H]=0.02 dex) of PARSEC 1.2S stellar models \citep{Bressan2012, Tang2014, Chen2015}, which significantly improved the precision of our ages with respect to the default grid ($\Delta \log\tau=0.05$ dex, $\Delta$[Z/H]=0.05 dex). The median age precision of the final t-SNE sample is 14\%.
 
 In this section we test the performance of abundance-space t-SNE on this most recent HARPS GTO sample compilation. The high number of measured abundances, in conjunction with the high precision of the measurements and the easily tractable sample size, makes the HARPS sample an ideal test case for machine-learning algorithms. 
-Our first tests showed that, in order to obtain reliable t-SNE abundance maps, the sample needed to be analysed in a more restricted temperature range, because certain abundance trends seem to be dominated by underlying temperature trends. Therefore, similar to \citet{DelgadoMena2017}, we chose an effective temperature range of 5300 K $<T_{\rm eff}<$ 6000 K for our analysis. We furthermore restricted surface gravities to $3<\log g_{\rm HIP}<5$, and required successful abundance determination for Mg, Al, Si, Ca, TiI, Fe, Cu, Zn, Sr, Y, ZrII, Ce and Ba that we use as input for t-SNE, leaving us with 533 stars.\footnote{Carbon and oxygen abundances are available from previous studies \citep{Suarez-Andres2017, BertrandeLis2015}, but since they are based on previous stellar parameter estimates, we decided not to include them in the t-SNE runs and only use them in the interpretation. We also did not use Nd and Eu in the t-SNE run, because they were only available for about half of the sample (stars with the highest signal-to-noise ratios).} In our final sample of 530 stars we also discarded 3 stars for which our age determination code, {\tt StarHorse} \citep{Santiago2016, Queiroz2018}, did not converge. We verified that these choices do not significantly affect the resulting t-SNE maps. 
+Our first tests showed that, in order to obtain reliable t-SNE abundance maps, the sample needed to be analysed in a more restricted temperature range, because certain abundance trends seem to be dominated by underlying temperature trends. Therefore, similar to \citet{DelgadoMena2017}, we chose an effective temperature range of 5300 K $<T_{\rm eff}<$ 6000 K for our analysis. We furthermore restricted surface gravities to $3<\log g_{\rm HIP}<5$, and required successful abundance determination for Mg, Al, Si, Ca, TiI, Fe, Cu, Zn, Sr, Y, ZrII, Ce and Ba that we use as input for t-SNE, leaving us with 533 stars.\footnote{Carbon and oxygen abundances are available from previous studies \citep{Suarez-Andres2017, BertrandeLis2015}, but since they are based on previous stellar parameter estimates, we decided not to include them in the t-SNE runs and only use them in the interpretation. We also did not use Nd and Eu in the t-SNE run, because they were only available for about half of the sample (stars with the highest signal-to-noise ratios).} To compensate the fact that t-SNE does not take into account individual (heteroscedastic) uncertainties in the data, we followed the approach of \citet{Hogg2016} and rescaled each abundance by the median uncertainty in that element, assuming an abundance uncretainty floor of 0.03 dex. In our final sample of 530 stars we also discarded 3 stars for which our age determination code, {\tt StarHorse} \citep{Santiago2016, Queiroz2018}, did not converge. We verified that these choices do not significantly affect the resulting t-SNE maps. 
 
 Fig. \ref{harps1} again shows our reference t-SNE map for the HARPS sample, but now colour-coded by chemical-abundance ratios, stellar parameters, ages and kinematics. The panels in the first three rows show how t-SNE is grouping the stars with similar abundances in the two-dimensional plane. The panels coloured as a function of stellar parameters demonstrate that the sample is not subject to major systematic abundance shifts, but does show some residual trends with effective temperature, since it preferentially groups cooler stars in slightly different regions of the t-SNE map than hotter ones. Because part of this effect may be due to chemical evolution rather than systematic abundance errors, we refrained from applying ad-hoc corrections to the abundances. 
 
@@ -127,7 +128,7 @@ Figure \ref{harps1} also demonstrates that the t-SNE map's Y dimension, although
 
 The fourth row of Fig. \ref{harps1} also shows that the t-SNE projection responds to elemental-abundance trends with stellar parameters, although they have not been included as input parameters, and although we work in a narrow effective-temperature bin: t-SNE places stars with slightly different stellar parameters in slightly different places of the map. In the case of $T_{\rm eff}$, this points to residual abundance trends with $T_{\rm eff}$, i.e. possible systematic errors (see also \citealt{DelgadoMena2017}. In the case of $\log g$, this is very likely not due to systematic errors, but due to stellar and chemical evolution: at fixed $T_{\rm eff}$, $\log g$ is a proxy for stellar age, and the abundance patterns are expected to vary with age.
 
-By construction, t-SNE clusters similar-abundance stars in different places of the map. The several discernible islands on the map suggest that we are able to identify stars that were formed from gas with significantly different chemical enrichment than the bulk of the disc stars that live on the ``main island'' of the map. In the following subsection, we will show that most, if not all, of the substructures identified in Fig. \ref{harps0} are robust to abundance uncertainties and reasonable variations in our analysis.
+By construction, t-SNE clusters similar-abundance stars in different places of the map. The several discernible islands on the map suggest that we are able to identify stars that were formed from gas with significantly different chemical enrichment than the bulk of the disc stars that live on the ``main island'' of the map. In the following subsection, we will show that most of the substructures identified in Fig. \ref{harps0} are robust to abundance uncertainties and reasonable variations in our analysis.
 
 \subsection{The robustness of the t-SNE results}\label{robust}
 
@@ -139,10 +140,11 @@ By construction, t-SNE clusters similar-abundance stars in different places of t
 
 As discussed in Sec. \ref{method}, the overall appearance of the maps produced by t-SNE depend mainly on the perplexity parameter $p$, as well as on the chosen parameter space. In Fig. \ref{perplexitytest2}, we show the t-SNE maps for different perplexity values and different sets of input parameters, using the same colours and symbols as in Fig. \ref{harps0}. This experiment shows that: 
 \begin{enumerate}
- \item The main features (i.e. neighbourhood relations between points) of the map are preserved for a wide range of perplexities.
+ \item The main features (i.e. neighbourhood relations between points) of the map are preserved (modulo map rotations/reflections) for a wide range of perplexities,.
  \item The groups defined in Fig. \ref{harps0} are also robustly recovered for different perplexities.
  \item Using only [X/Fe] abundance ratios results in slightly different maps, which can be explained by the higher abundance precision of [Fe/H] with respect to the [X/Fe], and the thus heigher weight of this dimension in the t-SNE projection. The [Fe/H] dimension alone, however, is not responsible for the emergence of the prominent subgroups.
- \item Adding ages and/or kinematics to the input parameter space does not significantly aid the t-SNE projection, at least in this special case of very local disc, high-resolution, and high-signal-to-noise data. In the case of moving groups or globular clusters, adding kinematic dimensions to chemical tagging excercises does make a difference (CITE d'Onghia student paper).
+ \item Adding ages and/or kinematics to the input parameter space does not significantly aid the t-SNE projection, at least in this special case of very local disc, high-resolution, and high-signal-to-noise data.%, the information content of chemical-abundance space may be sufficient to disentangle different age and kinematic populations
+ In the case of moving groups or globular clusters, however, adding kinematic dimensions to chemical tagging excercises does seem to help the recovery of known clusters \citep{Chen2017}.
 \end{enumerate}
 
 \begin{figure}\centering
@@ -151,11 +153,9 @@ As discussed in Sec. \ref{method}, the overall appearance of the maps produced b
 \label{mctest}
 \end{figure}
 
-We further tested the robustness of our reference map to abundance errors with a simple Monte-Carlo experiment: For each star, we created 50 mock stars with abundances drawn from a multi-dimensional Gaussian distribution centered on the measured abundance, and variance corresponding to the measured abundance uncertainties. Although t-SNE does not take into account uncertainties in the data, this procedure allows us to assure that the groups that we identified in the t-SNE map are not due to chance groupings.\footnote{In general, adding uncertainties to measured (i.e. already noisy) data will blur the true values even more. This means that if a signal disappears in the Monte-Carlo test, the test does not rule out the existence of the signal. On the other hand, if the signal persists, the signal is very unlikely to be due to a chance grouping.} 
+We further tested the robustness of our reference map to abundance errors with a simple Monte-Carlo experiment: For each star, we created 50 mock stars with abundances drawn from a multi-dimensional Gaussian distribution centered on the measured abundance, and variance corresponding to the measured abundance uncertainties. Although t-SNE does not take into account uncertainties in the data, this procedure allows us to assure that the groups that we identified in the t-SNE map are not due to chance groupings.\footnote{In general, adding uncertainties to measured (i.e. already noisy) data will blur the true values even more. This means that if a signal disappears in the Monte-Carlo test, the test does not rule out its existence. On the other hand, if the signal persists, it is very unlikely to be due to a chance grouping.} In the following subsection, we discuss each of the groups in more detail.
 
-%The main result of our t-SNE visualisation, the multiple populations found in the high-[$\alpha$/Fe]-sequence, can also be found in other solar-vicinity datasets, as we show in Chiappini et al. (in prep.).
-
-\subsection{Sub-populations and chemically peculiar stars}
+\subsection{Disc sub-populations}
 
 {\it The thin-thick disc dichotomy:} As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} and \citet{DelgadoMena2017}, the HARPS-GTO data confirm the clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram (e.g. \citealt{Edvardsson1993, Gratton1996, Fuhrmann1998, Fuhrmann2011, Fuhrmann2017}). This discontinuity is reflected in a very clear manner in the t-SNE projection:
 We find a clear and obvious gap between the chemical thin- and thick-disc populations in the t-SNE diagram that remains very robust for different choices of the t-SNE hyper-parameters. Primarily, this means that the chemical patterns of thin and thick disc are indeed distinct, and can be disentangled by high-resolution spectroscopy. Secondly, our analysis of the full chemical information results in a much more accurate division of the chemically-thin and thick populations. Indeed, if one only relies on one diagnostic, such as the [Mg/Fe] vs. [Fe/H] diagram \citep{Adibekyan2011, DelgadoMena2017}, several thin-disc stars would (most probably incorrectly) be identified as belonging chemical thick disc (see Fig. \ref{harps0}).
@@ -168,50 +168,59 @@ We find a clear and obvious gap between the chemical thin- and thick-disc popula
 
 {\it The metal-poor thin disc:} The green squares in Fig. \ref{harps0} correspond to the metal-poor thin disc ([Fe/H] $\sim-0.5$). Apart from metallicity, its main abundance differences with respect to the bulk of the chemical thin-disc population are: 1. a light elevation of [$\alpha$/Fe], as a consequence of the slower star-formation history in the outer disc, where this population is most likely to originate from (e.g. \citealt{Anders2014, Hayden2015}; see also kinematic diagnostics in Fig. \ref{harps0}, especially the eccentricity-mean radius diagram), 2. a systematic deficiency in [Al/Mg], in conjunction with a rather striking correlation between [Al/Mg] and age for this group. A strong correlation between age and [Al/Mg] has recently been found in solar-metallicity solar twins \citep{Nissen2015, Nissen2016, TucciMaia2016, Nissen2017}. Here we find that this correlation persists for a broader range of stellar parameters, lower signal-to-noise ratios, and more uncertain age estimates, and appears much stronger for the metal-poor thin-disc stars.
 
-{\it Possible satellite debris:} Another observation of Fig. \ref{harps0} is that our method clearly singles out a small group of stars with dwarf-galaxy or globular-cluster-like abundance pattern (some more were lost due to the temperature and abundance quality cuts). These five stars (; yellow diamonds in Fig. \ref{harps0}) are all on highly eccentric orbits, have low [Al/Mg] and high [Zn/O] abundances, and four of them are [Ti/Fe]-poor, placing them in the typical dwarf-galaxy regime.
+{\it The young local disc:}
 
-{\it Other peculiar stars:} 
+\subsection{Chemically peculiar stars}
+
+{\it Possible satellite debris and s-process stars:} Another observation of Fig. \ref{harps0} is that our method clearly singles out a small group of stars with dwarf-galaxy or globular-cluster-like, and s-process-enhanced abundance patterns (some more were lost due to the temperature and abundance quality cuts). These seven stars (yellow points in Fig. \ref{harps0}) are all enhanced in the measured s-process elements with respect to both the thin and thick disc populations (see Fig. \ref{harps3}, bottom panel). They are also enhanced in [$\alpha$/Fe], as expected for their low metallicity, although there is considerable star-to-star variance. Some of them are slightly less [$\alpha$/Fe]-enhanced than the thick-disc populations, placing them in the typical dwarf-galaxy regime. 
+
+The most extreme abundance outlier in this group, as already noted by \citet{DelgadoMena2017}, is HD11397, which shows the highest s-process abundances of the entire sample ([s/Fe]$\sim0.7$). It was classified as a so-called mild barium star by \citet{Pompeia2008} who also showed that its s-process abundance pattern is compatible with typical AGB stellar yields. 
+Another star that was noted as a mildly s-enhanced thick-disc star by \citet{DelgadoMena2017}, is HD126803, also among this group. The other mild s-enhancement candidate of \citet{DelgadoMena2017}, CD-436810, did not satisfy our $T_{\rm eff}$ criterion.
+
+
+
+{\it Other peculiar stars:} HD28701 (brown diamond in Fig. \ref{harps0}) shows enhanced abundances of Sr, Y and Zr when compared to other thick disk stars of similar metallicity, but not as much enhancement in the second s-process peak elements Ba, Ce and Nd \citep{DelgadoMena2017}.
 
 \subsection{Abundance trends with age}
 
-\begin{figure*}\centering
-\sidecaption
- \includegraphics[width=0.66\textwidth]{im/harps_tsne-age-abundsplot_teffcut.png}
+\begin{figure}\centering
+%\sidecaption
+ \includegraphics[width=0.5\textwidth]{im/harps_tsne-age-abundsplot_teffcut.png}
 \caption{Abundance trends with stellar age, measured with the \texttt{StarHorse} code \citep{Queiroz2018}.}
 \label{age}
-\end{figure*}
+\end{figure}
 
 
 \subsection{Kinematic trends}
 
-\begin{figure*}\centering
-\sidecaption
- \includegraphics[width=0.66\textwidth]{im/harps_tsne-kin-abundsplot_teffcut.png}
+\begin{figure}\centering
+% \sidecaption
+ \includegraphics[width=0.49\textwidth]{im/harps_tsne-kin-abundsplot_teffcut.png}
 \caption{Kinematic trends.}
 \label{kin}
-\end{figure*}
+\end{figure}
 
 
 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Discussion and outlook}\label{caveats}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% \subsection{Choosing the abundance space}
+% 
+% The t-SNE results for the \citet{Bensby2014} dataset are shown in Fig. \ref{perplexitytest}, for a range of perplexity values and different input. Following the recommendations of \citet{vanderMaaten2008} and \citet{Wattenberg2016}, we use this figure to choose the optimal perplexity value for each dataset (yellow-highlighted panels). In the following subsections, we analyse these results in detail.
+% 
+% \subsection{Residual trends with stellar parameters}
+% \subsection{The effect of adding age and kinematics to the analysis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion and outlook}\label{caveats}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Choosing the abundance space}
-
-The t-SNE results for the \citet{Bensby2014} dataset are shown in Fig. \ref{perplexitytest}, for a range of perplexity values and different input. Following the recommendations of \citet{vanderMaaten2008} and \citet{Wattenberg2016}, we use this figure to choose the optimal perplexity value for each dataset (yellow-highlighted panels). In the following subsections, we analyse these results in detail.
-
-\subsection{Residual trends with stellar parameters}
-\subsection{The effect of adding age and kinematics to the analysis}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions}\label{conclusions}
+\section{Discussion and conclusions}\label{conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 YES WE CAN use t-SNE to better define subpopulations in abundance space. However, the non-parametric non-linear behaviour of the technique makes it difficult to estimate the significance of found subgroups or clusters. The method could, however, be coupled to a genuine cluster finding algorithm.
 
-Potential for weak chemical tagging demonstrated in this paper; the viability of t-SNE for strong chemical tagging (finding dispersed members of open clusters) is still not completely clear, but see \citet{Kos2017}.
+Potential for weak chemical tagging demonstrated in this paper; the viability of t-SNE for strong chemical tagging (finding dispersed members of open clusters) is still not completely clear, but see \citet{Kos2018}.
 
 It is better to confine the analysis to narrow regions in atmospheric-parameter space to avoid spurious abundance trends induced by differences in atmospheric parameters. 
 

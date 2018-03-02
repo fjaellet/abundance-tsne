@@ -1,4 +1,4 @@
-\begin{thebibliography}{67}
+\begin{thebibliography}{70}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -66,6 +66,10 @@
 {Casagrande}, L., {Silva Aguirre}, V., {Schlesinger}, K.~J., {et~al.} 2016,
   \mnras, 455, 987
 
+\bibitem[{{Chen} {et~al.}(2017){Chen}, {D'Onghia}, {Pardy}, {Pasquali},
+  {Bertelli Motta}, {Hanlon}, \& {Grebel}}]{Chen2017}
+{Chen}, B., {D'Onghia}, E., {Pardy}, S., {et~al.} 2017, ArXiv e-prints
+
 \bibitem[{{Chen} {et~al.}(2015){Chen}, {Bressan}, {Girardi}, {Marigo}, {Kong},
   \& {Lanza}}]{Chen2015}
 {Chen}, Y., {Bressan}, A., {Girardi}, L., {et~al.} 2015, ArXiv e-prints
@@ -100,17 +104,17 @@
 {Delgado Mena}, E., {Israelian}, G., {Gonz{\'a}lez Hern{\'a}ndez}, J.~I.,
   {et~al.} 2014, \aap, 562, A92
 
-\bibitem[{{Delgado Mena} {et~al.}(2017{\natexlab{a}}){Delgado Mena},
-  {Tsantaki}, {Adibekyan}, {Sousa}, {Santos}, {Gonz{\'a}lez Hern{\'a}ndez}, \&
-  {Israelian}}]{DelgadoMena2017a}
-{Delgado Mena}, E., {Tsantaki}, M., {Adibekyan}, V.~Z., {et~al.}
-  2017{\natexlab{a}}, ArXiv e-prints
-
-\bibitem[{{Delgado Mena} {et~al.}(2017{\natexlab{b}}){Delgado Mena},
-  {Tsantaki}, {Adibekyan}, {Sousa}, {Santos}, {Gonz{\'a}lez Hern{\'a}ndez}, \&
+\bibitem[{{Delgado Mena} {et~al.}(2017){Delgado Mena}, {Tsantaki}, {Adibekyan},
+  {Sousa}, {Santos}, {Gonz{\'a}lez Hern{\'a}ndez}, \&
   {Israelian}}]{DelgadoMena2017}
-{Delgado Mena}, E., {Tsantaki}, M., {Adibekyan}, V.~Z., {et~al.}
-  2017{\natexlab{b}}, ArXiv e-prints
+{Delgado Mena}, E., {Tsantaki}, M., {Adibekyan}, V.~Z., {et~al.} 2017, \aap,
+  606, A94
+
+\bibitem[{{Delgado Mena} {et~al.}(2018){Delgado Mena}, {Tsantaki}, {Adibekyan},
+  {Sousa}, {Santos}, {Gonz{\'a}lez Hern{\'a}ndez}, \&
+  {Israelian}}]{DelgadoMena2018}
+{Delgado Mena}, E., {Tsantaki}, M., {Adibekyan}, V.~Z., {et~al.} 2018, IAU
+  Symposium 330 Proceedings, arXiv:1707.05156
 
 \bibitem[{{Deng} {et~al.}(2012){Deng}, {Newberg}, {Liu}, {Carlin}, {Beers},
   {Chen}, {Chen}, {Christlieb}, {Grillmair}, {Guhathakurta}, {Han}, {Hou},
@@ -271,6 +275,11 @@
 {Hinton}, G.~E. \& {Roweis}, S.~T. 2003, in Advances in neural information
   processing systems, 857--864
 
+\bibitem[{{Hogg} {et~al.}(2016){Hogg}, {Casey}, {Ness}, {Rix},
+  {Foreman-Mackey}, {Hasselquist}, {Ho}, {Holtzman}, {Majewski}, {Martell},
+  {M{\'e}sz{\'a}ros}, {Nidever}, \& {Shetrone}}]{Hogg2016}
+{Hogg}, D.~W., {Casey}, A.~R., {Ness}, M., {et~al.} 2016, \apj, 833, 262
+
 \bibitem[{{Ivezi{\'c}} {et~al.}(2013){Ivezi{\'c}}, {Connolly}, {VanderPlas}, \&
   {Gray}}]{Ivezic2013}
 {Ivezi{\'c}}, {\.Z}., {Connolly}, A., {VanderPlas}, J., \& {Gray}, A. 2013,
@@ -288,13 +297,13 @@
   {Siviero}, \& {Zwitter}}]{Kordopatis2015}
 {Kordopatis}, G., {Binney}, J., {Gilmore}, G., {et~al.} 2015, \mnras, 447, 3526
 
-\bibitem[{{Kos} {et~al.}(2017){Kos}, {Bland-Hawthorn}, {Freeman}, {Buder},
+\bibitem[{{Kos} {et~al.}(2018){Kos}, {Bland-Hawthorn}, {Freeman}, {Buder},
   {Traven}, {De Silva}, {Sharma}, {Asplund}, {Duong}, {Lin}, {Lind}, {Martell},
-  {Simpson}, {Stello}, {Zucker}, {Zwitter}, {Anguiano}, {Da Costa}, {Horner},
-  {Kafle}, {Lewis}, {Munari}, {Nataf}, {Ness}, {Reid}, {Schlesinger}, {Ting},
-  \& {Wyse}}]{Kos2017}
-{Kos}, J., {Bland-Hawthorn}, J., {Freeman}, K., {et~al.} 2017, MNRAS,
-  submitted, arXiv:1709.00794
+  {Simpson}, {Stello}, {Zucker}, {Zwitter}, {Anguiano}, {Da Costa}, {D'Orazi},
+  {Horner}, {Kafle}, {Lewis}, {Munari}, {Nataf}, {Ness}, {Reid}, {Schlesinger},
+  {Ting}, \& {Wyse}}]{Kos2018}
+{Kos}, J., {Bland-Hawthorn}, J., {Freeman}, K., {et~al.} 2018, \mnras, 473,
+  4612
 
 \bibitem[{Kullback \& Leibler(1951)}]{Kullback1951}
 Kullback, S. \& Leibler, R.~A. 1951, Ann. Math. Statist., 22, 79
@@ -394,6 +403,9 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Dubourg}, {Vanderplas}, {Passos}, {Cournapeau}, {Brucher}, {Perrot}, \&
   {Duchesnay}}]{Pedregosa2012}
 {Pedregosa}, F., {Varoquaux}, G., {Gramfort}, A., {et~al.} 2012, ArXiv e-prints
+
+\bibitem[{{Pomp{\'e}ia} \& {Allen}(2008)}]{Pompeia2008}
+{Pomp{\'e}ia}, L. \& {Allen}, D.~M. 2008, \aap, 488, 723
 
 \bibitem[{{Queiroz} {et~al.}(2018){Queiroz}, {Anders}, {Santiago}, {Chiappini},
   {Steinmetz}, {Dal Ponte}, {Stassun}, {da Costa}, {Maia}, {Beers}, {Crestani},
