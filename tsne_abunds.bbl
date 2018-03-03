@@ -1,4 +1,4 @@
-\begin{thebibliography}{70}
+\begin{thebibliography}{72}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -267,6 +267,10 @@
   {Zasowski}}]{Hayden2015}
 {Hayden}, M.~R., {Bovy}, J., {Holtzman}, J.~A., {et~al.} 2015, \apj, 808, 132
 
+\bibitem[{{Haywood} {et~al.}(2018){Haywood}, {Di Matteo}, {Lehnert}, {Snaith},
+  {Fragkoudi}, \& {Khoperskov}}]{Haywood2018}
+{Haywood}, M., {Di Matteo}, P., {Lehnert}, M., {et~al.} 2018, ArXiv e-prints
+
 \bibitem[{{Henden} \& {Munari}(2014)}]{Henden2014}
 {Henden}, A. \& {Munari}, U. 2014, Contributions of the Astronomical
   Observatory Skalnate Pleso, 43, 518
@@ -394,6 +398,11 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Christensen-Dalsgaard}, {Collet}, {Grundahl}, \& {Slumstrup}}]{Nissen2017}
 {Nissen}, P.~E., {Silva Aguirre}, V., {Christensen-Dalsgaard}, J., {et~al.}
   2017, \aap, 608, A112
+
+\bibitem[{{Nordstr{\"o}m} {et~al.}(2004){Nordstr{\"o}m}, {Mayor}, {Andersen},
+  {Holmberg}, {Pont}, {J{\o}rgensen}, {Olsen}, {Udry}, \&
+  {Mowlavi}}]{Nordstroem2004}
+{Nordstr{\"o}m}, B., {Mayor}, M., {Andersen}, J., {et~al.} 2004, \aap, 418, 989
 
 \bibitem[{{Pagel}(2009)}]{Pagel2009}
 {Pagel}, B.~E.~J. 2009, {Nucleosynthesis and Chemical Evolution of Galaxies}
