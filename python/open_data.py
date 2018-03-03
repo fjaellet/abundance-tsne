@@ -43,7 +43,7 @@ class harps(object):
                        "smr2", "t2trans1", "highTi","lowMg","highAlMg?"]
             self.names   = ["", "", "", "",
                        "", "", "Transition group", "", "",
-                       "Young local disc", "", "", "Satellite debris", "", "", r"", "Debris candidate", 
+                       "Young local disc", "", "", "[s/Fe]-enhanced", "", "", r"", "Debris candidate", 
                        r"Extreme-Ti star", r"Low-[Mg/Fe] star", "High-[Al/Mg] star"]
             self.Xcoords = [10, 11, 4.5, -12,  18, -31, 22, 26,-22.5, -14, -2, -25]
             self.Ycoords = [5.5,.5,  -2, -4,   6,  0,   1.5, -.5, -7, -2, -6, 14]

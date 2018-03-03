@@ -52,7 +52,7 @@ More thorough multi-dimensional abundance-space studies using data-mining techni
 
 In this paper we explore the possibility of combining the information contained in various measured abundance ratios using the dimensionality reduction technique t-SNE (t-distributed stochastic neighbour embedding) to define more robust subpopulations and better identify outliers. We show how the use of several abundance ratios simultaneously can unveil differences and similarities that can trace substructures even without the knowledge of stellar ages. Some of the identified groups/objects each have their own star-formation and enrichment history that should be disentangled before trying to infer the global star-formation history of the Milky-Way disc.
 
-In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2017}). 
+In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2018}). 
 During the writing of this paper, \citet{Kos2018} demonstrated in a complementary analysis that abundance-space t-SNE is indeed a reliable chemical-tagging tool: the authors were able to recover 7 out of 9 known open and globular clusters with high efficiency and low contamination using 13 chemical abundances from the GALAH survey \citep{Martell2017}, and they also found two new field member stars to known clusters with this technique. 
 Here we apply abundance-space t-SNE to the high-resolution solar-vicinity HARPS-GTO survey data of \citet{DelgadoMena2017}, and show that this method provides a powerful visualisation and clustering tool for chemical-tagging studies. We identify, in a robust way, several distinct chemical-abundance substructures of the solar-vicinity disc population, as well as some peculiar stars. In an acompanying letter (Chiappini et al., in prep.) we discuss the main result of chemical subpopulations in the high-[$\alpha$/Fe] regime, which is ubiquitous in other surveys as well, and points to a different origin of the metal-poor and metal-rich part of the chemical thick disc. 
 
@@ -153,14 +153,16 @@ As discussed in Sec. \ref{method}, the overall appearance of the maps produced b
 \label{mctest}
 \end{figure}
 
-We further tested the robustness of our reference map to abundance errors with a simple Monte-Carlo experiment: For each star, we created 50 mock stars with abundances drawn from a multi-dimensional Gaussian distribution centered on the measured abundance, and variance corresponding to the measured abundance uncertainties. Although t-SNE does not take into account uncertainties in the data, this procedure allows us to assure that the groups that we identified in the t-SNE map are not due to chance groupings.\footnote{In general, adding uncertainties to measured (i.e. already noisy) data will blur the true values even more. This means that if a signal disappears in the Monte-Carlo test, the test does not rule out its existence. On the other hand, if the signal persists, it is very unlikely to be due to a chance grouping.} In the following subsection, we discuss each of the groups in more detail.
+We further tested the robustness of our reference map to abundance errors with a simple Monte-Carlo experiment: For each star, we created 50 mock stars with abundances drawn from a multi-dimensional Gaussian distribution centered on the measured abundance, and variance corresponding to the measured abundance uncertainties. Although t-SNE does not take into account uncertainties in the data, this procedure allows us to assure that the groups that we identified in the t-SNE map are not due to chance groupings.\footnote{In general, adding uncertainties to measured (i.e. already noisy) data will blur the true values even more. This means that if a signal disappears in the Monte-Carlo test, the test does not rule out its existence. On the other hand, if the signal persists, it is very unlikely to be due to a chance grouping.} 
 
 \subsection{Disc sub-populations}
+
+In this subsection, we discuss the main groups and features identified in Fig. \ref{harps0} in more detail.\\
 
 {\it The thin-thick disc dichotomy:} As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} and \citet{DelgadoMena2017}, the HARPS-GTO data confirm the clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram (e.g. \citealt{Edvardsson1993, Gratton1996, Fuhrmann1998, Fuhrmann2011, Fuhrmann2017}). This discontinuity is reflected in a very clear manner in the t-SNE projection:
 We find a clear and obvious gap between the chemical thin- and thick-disc populations in the t-SNE diagram that remains very robust for different choices of the t-SNE hyper-parameters. Primarily, this means that the chemical patterns of thin and thick disc are indeed distinct, and can be disentangled by high-resolution spectroscopy. Secondly, our analysis of the full chemical information results in a much more accurate division of the chemically-thin and thick populations. Indeed, if one only relies on one diagnostic, such as the [Mg/Fe] vs. [Fe/H] diagram \citep{Adibekyan2011, DelgadoMena2017}, several thin-disc stars would (most probably incorrectly) be identified as belonging chemical thick disc (see Fig. \ref{harps0}).
 
-{\it Thick-disc sub-populations:} \citet{Adibekyan2011} first discovered a clear discontinuity between the metal-poor and metal-rich $[\alpha$/Fe]-enhanced (or h$\alpha$mr) disc populations. In our t-SNE analysis of the \citet{DelgadoMena2017} sample, similar to the original paper, we also see a clear difference between at least two, maybe three or four populations (dubbed Thick Discs I/II and III/IV in Fig. \ref{harps0}). The multimodality is better seen when slightly higher perplexity values are chosen ($p\sim 30$). Even if ages and/or kinematics are included as additional dimensions in the analysis, this picture does not change much. The implications of this result, which we can also confirm with other high-resolution data, are discussed in depth in Chiappini et al. (in prep.).
+{\it Thick-disc sub-populations:} \citet{Adibekyan2011} first discovered a clear discontinuity between the metal-poor and metal-rich $[\alpha$/Fe]-enhanced (or h$\alpha$mr) disc populations. In our t-SNE analysis of the \citet{DelgadoMena2017} sample, similar to the original paper, we also see a clear difference between at least two, maybe three or four populations (dubbed Thick Discs I/II and III/IV in Fig. \ref{harps0}). Even if ages and/or kinematics are included as additional dimensions in the analysis, this picture does not change much. The implications of this result, which we can also confirm with other high-resolution data, will be discussed in depth in a companion paper (Chiappini et al., in prep.).
 
 {\it Super-metal-rich stars:} SMR stars ([Fe/H] $\gtrsim0.3$ -- the western-most stars in the t-SNE plane; orange stars in Fig. \ref{harps0}) have only slightly different abundance patterns from the bulk of the thin disc stars (black dots; see Fig. \ref{harps3}); however, Fig. \ref{harps1} shows that they are enhanced in [Y/Ba] and [Cu/Fe] with respect to the local thin disc, indicative of an origin in the inner Milky-Way disc. Most of them have ages between 4 and 8 Gyr, and are on cold orbits ($e<0.12$), which again supports the idea that they have radially migrated from the inner disc (see e.g. \citealt{Casagrande2011, Minchev2012, Vera-Ciro2014, Kordopatis2015, Grand2016, Anders2017}).
 
@@ -181,7 +183,7 @@ Another star that was noted as a mildly s-enhanced thick-disc star by \citet{Del
 
 {\it Other peculiar stars:} HD28701 (brown diamond in Fig. \ref{harps0}) shows enhanced abundances of Sr, Y and Zr when compared to other thick disk stars of similar metallicity, but not as much enhancement in the second s-process peak elements Ba, Ce and Nd \citep{DelgadoMena2017}.
 
-\subsection{Abundance trends with age}
+\subsection{Trends with age and kinematics}
 
 \begin{figure}\centering
 %\sidecaption
@@ -189,9 +191,6 @@ Another star that was noted as a mildly s-enhanced thick-disc star by \citet{Del
 \caption{Abundance trends with stellar age, measured with the \texttt{StarHorse} code \citep{Queiroz2018}.}
 \label{age}
 \end{figure}
-
-
-\subsection{Kinematic trends}
 
 \begin{figure}\centering
 % \sidecaption
@@ -218,7 +217,8 @@ Another star that was noted as a mildly s-enhanced thick-disc star by \citet{Del
 \section{Discussion and conclusions}\label{conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-YES WE CAN use t-SNE to better define subpopulations in abundance space. However, the non-parametric non-linear behaviour of the technique makes it difficult to estimate the significance of found subgroups or clusters. The method could, however, be coupled to a genuine cluster finding algorithm.
+The solar vicinity comprises a well-established mixture of stellar populations, among them halo stars, thick- and thin-disc stars, stars in streams, stars passing by on eccentric orbits, stars on circular orbits that have radially migrated, chemically peculiar stars, and even stars with possibly extragalactic origins (e.g. members of disrupted dwarf galaxies or globular clusters). 
+In this paper we have demonstrated the use of the dimensionality reduction algorithm t-SNE to better define subpopulations in abundance space. While the non-parametric non-linear behaviour of the technique makes it difficult to estimate the significance of found subgroups or clusters, we have verified that our results depend little on the t-SNE parameter choices and are robust to abundance errors. The method could in principle even be coupled to a genuine cluster finding algorithm.
 
 Potential for weak chemical tagging demonstrated in this paper; the viability of t-SNE for strong chemical tagging (finding dispersed members of open clusters) is still not completely clear, but see \citet{Kos2018}.
 

@@ -177,13 +177,13 @@ exinds = [ [7,8], [8,9], [8,32], [0,32],
 limits = [ None,  None,  None,  None, 
            None,  None,  [-.1,15.1,-6,8],  [-.1,15.1, -6,8]]
 
-g   = plt.figure(figsize=(6, 10))
+g   = plt.figure(figsize=(6, 8))
 plt.suptitle("Kinematic trends", fontsize=17)
-gs = gridspec.GridSpec(4, 2)
+gs = gridspec.GridSpec(3, 2)
 gs.update(left=0.12, bottom=0.07, right=0.86, top=0.93,
            wspace=0.06, hspace=0.31)
 
-for jj in range(8):
+for jj in range(6):
     print jj
     ax = plt.Subplot(g, gs[jj/2, jj%2])
     if exinds[jj] != None:

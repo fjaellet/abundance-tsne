@@ -72,7 +72,7 @@
 
 \bibitem[{{Chen} {et~al.}(2015){Chen}, {Bressan}, {Girardi}, {Marigo}, {Kong},
   \& {Lanza}}]{Chen2015}
-{Chen}, Y., {Bressan}, A., {Girardi}, L., {et~al.} 2015, ArXiv e-prints
+{Chen}, Y., {Bressan}, A., {Girardi}, L., {et~al.} 2015, \mnras, 452, 1068
 
 \bibitem[{{Cutri} {et~al.}(2003){Cutri}, {Skrutskie}, {van Dyk}, {Beichman},
   {Carpenter}, {Chester}, {Cambresy}, {Evans}, {Fowler}, {Gizis}, {Howard},
@@ -393,7 +393,7 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 \bibitem[{{Nissen} {et~al.}(2017){Nissen}, {Silva Aguirre},
   {Christensen-Dalsgaard}, {Collet}, {Grundahl}, \& {Slumstrup}}]{Nissen2017}
 {Nissen}, P.~E., {Silva Aguirre}, V., {Christensen-Dalsgaard}, J., {et~al.}
-  2017, ArXiv e-prints
+  2017, \aap, 608, A112
 
 \bibitem[{{Pagel}(2009)}]{Pagel2009}
 {Pagel}, B.~E.~J. 2009, {Nucleosynthesis and Chemical Evolution of Galaxies}
@@ -402,7 +402,8 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Michel}, {Thirion}, {Grisel}, {Blondel}, {Louppe}, {Prettenhofer}, {Weiss},
   {Dubourg}, {Vanderplas}, {Passos}, {Cournapeau}, {Brucher}, {Perrot}, \&
   {Duchesnay}}]{Pedregosa2012}
-{Pedregosa}, F., {Varoquaux}, G., {Gramfort}, A., {et~al.} 2012, ArXiv e-prints
+{Pedregosa}, F., {Varoquaux}, G., {Gramfort}, A., {et~al.} 2012, ArXiv
+  e-prints, arXiv:1201.0490
 
 \bibitem[{{Pomp{\'e}ia} \& {Allen}(2008)}]{Pompeia2008}
 {Pomp{\'e}ia}, L. \& {Allen}, D.~M. 2008, \aap, 488, 723
@@ -411,13 +412,13 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Steinmetz}, {Dal Ponte}, {Stassun}, {da Costa}, {Maia}, {Beers}, {Crestani},
   {Fern{\'a}ndez-Trincado}, {An{\'{\i}}bal Garc{\'{\i}}a-Hern{\'a}ndez},
   {Roman-Lopes}, \& {Zamora}}]{Queiroz2018}
-{Queiroz}, A.~B.~A., {Anders}, F., {Santiago}, B.~X., {et~al.} 2018, MNRAS,
-  accepted, arXiv:1710.09970
+{Queiroz}, A.~B.~A., {Anders}, F., {Santiago}, B.~X., {et~al.} 2018, MNRAS, in
+  press, arXiv:1710.09970
 
-\bibitem[{{Reis} {et~al.}(2017){Reis}, {Poznanski}, {Baron}, {Zasowski}, \&
-  {Shahaf}}]{Reis2017}
-{Reis}, I., {Poznanski}, D., {Baron}, D., {Zasowski}, G., \& {Shahaf}, S. 2017,
-  ArXiv e-prints
+\bibitem[{{Reis} {et~al.}(2018){Reis}, {Poznanski}, {Baron}, {Zasowski}, \&
+  {Shahaf}}]{Reis2018}
+{Reis}, I., {Poznanski}, D., {Baron}, D., {Zasowski}, G., \& {Shahaf}, S. 2018,
+  MNRAS, in press, arXiv:1711.00022
 
 \bibitem[{{Rodrigues} {et~al.}(2017){Rodrigues}, {Bossini}, {Miglio},
   {Girardi}, {Montalb{\'a}n}, {Noels}, {Trabucchi}, {Coelho}, \&

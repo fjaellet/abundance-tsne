@@ -52,7 +52,7 @@ More thorough multi-dimensional abundance-space studies using data-mining techni
 
 In this paper we explore the possibility of combining the information contained in various measured abundance ratios using the dimensionality reduction technique t-SNE (t-distributed stochastic neighbour embedding) to define more robust subpopulations and better identify outliers. We show how the use of several abundance ratios simultaneously can unveil differences and similarities that can trace substructures even without the knowledge of stellar ages. Some of the identified groups/objects each have their own star-formation and enrichment history that should be disentangled before trying to infer the global star-formation history of the Milky-Way disc.
 
-In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2017}). 
+In astronomical applications, t-SNE has mainly been used to identify objects with peculiar spectra (e.g. \citealt{Matijevivc2017, Valentini2017, Traven2017, Reis2018}). 
 During the writing of this paper, \citet{Kos2018} demonstrated in a complementary analysis that abundance-space t-SNE is indeed a reliable chemical-tagging tool: the authors were able to recover 7 out of 9 known open and globular clusters with high efficiency and low contamination using 13 chemical abundances from the GALAH survey \citep{Martell2017}, and they also found two new field member stars to known clusters with this technique. 
 Here we apply abundance-space t-SNE to the high-resolution solar-vicinity HARPS-GTO survey data of \citet{DelgadoMena2017}, and show that this method provides a powerful visualisation and clustering tool for chemical-tagging studies. We identify, in a robust way, several distinct chemical-abundance substructures of the solar-vicinity disc population, as well as some peculiar stars. In an acompanying letter (Chiappini et al., in prep.) we discuss the main result of chemical subpopulations in the high-[$\alpha$/Fe] regime, which is ubiquitous in other surveys as well, and points to a different origin of the metal-poor and metal-rich part of the chemical thick disc. 
 
@@ -157,6 +157,8 @@ We further tested the robustness of our reference map to abundance errors with a
 
 \subsection{Disc sub-populations}
 
+
+
 {\it The thin-thick disc dichotomy:} As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} and \citet{DelgadoMena2017}, the HARPS-GTO data confirm the clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram (e.g. \citealt{Edvardsson1993, Gratton1996, Fuhrmann1998, Fuhrmann2011, Fuhrmann2017}). This discontinuity is reflected in a very clear manner in the t-SNE projection:
 We find a clear and obvious gap between the chemical thin- and thick-disc populations in the t-SNE diagram that remains very robust for different choices of the t-SNE hyper-parameters. Primarily, this means that the chemical patterns of thin and thick disc are indeed distinct, and can be disentangled by high-resolution spectroscopy. Secondly, our analysis of the full chemical information results in a much more accurate division of the chemically-thin and thick populations. Indeed, if one only relies on one diagnostic, such as the [Mg/Fe] vs. [Fe/H] diagram \citep{Adibekyan2011, DelgadoMena2017}, several thin-disc stars would (most probably incorrectly) be identified as belonging chemical thick disc (see Fig. \ref{harps0}).
 
@@ -174,7 +176,8 @@ We find a clear and obvious gap between the chemical thin- and thick-disc popula
 
 {\it Possible satellite debris and s-process stars:} Another observation of Fig. \ref{harps0} is that our method clearly singles out a small group of stars with dwarf-galaxy or globular-cluster-like, and s-process-enhanced abundance patterns (some more were lost due to the temperature and abundance quality cuts). These seven stars (yellow points in Fig. \ref{harps0}) are all enhanced in the measured s-process elements with respect to both the thin and thick disc populations (see Fig. \ref{harps3}, bottom panel). They are also enhanced in [$\alpha$/Fe], as expected for their low metallicity, although there is considerable star-to-star variance. Some of them are slightly less [$\alpha$/Fe]-enhanced than the thick-disc populations, placing them in the typical dwarf-galaxy regime. 
 
-The most extreme abundance outlier in this group, as already noted by \citet{DelgadoMena2017}, is HD11397, which shows the highest s-process abundances of the entire sample ([s/Fe]$\sim0.7$), and was classified as a so-called mild barium star by \citet{Pompeia2008}. Another star that was noted as a mildly s-enhanced thick-disc star by \citet{DelgadoMena2017}, is HD126803, also among this group. The other mild s-enhancement candidate of \citet{DelgadoMena2017}, CD-436810, did not satisfy our $T_{\rm eff}$ criterion.
+The most extreme abundance outlier in this group, as already noted by \citet{DelgadoMena2017}, is HD11397, which shows the highest s-process abundances of the entire sample ([s/Fe]$\sim0.7$). It was classified as a so-called mild barium star by \citet{Pompeia2008} who also showed that its s-process abundance pattern is compatible with typical AGB stellar yields. 
+Another star that was noted as a mildly s-enhanced thick-disc star by \citet{DelgadoMena2017}, is HD126803, also among this group. The other mild s-enhancement candidate of \citet{DelgadoMena2017}, CD-436810, did not satisfy our $T_{\rm eff}$ criterion.
 
 
 
