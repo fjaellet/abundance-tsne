@@ -1,21 +1,6 @@
-"""
-Multi-dim. extreme deconvolution of the local APOGEE_TGAS (d<1 kpc) stars
------------------------------
-
-An example of extreme deconvolution showing a simulated two-dimensional
-distribution of points, where the positions are subject to errors. The top two
-panels show the distributions with small (left) and large (right) errors. The
-bottom panels show the densities derived from the noisy sample (top-right
-panel) using extreme deconvolution; the resulting distribution closely matches
-that shown in the top-left panel.
-"""
-# Author: F. Anders, but mostly really Jake VanderPlas
+# Author: F. Anders
 # License: BSD
-#   The figure produced by this code is published in the textbook
-#   "Statistics, Data Mining, and Machine Learning in Astronomy" (2013)
-#   For more information, see http://astroML.github.com
-#   To report a bug or issue, use the following forum:
-#    https://groups.google.com/forum/#!forum/astroml-general
+
 import numpy as np
 from matplotlib import pyplot as plt
 import matplotlib
@@ -35,9 +20,9 @@ what = {"thick":[0,1,2,3,4], "thin":[0,5,7,9],
         "strange": [0,10,11,12,13,14,16,17,18,19]}
 note = {"thick":r"High-$[\alpha$/Fe] populations",
         "thin":r"Low-$[\alpha$/Fe] populations",
-        "strange":r"Outliers"}
+        "strange":r"Peculiar stars"}
 
-inds = "thick"
+inds = "strange"
   
 t     = open_data.harps()
 data  = t.data
