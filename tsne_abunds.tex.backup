@@ -157,6 +157,13 @@ We further tested the robustness of our reference map to abundance errors with a
 
 \subsection{Disc sub-populations}
 
+\begin{figure}\centering
+%\sidecaption
+ \includegraphics[width=0.5\textwidth]{im/harps_tsne-age-abundsplot_teffcut.png}
+\caption{Abundance trends of the HARPS-GTO abundances with stellar age, measured with the \texttt{StarHorse} code \citep{Queiroz2018}.}
+\label{age}
+\end{figure}
+
 In this subsection, we discuss the main groups and features identified in Fig. \ref{harps0} in more detail.\\
 
 {\it The thin-thick disc dichotomy:} As discussed in the works of \citet{Adibekyan2011, Adibekyan2012} and \citet{DelgadoMena2017}, the HARPS-GTO data confirm the clear discontinuity between the high- and the low-[$\alpha$/Fe] sequences in the [Mg/Fe] vs. [Fe/H] diagram (e.g. \citealt{Edvardsson1993, Gratton1996, Fuhrmann1998, Fuhrmann2011, Fuhrmann2017}). This discontinuity is reflected in a very clear manner in the t-SNE projection:
@@ -175,29 +182,28 @@ a hint for a systematic r-process ([Eu/Fe]$\sim0.2$) enhancement with respect to
 
 {\it The young locally-born disc:} The grey circles in Fig. \ref{harps0} denote a population that we call young local disc, because 1. they are among the youngest stars (see Fig. \ref{age}), 2. they follow the local rotation curve with a very low velocity dispersion (see Fig. \ref{kin}, and 3. their abundance pattern follows the trends of the local interstellar medium (CONFIRM!) as well as the predictions of chemical-evolution models of the Galactic thin disc (CITE examples). The young local disc stars have near-solar metallicities and are slightly deficient in [Mg/Fe], [Al/Fe], and [Si/Fe] with respect to the Sun and the thin disc, as expected for young stars from the stronger contribution of SN Ia yields. They are also systematically deficient in [Cu/Fe] and [Zn/Fe], while being moderately in enhanced ([s/Fe]$\sim0.15$) in s-process elements, probably by intermediate- and low-mass AGB stars. 
 
-{\it The remaining thin-disc component:} 
-
-\begin{figure}\centering
-%\sidecaption
- \includegraphics[width=0.5\textwidth]{im/harps_tsne-age-abundsplot_teffcut.png}
-\caption{Abundance trends of the HARPS-GTO abundances with stellar age, measured with the \texttt{StarHorse} code \citep{Queiroz2018}.}
-\label{age}
-\end{figure}
+{\it The remaining thin-disc component:} The black dots in Fig. \ref{harps0} stand for the remaining parts of the low-[$\alpha$/Fe] solar-vicinity disc. The morphology of this population in the t-SNE map suggests that this reference ``thin disc'' may not be a homogeneous monolithic population either (possibly more substructure could be defined, although less robustly; see Fig. \ref{robust}). But within the scope of this paper, we define the thin disc as a broad component that has a wide range of ages and birth places, and therefore could in principle also cover a wider range of chemical abundances. Fig. \ref{harps3} shows, however, that our ``thin disc'' population, while covering a considerable metallicity range from -0.3 to 0.3, has quite small spreads in each elemental abundance relative to iron, and closely follows the solar abundance pattern. This suggests that 1. the Sun has very typical thin-disc abundances, and 2. the chemical evolution of the interstellar medium in the disc near must have been slow and very homogeneous for the past $\sim10$ Gyr. The significant spread in the age-metallicity relation of the solar-neighbourhood thin disc (Fig. \ref{age}) can be explained by the presence of a strong radial metallicity gradient, together with radial mixing \citep[e.g.][Minchev et al., in prep.]{Edvardsson1993, Minchev2013, Anders2017a}.
 
 \subsection{Chemically peculiar stars}
 
-{\it Possible satellite debris and s-process stars:} Another observation of Fig. \ref{harps0} is that our method clearly singles out a small group of stars with dwarf-galaxy or globular-cluster-like, and s-process-enhanced abundance patterns (some more were lost due to the temperature and abundance quality cuts). These seven stars (yellow points in Fig. \ref{harps0}) are all enhanced in the measured s-process elements with respect to both the thin and thick disc populations (see Fig. \ref{harps3}, bottom panel). They are also enhanced in [$\alpha$/Fe], as expected for their low metallicity, although there is considerable star-to-star variance. Some of them are slightly less [$\alpha$/Fe]-enhanced than the thick-disc populations, placing them in the typical dwarf-galaxy regime. 
+In addition to the main disc populations discussed in the previous subsection, Fig. \ref{harps0} also highlights a number of outliers and chemically peculiar stars revealed by the t-SNE projection. Some of them are known peculiar objects, some are solid, and some are dubious candidates. Their abundance patterns relative to iron are shown in the bottom panel of Fig. \ref{harps3}. Here we discuss each of them briefly.
+
+{\it s-process-enhanced stars:} Our method clearly singles out a small group of stars with dwarf-galaxy- or globular-cluster-like, and s-process-enhanced abundance patterns (a few more were lost due to the temperature and abundance quality cuts). These seven stars (yellow points in Fig. \ref{harps0}) are all enhanced in the measured s-process elements with respect to both the thin and thick disc populations (see Fig. \ref{harps3}, bottom panel). They are also enhanced in [$\alpha$/Fe], as expected for their low metallicity, although there is considerable star-to-star variance. Some of them are slightly less [$\alpha$/Fe]-enhanced than the thick-disc populations, placing them in the typical dwarf-galaxy regime. 
 
 The most extreme abundance outlier in this group, as already noted by \citet{DelgadoMena2017}, is HD11397, which shows the highest s-process abundances of the entire sample ([s/Fe]$\sim0.7$). It was classified as a so-called mild barium star by \citet{Pompeia2008} who also showed that its s-process abundance pattern is compatible with typical AGB stellar yields. 
 Another star that was noted as a mildly s-enhanced thick-disc star by \citet{DelgadoMena2017}, is HD126803, also among this group. The other mild s-enhancement candidate of \citet{DelgadoMena2017}, CD-436810, did not satisfy our $T_{\rm eff}$ criterion.
 
 
 
-{\it Other peculiar stars:} HD28701 (brown diamond in Fig. \ref{harps0}) shows enhanced abundances of Sr, Y and Zr when compared to other thick disk stars of similar metallicity, but not as much enhancement in the second s-process peak elements Ba, Ce and Nd \citep{DelgadoMena2017}.
+{\it Another debris candidate:} HD28701 (brown diamond in Fig. \ref{harps0}) shows enhanced abundances of Sr, Y and Zr when compared to other thick disk stars of similar metallicity, but not as much enhancement in the second s-process peak elements Ba, Ce and Nd \citep{DelgadoMena2017}.
+
+{\it Extreme-[Ti/Fe] star:} 
+
+{\it Low-[Mg/Fe] candidate:}
+
+{\it High-[Al/Mg] candidate:} This star is most likely not a true oddball, but a typical youngish thin-disc star with a very uncertain Al measurement ([Al/Fe]$=0.43\pm0.46$) that ended up as an outlier in the t-SNE map because the method cannot account for heteroscedastic errors.
 
 \subsection{Trends with age and kinematics}
-
-A strong correlation between age and [Al/Mg] has recently been found in solar-metallicity solar twins \citep{Nissen2015, Nissen2016, TucciMaia2016, Nissen2017}. Here we find that this correlation persists for a broader range of stellar parameters, lower signal-to-noise ratios, and more uncertain age estimates, and appears much stronger for the metal-poor thin-disc stars.
 
 \begin{figure}\centering
 % \sidecaption
@@ -206,7 +212,7 @@ A strong correlation between age and [Al/Mg] has recently been found in solar-me
 \label{kin}
 \end{figure}
 
-
+A strong correlation between age and [Al/Mg] has recently been found in solar-metallicity solar twins \citep{Nissen2015, Nissen2016, TucciMaia2016, Nissen2017}. Here we find that this correlation persists for a broader range of stellar parameters, lower signal-to-noise ratios, and more uncertain age estimates, and appears much stronger for the metal-poor thin-disc stars.
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

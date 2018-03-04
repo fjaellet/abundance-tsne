@@ -1,4 +1,4 @@
-\begin{thebibliography}{72}
+\begin{thebibliography}{74}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -12,17 +12,26 @@
 {Adibekyan}, V.~Z., {Sousa}, S.~G., {Santos}, N.~C., {et~al.} 2012, \aap, 545,
   A32
 
-\bibitem[{{Anders} {et~al.}(2017){Anders}, {Chiappini}, {Rodrigues}, {Miglio},
-  {Montalb{\'a}n}, {Mosser}, {Girardi}, {Valentini}, {Noels}, {Morel},
-  {Johnson}, {Schultheis}, {Baudin}, {de Assis Peralta}, {Hekker},
-  {Theme{\ss}l}, {Kallinger}, {Garc{\'{\i}}a}, {Mathur}, {Baglin}, {Santiago},
-  {Martig}, {Minchev}, {Steinmetz}, {da Costa}, {Maia}, {Allende Prieto},
-  {Cunha}, {Beers}, {Epstein}, {Garc{\'{\i}}a P{\'e}rez},
+\bibitem[{{Anders} {et~al.}(2017{\natexlab{a}}){Anders}, {Chiappini},
+  {Minchev}, {Miglio}, {Montalb{\'a}n}, {Mosser}, {Rodrigues}, {Santiago},
+  {Baudin}, {Beers}, {da Costa}, {Garc{\'{\i}}a},
+  {Garc{\'{\i}}a-Hern{\'a}ndez}, {Holtzman}, {Maia}, {Majewski}, {Mathur},
+  {Noels-Grotsch}, {Pan}, {Schneider}, {Schultheis}, {Steinmetz}, {Valentini},
+  \& {Zamora}}]{Anders2017a}
+{Anders}, F., {Chiappini}, C., {Minchev}, I., {et~al.} 2017{\natexlab{a}},
+  \aap, 600, A70
+
+\bibitem[{{Anders} {et~al.}(2017{\natexlab{b}}){Anders}, {Chiappini},
+  {Rodrigues}, {Miglio}, {Montalb{\'a}n}, {Mosser}, {Girardi}, {Valentini},
+  {Noels}, {Morel}, {Johnson}, {Schultheis}, {Baudin}, {de Assis Peralta},
+  {Hekker}, {Theme{\ss}l}, {Kallinger}, {Garc{\'{\i}}a}, {Mathur}, {Baglin},
+  {Santiago}, {Martig}, {Minchev}, {Steinmetz}, {da Costa}, {Maia}, {Allende
+  Prieto}, {Cunha}, {Beers}, {Epstein}, {Garc{\'{\i}}a P{\'e}rez},
   {Garc{\'{\i}}a-Hern{\'a}ndez}, {Harding}, {Holtzman}, {Majewski},
   {M{\'e}sz{\'a}ros}, {Nidever}, {Pan}, {Pinsonneault}, {Schiavon},
   {Schneider}, {Shetrone}, {Stassun}, {Zamora}, \& {Zasowski}}]{Anders2017}
-{Anders}, F., {Chiappini}, C., {Rodrigues}, T.~S., {et~al.} 2017, \aap, 597,
-  A30
+{Anders}, F., {Chiappini}, C., {Rodrigues}, T.~S., {et~al.} 2017{\natexlab{b}},
+  \aap, 597, A30
 
 \bibitem[{{Anders} {et~al.}(2014){Anders}, {Chiappini}, {Santiago},
   {Rocha-Pinto}, {Girardi}, {da Costa}, {Maia}, {Steinmetz}, {Minchev},
@@ -383,6 +392,10 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Worley}}]{Miglio2017}
 {Miglio}, A., {Chiappini}, C., {Mosser}, B., {et~al.} 2017, Astronomische
   Nachrichten, 338, 644
+
+\bibitem[{{Minchev} {et~al.}(2013){Minchev}, {Chiappini}, \&
+  {Martig}}]{Minchev2013}
+{Minchev}, I., {Chiappini}, C., \& {Martig}, M. 2013, \aap, 558, A9
 
 \bibitem[{{Minchev} {et~al.}(2012){Minchev}, {Famaey}, {Quillen}, {Dehnen},
   {Martig}, \& {Siebert}}]{Minchev2012}
