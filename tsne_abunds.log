@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  5 MAR 2018 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  6 MAR 2018 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1057,49 +1057,68 @@ fcut.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./im/harps_tsne-age-abundsplot_teffcut.png>]
-<im/harps_tsne-kin-abundsplot_teffcut.png, id=62, 433.62pt x 578.16pt>
+Underfull \hbox (badness 10000) in paragraph at lines 244--249
+[]\T1/txr/m/it/10 Extreme-[Ti/Fe] star: \T1/txr/m/n/10 HD14452 (limegreen pen-t
+agon,
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 244--249
+\T1/txr/m/n/10 en-riched in the heav-ier $\OML/txmi/m/it/10 $\T1/txr/m/n/10 -e
+lements ti-ta-nium and cal-cium
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
+[]\T1/txr/m/it/10 Low-[Mg/Fe] can-di-date: \T1/txr/m/n/10 HD113513 (black squar
+e,
+ []
+
+<im/harps_tsne-kin-abundsplot_teffcut.png, id=65, 433.62pt x 578.16pt>
 File: im/harps_tsne-kin-abundsplot_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-kin-abundsplot_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-kin-abundsplot_teffcut.png used on input
- line 248.
+ line 258.
 (pdftex.def)             Requested size: 256.53291pt x 342.05539pt.
- [8]
-Underfull \hbox (badness 1924) in paragraph at lines 276--277
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 286--287
 []\T1/txr/m/n/10 It is bet-ter to con-fine the anal-y-sis to nar-row re-gions
  []
 
-(./tsne_abunds.bbl
-Underfull \hbox (badness 1173) in paragraph at lines 438--440
+(./tsne_abunds.bbl [9 <./im/harps_tsne-kin-abundsplot_teffcut.png>]
+Underfull \hbox (badness 1173) in paragraph at lines 443--445
 []\T1/txr/m/n/8 Pedregosa, F., Varo-quaux, G., Gram-fort, A., et al. 2012, ArXi
 v e-prints,
  []
 
-[9 <./im/harps_tsne-kin-abundsplot_teffcut.png>] (./tsne_abunds.llt)) [10
+(./tsne_abunds.llt)) [10
 
-]
-(./tsne_abunds.aux) ) 
+] (./tsne_abunds.aux) ) 
 Here is how much of TeX's memory you used:
- 6476 strings out of 494041
- 83619 string characters out of 6158495
- 220933 words of memory out of 5000000
- 9640 multiletter control sequences out of 15000+600000
+ 6479 strings out of 494041
+ 83667 string characters out of 6158495
+ 220403 words of memory out of 5000000
+ 9643 multiletter control sequences out of 15000+600000
  89815 words of font info for 150 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 41i,12n,45p,7218b,546s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/share/
-texmf/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texmf/fonts/type1/public/
-txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/s
-hare/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/pu
-blic/txfonts/t1xtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/txex.pfb></
-usr/share/texmf/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf/fonts/typ
-e1/public/txfonts/txsya.pfb></usr/share/texmf/fonts/type1/public/txfonts/txsyc.
-pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/fon
-ts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb8a
-.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on tsne_abunds.pdf (10 pages, 4510015 bytes).
+ 41i,12n,45p,7218b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/shar
+e/texmf/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texmf/fonts/type1/publi
+c/txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr
+/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texmf/fonts/type1/
+public/txfonts/t1xtt.pfb></usr/share/texmf/fonts/type1/public/txfonts/txex.pfb>
+</usr/share/texmf/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf/fonts/t
+ype1/public/txfonts/txsya.pfb></usr/share/texmf/fonts/type1/public/txfonts/txsy
+c.pfb></usr/share/texmf/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf/f
+onts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb
+8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fon
+ts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on tsne_abunds.pdf (10 pages, 4512105 bytes).
 PDF statistics:
  123 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream

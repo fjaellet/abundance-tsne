@@ -1,4 +1,4 @@
-\begin{thebibliography}{75}
+\begin{thebibliography}{76}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -411,6 +411,11 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 \bibitem[{{Minchev} {et~al.}(2012){Minchev}, {Famaey}, {Quillen}, {Dehnen},
   {Martig}, \& {Siebert}}]{Minchev2012}
 {Minchev}, I., {Famaey}, B., {Quillen}, A.~C., {et~al.} 2012, \aap, 548, A127
+
+\bibitem[{{Ness} {et~al.}(2018){Ness}, {Rix}, {Hogg}, {Casey}, {Holtzman},
+  {Fouesneau}, {Zasowski}, {Geisler}, {Shetrone}, {Minniti}, {Frinchaboy}, \&
+  {Roman-Lopes}}]{Ness2018}
+{Ness}, M., {Rix}, H.-W., {Hogg}, D.~W., {et~al.} 2018, \apj, 853, 198
 
 \bibitem[{{Nissen}(2015)}]{Nissen2015}
 {Nissen}, P.~E. 2015, \aap, 579, A52
