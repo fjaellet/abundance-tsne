@@ -1,4 +1,4 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{79}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -58,6 +58,9 @@
 \bibitem[{{Boesso} \& {Rocha-Pinto}(2018)}]{Boesso2018}
 {Boesso}, R. \& {Rocha-Pinto}, H.~J. 2018, \mnras, 474, 4010
 
+\bibitem[{{Bovy}(2015)}]{Bovy2015}
+{Bovy}, J. 2015, \apjs, 216, 29
+
 \bibitem[{{Bressan} {et~al.}(2012){Bressan}, {Marigo}, {Girardi}, {Salasnich},
   {Dal Cero}, {Rubele}, \& {Nanni}}]{Bressan2012}
 {Bressan}, A., {Marigo}, P., {Girardi}, L., {et~al.} 2012, \mnras, 427, 127
@@ -90,6 +93,11 @@
   {Zacarias}}]{Cutri2003}
 {Cutri}, R.~M., {Skrutskie}, M.~F., {van Dyk}, S., {et~al.} 2003, {2MASS All
   Sky Catalog of point sources.}
+
+\bibitem[{{da Silva} {et~al.}(2006){da Silva}, {Girardi}, {Pasquini},
+  {Setiawan}, {von der L{\"u}he}, {de Medeiros}, {Hatzes}, {D{\"o}llinger}, \&
+  {Weiss}}]{daSilva2006}
+{da Silva}, L., {Girardi}, L., {Pasquini}, L., {et~al.} 2006, \aap, 458, 609
 
 \bibitem[{{da Silva} {et~al.}(2015){da Silva}, {Milone}, \&
   {Rocha-Pinto}}]{daSilva2015}
@@ -276,9 +284,17 @@
   {Zasowski}}]{Hayden2015}
 {Hayden}, M.~R., {Bovy}, J., {Holtzman}, J.~A., {et~al.} 2015, \apj, 808, 132
 
+\bibitem[{{Haywood}(2006)}]{Haywood2006}
+{Haywood}, M. 2006, \mnras, 371, 1760
+
 \bibitem[{{Haywood} {et~al.}(2018){Haywood}, {Di Matteo}, {Lehnert}, {Snaith},
   {Fragkoudi}, \& {Khoperskov}}]{Haywood2018}
 {Haywood}, M., {Di Matteo}, P., {Lehnert}, M., {et~al.} 2018, ArXiv e-prints
+
+\bibitem[{{Haywood} {et~al.}(2013){Haywood}, {Di Matteo}, {Lehnert}, {Katz}, \&
+  {G{\'o}mez}}]{Haywood2013}
+{Haywood}, M., {Di Matteo}, P., {Lehnert}, M.~D., {Katz}, D., \& {G{\'o}mez},
+  A. 2013, \aap, 560, A109
 
 \bibitem[{{Henden} \& {Munari}(2014)}]{Henden2014}
 {Henden}, A. \& {Munari}, U. 2014, Contributions of the Astronomical
@@ -337,6 +353,9 @@ Kullback, S. \& Leibler, R.~A. 1951, Ann. Math. Statist., 22, 79
 
 \bibitem[{Linderman \& Steinerberger(2017)}]{Linderman2017}
 Linderman, G.~C. \& Steinerberger, S. 2017
+
+\bibitem[{{Mackereth} \& {Bovy}(2018)}]{Mackereth2018}
+{Mackereth}, J.~T. \& {Bovy}, J. 2018, \mnras, submitted, arXiv:1802.02592
 
 \bibitem[{{Majewski} {et~al.}(2017){Majewski}, {Schiavon}, {Frinchaboy},
   {Allende Prieto}, {Barkhouser}, {Bizyaev}, {Blank}, {Brunner}, {Burton},
@@ -423,11 +442,6 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 \bibitem[{{Nissen}(2016)}]{Nissen2016}
 {Nissen}, P.~E. 2016, \aap, 593, A65
 
-\bibitem[{{Nissen} {et~al.}(2017){Nissen}, {Silva Aguirre},
-  {Christensen-Dalsgaard}, {Collet}, {Grundahl}, \& {Slumstrup}}]{Nissen2017}
-{Nissen}, P.~E., {Silva Aguirre}, V., {Christensen-Dalsgaard}, J., {et~al.}
-  2017, \aap, 608, A112
-
 \bibitem[{{Nordstr{\"o}m} {et~al.}(2004){Nordstr{\"o}m}, {Mayor}, {Andersen},
   {Holmberg}, {Pont}, {J{\o}rgensen}, {Olsen}, {Udry}, \&
   {Mowlavi}}]{Nordstroem2004}
@@ -508,11 +522,6 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Mortier}, \& {Israelian}}]{Tsantaki2013}
 {Tsantaki}, M., {Sousa}, S.~G., {Adibekyan}, V.~Z., {et~al.} 2013, \aap, 555,
   A150
-
-\bibitem[{{Tucci Maia} {et~al.}(2016){Tucci Maia}, {Ram{\'{\i}}rez},
-  {Mel{\'e}ndez}, {Bedell}, {Bean}, \& {Asplund}}]{TucciMaia2016}
-{Tucci Maia}, M., {Ram{\'{\i}}rez}, I., {Mel{\'e}ndez}, J., {et~al.} 2016,
-  \aap, 590, A32
 
 \bibitem[{{Valentini} {et~al.}(2017){Valentini}, {Chiappini}, {Davies},
   {Elsworth}, {Mosser}, {Lund}, {Miglio}, {Chaplin}, {Rodrigues}, {Boeche},
