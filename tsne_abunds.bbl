@@ -1,4 +1,4 @@
-\begin{thebibliography}{79}
+\begin{thebibliography}{90}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -86,6 +86,23 @@
   \& {Lanza}}]{Chen2015}
 {Chen}, Y., {Bressan}, A., {Girardi}, L., {et~al.} 2015, \mnras, 452, 1068
 
+\bibitem[{{Chiappini}(2009)}]{Chiappini2009}
+{Chiappini}, C. 2009, in IAU Symposium, Vol. 254, IAU Symposium, ed.
+  J.~{Andersen}, B.~{Nordstr{\"o}m}, \& J.~{Bland-Hawthorn}, 191--196
+
+\bibitem[{{Chiappini}(2015)}]{Chiappini2015}
+{Chiappini}, C. 2015, in EAS Publications Series, Vol.~73, EAS Publications
+  Series, 309--341
+
+\bibitem[{{Cristallo} {et~al.}(2009){Cristallo}, {Straniero}, {Gallino},
+  {Piersanti}, {Dom{\'{\i}}nguez}, \& {Lederer}}]{Cristallo2009}
+{Cristallo}, S., {Straniero}, O., {Gallino}, R., {et~al.} 2009, \apj, 696, 797
+
+\bibitem[{{Cristallo} {et~al.}(2015){Cristallo}, {Straniero}, {Piersanti}, \&
+  {Gobrecht}}]{Cristallo2015}
+{Cristallo}, S., {Straniero}, O., {Piersanti}, L., \& {Gobrecht}, D. 2015,
+  \apjs, 219, 40
+
 \bibitem[{{Cutri} {et~al.}(2003){Cutri}, {Skrutskie}, {van Dyk}, {Beichman},
   {Carpenter}, {Chester}, {Cambresy}, {Evans}, {Fowler}, {Gizis}, {Howard},
   {Huchra}, {Jarrett}, {Kopan}, {Kirkpatrick}, {Light}, {Marsh}, {McCallon},
@@ -98,6 +115,13 @@
   {Setiawan}, {von der L{\"u}he}, {de Medeiros}, {Hatzes}, {D{\"o}llinger}, \&
   {Weiss}}]{daSilva2006}
 {da Silva}, L., {Girardi}, L., {Pasquini}, L., {et~al.} 2006, \aap, 458, 609
+
+\bibitem[{{da Silva} {et~al.}(2016){da Silva}, {Lemasle}, {Bono}, {Genovali},
+  {McWilliam}, {Cristallo}, {Bergemann}, {Buonanno}, {Fabrizio}, {Ferraro},
+  {Fran{\c c}ois}, {Iannicola}, {Inno}, {Laney}, {Kudritzki}, {Matsunaga},
+  {Nonino}, {Primas}, {Przybilla}, {Romaniello}, {Th{\'e}venin}, \&
+  {Urbaneja}}]{daSilva2016}
+{da Silva}, R., {Lemasle}, B., {Bono}, G., {et~al.} 2016, \aap, 586, A125
 
 \bibitem[{{da Silva} {et~al.}(2015){da Silva}, {Milone}, \&
   {Rocha-Pinto}}]{daSilva2015}
@@ -267,12 +291,15 @@
 \bibitem[{{Grand} \& {Kawata}(2016)}]{Grand2016}
 {Grand}, R.~J.~J. \& {Kawata}, D. 2016, Astronomische Nachrichten, 337, 957
 
-\bibitem[{{Gratton} {et~al.}(1996){Gratton}, {Carretta}, {Matteucci}, \&
-  {Sneden}}]{Gratton1996}
-{Gratton}, R., {Carretta}, E., {Matteucci}, F., \& {Sneden}, C. 1996, in
-  Astronomical Society of the Pacific Conference Series, Vol.~92, Formation of
-  the Galactic Halo...Inside and Out, ed. H.~L. {Morrison} \& A.~{Sarajedini},
-  307
+\bibitem[{{Grenon}(1972)}]{Grenon1972}
+{Grenon}, M. 1972, in IAU Colloq. 17: Age des Etoiles, ed. G.~{Cayrel de
+  Strobel} \& A.~M. {Delplace}, 55
+
+\bibitem[{{Grenon}(1989)}]{Grenon1989}
+{Grenon}, M. 1989, \apss, 156, 29
+
+\bibitem[{{Grenon}(1999)}]{Grenon1999}
+{Grenon}, M. 1999, \apss, 265, 331
 
 \bibitem[{{Hayden} {et~al.}(2015){Hayden}, {Bovy}, {Holtzman}, {Nidever},
   {Bird}, {Weinberg}, {Andrews}, {Majewski}, {Allende Prieto}, {Anders},
@@ -382,6 +409,15 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Tinney}, {Watson}, \& {Wittenmyer}}]{Martell2017}
 {Martell}, S.~L., {Sharma}, S., {Buder}, S., {et~al.} 2017, \mnras, 465, 3203
 
+\bibitem[{{Martig} {et~al.}(2015){Martig}, {Rix}, {Aguirre}, {Hekker},
+  {Mosser}, {Elsworth}, {Bovy}, {Stello}, {Anders}, {Garc{\'{\i}}a}, {Tayar},
+  {Rodrigues}, {Basu}, {Carrera}, {Ceillier}, {Chaplin}, {Chiappini},
+  {Frinchaboy}, {Garc{\'{\i}}a-Hern{\'a}ndez}, {Hearty}, {Holtzman}, {Johnson},
+  {Majewski}, {Mathur}, {M{\'e}sz{\'a}ros}, {Miglio}, {Nidever}, {Pan},
+  {Pinsonneault}, {Schiavon}, {Schneider}, {Serenelli}, {Shetrone}, \&
+  {Zamora}}]{Martig2015}
+{Martig}, M., {Rix}, H.-W., {Aguirre}, V.~S., {et~al.} 2015, \mnras, 451, 2230
+
 \bibitem[{{Matijevi{\v c}} {et~al.}(2017){Matijevi{\v c}}, {Chiappini},
   {Grebel}, {Wyse}, {Zwitter}, {Bienaym{\'e}}, {Bland-Hawthorn}, {Freeman},
   {Gibson}, {Gilmore}, {Helmi}, {Kordopatis}, {Kunder}, {Munari}, {Navarro},
@@ -426,6 +462,10 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 \bibitem[{{Minchev} {et~al.}(2013){Minchev}, {Chiappini}, \&
   {Martig}}]{Minchev2013}
 {Minchev}, I., {Chiappini}, C., \& {Martig}, M. 2013, \aap, 558, A9
+
+\bibitem[{{Minchev} {et~al.}(2014){Minchev}, {Chiappini}, \&
+  {Martig}}]{Minchev2014}
+{Minchev}, I., {Chiappini}, C., \& {Martig}, M. 2014, \aap, 572, A92
 
 \bibitem[{{Minchev} {et~al.}(2012){Minchev}, {Famaey}, {Quillen}, {Dehnen},
   {Martig}, \& {Siebert}}]{Minchev2012}
@@ -472,6 +512,11 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 {Reis}, I., {Poznanski}, D., {Baron}, D., {Zasowski}, G., \& {Shahaf}, S. 2018,
   MNRAS, in press, arXiv:1711.00022
 
+\bibitem[{{Ritter} {et~al.}(2017){Ritter}, {C{\^o}t{\'e}}, {Herwig}, {Navarro},
+  \& {Fryer}}]{Ritter2017}
+{Ritter}, C., {C{\^o}t{\'e}}, B., {Herwig}, F., {Navarro}, J.~F., \& {Fryer},
+  C. 2017, ArXiv e-prints
+
 \bibitem[{{Rodrigues} {et~al.}(2017){Rodrigues}, {Bossini}, {Miglio},
   {Girardi}, {Montalb{\'a}n}, {Noels}, {Trabucchi}, {Coelho}, \&
   {Marigo}}]{Rodrigues2017}
@@ -517,6 +562,10 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Reid}, \& {Ting}}]{Traven2017}
 {Traven}, G., {Matijevi{\v c}}, G., {Zwitter}, T., {et~al.} 2017, \apjs, 228,
   24
+
+\bibitem[{{Trevisan} {et~al.}(2011){Trevisan}, {Barbuy}, {Eriksson},
+  {Gustafsson}, {Grenon}, \& {Pomp{\'e}ia}}]{Trevisan2011}
+{Trevisan}, M., {Barbuy}, B., {Eriksson}, K., {et~al.} 2011, \aap, 535, A42
 
 \bibitem[{{Tsantaki} {et~al.}(2013){Tsantaki}, {Sousa}, {Adibekyan}, {Santos},
   {Mortier}, \& {Israelian}}]{Tsantaki2013}
