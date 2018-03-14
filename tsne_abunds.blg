@@ -4,48 +4,49 @@ The top-level auxiliary file: tsne_abunds.aux
 The style file: aa.bst
 Database file #1: FA_library.bib
 Warning--empty publisher in Cutri2003
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty publisher in Ivezic2013
 Warning--empty journal in Linderman2017
 Warning--empty publisher in Pagel2009
-You've used 90 entries,
+You've used 96 entries,
             2947 wiz_defined-function locations,
-            1194 strings with 50073 characters,
-and the built_in function-call counts, 110829 in all, are:
-= -- 7928
-> -- 16290
-< -- 29
-+ -- 5441
-- -- 5350
-* -- 10821
-:= -- 20984
-add.period$ -- 90
-call.type$ -- 90
-change.case$ -- 2140
-chr.to.int$ -- 89
-cite$ -- 94
-duplicate$ -- 1673
-empty$ -- 2396
-format.name$ -- 5569
-if$ -- 21449
+            1232 strings with 51288 characters,
+and the built_in function-call counts, 113305 in all, are:
+= -- 8140
+> -- 16459
+< -- 32
++ -- 5498
+- -- 5401
+* -- 11020
+:= -- 21462
+add.period$ -- 96
+call.type$ -- 96
+change.case$ -- 2181
+chr.to.int$ -- 95
+cite$ -- 100
+duplicate$ -- 1777
+empty$ -- 2540
+format.name$ -- 5631
+if$ -- 21928
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 84
-newline$ -- 274
-num.names$ -- 364
-pop$ -- 2137
+missing$ -- 89
+newline$ -- 292
+num.names$ -- 388
+pop$ -- 2169
 preamble$ -- 1
-purify$ -- 2140
+purify$ -- 2181
 quote$ -- 0
-skip$ -- 1463
+skip$ -- 1553
 stack$ -- 0
-substring$ -- 1831
+substring$ -- 1934
 swap$ -- 44
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 801
+type$ -- 855
 warning$ -- 4
-while$ -- 353
+while$ -- 375
 width$ -- 0
-write$ -- 893
+write$ -- 957
 (There were 4 warnings)

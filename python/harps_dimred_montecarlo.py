@@ -72,7 +72,7 @@ colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
             data['BaFe'], data['ZnFe'], 
             data['YFe']-data['BaFe'],data['YFe']-data['ZnFe'],data['CeFe'],
             data['Teff'],data['logg'], data['vt_1'],np.log10(data['S/N']),
-            data['meanage'],data['Ulsr'],data['Vlsr'],data['Wlsr']]
+            data['meanage'],-data['vXg'],data['vYg'],data['vZg']]
 titles   = [r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Ca/Fe]$', r'$\rm [Mg/Fe]$',
           r'$\rm [Mg/Ti]$', r'$\rm [Cu/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Ba/Fe]$',
           r'$\rm [Zn/Fe]$', r'$\rm [Y/Ba]$', r'$\rm [Y/Zn]$', r'$\rm [Ce/Fe]$',

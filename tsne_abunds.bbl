@@ -1,4 +1,4 @@
-\begin{thebibliography}{90}
+\begin{thebibliography}{96}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adibekyan} {et~al.}(2011){Adibekyan}, {Santos}, {Sousa}, \&
@@ -80,7 +80,8 @@
 
 \bibitem[{{Chen} {et~al.}(2017){Chen}, {D'Onghia}, {Pardy}, {Pasquali},
   {Bertelli Motta}, {Hanlon}, \& {Grebel}}]{Chen2017}
-{Chen}, B., {D'Onghia}, E., {Pardy}, S., {et~al.} 2017, ArXiv e-prints
+{Chen}, B., {D'Onghia}, E., {Pardy}, S., {et~al.} 2017, \apj, submitted,
+  arXiv:1709.03987
 
 \bibitem[{{Chen} {et~al.}(2015){Chen}, {Bressan}, {Girardi}, {Marigo}, {Kong},
   \& {Lanza}}]{Chen2015}
@@ -169,8 +170,15 @@
 {Edvardsson}, B., {Andersen}, J., {Gustafsson}, B., {et~al.} 1993, \aap, 275,
   101
 
+\bibitem[{{Feltzing} {et~al.}(2003){Feltzing}, {Bensby}, \&
+  {Lundstr{\"o}m}}]{Feltzing2003}
+{Feltzing}, S., {Bensby}, T., \& {Lundstr{\"o}m}, I. 2003, \aap, 397, L1
+
 \bibitem[{{Fuhrmann}(1998)}]{Fuhrmann1998}
 {Fuhrmann}, K. 1998, \aap, 338, 161
+
+\bibitem[{{Fuhrmann}(2008)}]{Fuhrmann2008}
+{Fuhrmann}, K. 2008, \mnras, 384, 173
 
 \bibitem[{{Fuhrmann}(2011)}]{Fuhrmann2011}
 {Fuhrmann}, K. 2011, \mnras, 414, 2893
@@ -316,7 +324,8 @@
 
 \bibitem[{{Haywood} {et~al.}(2018){Haywood}, {Di Matteo}, {Lehnert}, {Snaith},
   {Fragkoudi}, \& {Khoperskov}}]{Haywood2018}
-{Haywood}, M., {Di Matteo}, P., {Lehnert}, M., {et~al.} 2018, ArXiv e-prints
+{Haywood}, M., {Di Matteo}, P., {Lehnert}, M., {et~al.} 2018, \aap, submitted,
+  arXiv:1802.09887
 
 \bibitem[{{Haywood} {et~al.}(2013){Haywood}, {Di Matteo}, {Lehnert}, {Katz}, \&
   {G{\'o}mez}}]{Haywood2013}
@@ -374,6 +383,11 @@ Kullback, S. \& Leibler, R.~A. 1951, Ann. Math. Statist., 22, 79
   {Cass}, {Hartley}, {Fiegert}, {Stupar}, {Ritter}, {Hawkins}, {Gerhard},
   {Chaplin}, {Davies}, {Elsworth}, {Lund}, {Miglio}, \& {Mosser}}]{Kunder2017}
 {Kunder}, A., {Kordopatis}, G., {Steinmetz}, M., {et~al.} 2017, \aj, 153, 75
+
+\bibitem[{{Kurucz}(1993)}]{Kurucz1993}
+{Kurucz}, R. 1993, ATLAS9 Stellar Atmosphere Programs and 2 km/s grid.~Kurucz
+  CD-ROM No.~13.~ Cambridge, Mass.: Smithsonian Astrophysical Observatory,
+  1993., 13
 
 \bibitem[{{Lindegren} \& {Feltzing}(2013)}]{Lindegren2013}
 {Lindegren}, L. \& {Feltzing}, S. 2013, \aap, 553, A94
@@ -512,10 +526,10 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 {Reis}, I., {Poznanski}, D., {Baron}, D., {Zasowski}, G., \& {Shahaf}, S. 2018,
   MNRAS, in press, arXiv:1711.00022
 
-\bibitem[{{Ritter} {et~al.}(2017){Ritter}, {C{\^o}t{\'e}}, {Herwig}, {Navarro},
-  \& {Fryer}}]{Ritter2017}
-{Ritter}, C., {C{\^o}t{\'e}}, B., {Herwig}, F., {Navarro}, J.~F., \& {Fryer},
-  C. 2017, ArXiv e-prints
+\bibitem[{{Ritter} {et~al.}(2017){Ritter}, {Herwig}, {Jones}, {Pignatari},
+  {Fryer}, \& {Hirschi}}]{Ritter2017a}
+{Ritter}, C., {Herwig}, F., {Jones}, S., {et~al.} 2017, \mnras, submitted,
+  arXiv:1709.08677
 
 \bibitem[{{Rodrigues} {et~al.}(2017){Rodrigues}, {Bossini}, {Miglio},
   {Girardi}, {Montalb{\'a}n}, {Noels}, {Trabucchi}, {Coelho}, \&
@@ -528,6 +542,19 @@ Linderman, G.~C. \& Steinerberger, S. 2017
   {Schultheis}, {Steinmetz}, {Miglio}, {Montalb{\'a}n}, {Schneider}, {Beers},
   {Frinchaboy}, {Lee}, \& {Zasowski}}]{Santiago2016}
 {Santiago}, B.~X., {Brauer}, D.~E., {Anders}, F., {et~al.} 2016, \aap, 585, A42
+
+\bibitem[{Sneden(1973)}]{Sneden1973}
+Sneden, C.~A. 1973, PhD thesis, University of Texas at Austin
+
+\bibitem[{{Sousa} {et~al.}(2015){Sousa}, {Santos}, {Adibekyan}, {Delgado-Mena},
+  \& {Israelian}}]{Sousa2015}
+{Sousa}, S.~G., {Santos}, N.~C., {Adibekyan}, V., {Delgado-Mena}, E., \&
+  {Israelian}, G. 2015, \aap, 577, A67
+
+\bibitem[{{Sousa} {et~al.}(2007){Sousa}, {Santos}, {Israelian}, {Mayor}, \&
+  {Monteiro}}]{Sousa2007}
+{Sousa}, S.~G., {Santos}, N.~C., {Israelian}, G., {Mayor}, M., \& {Monteiro},
+  M.~J.~P.~F.~G. 2007, \aap, 469, 783
 
 \bibitem[{{Steinmetz} {et~al.}(2006){Steinmetz}, {Zwitter}, {Siebert},
   {Watson}, {Freeman}, {Munari}, {Campbell}, {Williams}, {Seabroke}, {Wyse},
@@ -596,7 +623,8 @@ Linderman, G.~C. \& Steinerberger, S. 2017
 
 \bibitem[{Wattenberg {et~al.}(2016)Wattenberg, Viégas, \&
   Johnson}]{Wattenberg2016}
-Wattenberg, M., Viégas, F., \& Johnson, I. 2016, Distill
+Wattenberg, M., Viégas, F., \& Johnson, I. 2016, Distill,
+  doi:10.23915/distill.00002
 
 \bibitem[{{Yanny} {et~al.}(2009){Yanny}, {Rockosi}, {Newberg}, {Knapp},
   {Adelman-McCarthy}, {Alcorn}, {Allam}, {Allende Prieto}, {An}, {Anderson},

@@ -24,14 +24,14 @@ data  = t.data
 t.get_tsne_subsets( sets = sets )
 
 labels = [r'$\rm \tau \ [Gyr]$', r'$\rm [Fe/H]$', r'$\rm [Ti/Fe]$', r'$\rm [Y/Mg]$', 
-          r'$\rm [Zr/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Mg/Fe]$', r'$U$ [km/s]',
-          r'$V$ [km/s]', r'$W$ [km/s]', r'$T_{\rm eff}$ [K]', r'$\log g_{\rm HIP}$',
+          r'$\rm [Zr/Fe]$', r'$\rm [Al/Mg]$', r'$\rm [Mg/Fe]$', r'$v_X$ [km/s]',
+          r'$v_Y$ [km/s]', r'$v_Z$ [km/s]', r'$T_{\rm eff}$ [K]', r'$\log g_{\rm HIP}$',
           r'$R_{\rm Gal}$ [kpc]', r'$Z_{\rm Gal}$ [kpc]', r'$X_{\rm Gal}$ [kpc]', r'$Y_{\rm Gal}$ [kpc]',
           r'$\rm [Ba/Fe]$', r'$\rm [Y/Al]$', r'$\rm [Nd/Fe]$', r'$\rm [Sr/Ba]$',
           r'$\rm [Ce/Fe]$', r'$\rm [Zr/Ba]$', r'$\rm [Zn/Fe]$', r'$\rm [Eu/Fe]$',
           r'$\rm [Cu/Fe]$', r'$\rm [O/H]$', r'$\rm [C/Fe]$', r'$\rm [C/O]$',
           r'$\rm [Si/Fe]$', r'$\rm L_Z$', r'$ e$', r'$Z_{\rm max}$',
-          r'$\sqrt{U^2+W^2}$ [km/s]', r'$\rm [Mg/Y]$', r'$\rm [Ba/Y]$',
+          r'$\sqrt{v_X^2+v_Z^2}$ [km/s]', r'$\rm [Mg/Y]$', r'$\rm [Ba/Y]$',
           r'$R_{\rm Gal}-R_{\rm guide}$ [kpc]', r'$R_{\rm guide}-R_{\rm birth}$ [kpc]'
           ]
 

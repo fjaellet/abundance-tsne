@@ -127,7 +127,7 @@ ax.get_yaxis().set_visible(False)
 # UVW plots
 #################
 uvw = [data['Ulsr'], data['Vlsr'], data['Wlsr']]
-lab = [r"$U\ \rm{[km/s]}$", r"$V\ \rm{[km/s]}$", r"$W\ \rm{[km/s]}$"]
+lab = [r"$v_X\ \rm{[km/s]}$", r"$v_Y\ \rm{[km/s]}$", r"$v_Z\ \rm{[km/s]}$"]
 gs2 = gridspec.GridSpec(2, 2)
 gs2.update(left=0.63, bottom=0.25, right=0.98, top=0.62,
            wspace=0.05, hspace=0.05)
