@@ -27,7 +27,7 @@ feh      = True
 teffcut  = True
 p        = 40
 i        = 0
-mc       = 50 # needs to be an integer >=1. If ==1, then no MC magic will happen
+mc       = 1 # needs to be an integer >=1. If ==1, then no MC magic will happen
 
 add = ""
 if age or kin or mc>1 or teffcut or not feh:
@@ -114,9 +114,14 @@ for ii in range(5):
 rec = np.rec.fromarrays((data['Star'], means[:,1], means[:,4]),
                         dtype=[('ID','|S18'),('X_tsne','float'),
                                ('Y_tsne','float')])
-np.savetxt("../tsne_results/harps_tsne_results"+add+str(p)+
+if mc > 1:
+    np.savetxt("../tsne_results/harps_tsne_results"+add+str(p)+
                    "_rand"+str(i)+"_montecarloaverage.csv", rec, delimiter=',',
        fmt = ('%s, %.5e, %.5e'))
-plt.savefig("../im/HARPS_tsne_plots"+add+str(p)+
+    plt.savefig("../im/HARPS_tsne_plots"+add+str(p)+
                    "_montecarloaverage.png", dpi=200)
+else:
+    plt.savefig("../im/HARPS_tsne_plots"+add+str(p)+
+                   "_nice.png", dpi=200)
+    plt.show()
         

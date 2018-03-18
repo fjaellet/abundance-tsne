@@ -82,18 +82,18 @@ xerr = [data['agestd'], data['erfeh'], data['errTiI'],
 
 import matplotlib.gridspec as gridspec
 g   = plt.figure(figsize=(8, 4))
-plt.suptitle("Testing the influence of abundance uncertainties", fontsize=16)
+plt.suptitle("Testing the influence of abundance uncertainties", fontsize=18)
 gs0 = gridspec.GridSpec(1, 2)
-#gs0.update(left=0.315, bottom=0.275, right=0.98, top=0.78)
+gs0.update(bottom=0.12, left=0.09, right=0.97)
 ax  = plt.Subplot(g, gs0[0, 0])
 g.add_subplot(ax)
 for kk in np.arange(len(t.subsets)):
     mask = (t.classcol == t.subsets[kk])
     ax.scatter(t.Xt[mask], t.Yt[mask], s=4*t.size[kk], lw=t.lw[kk], edgecolors="k",
                c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
-ax.set_xlabel("t-SNE X dimension", fontsize=13)
-ax.set_ylabel("t-SNE Y dimension", fontsize=13)
-ax.text(6, 9, "Fiducial map", fontsize=13)
+ax.set_xlabel("t-SNE X dimension", fontsize=14)
+ax.set_ylabel("t-SNE Y dimension", fontsize=14)
+ax.text(5, 9, "Fiducial map", fontsize=15)
 
 ax  = plt.Subplot(g, gs0[0, 1])
 g.add_subplot(ax)
@@ -121,13 +121,13 @@ for kk in np.arange(len(t.subsets)):
     #if kk < len(t.names):
     #    ax.text(t.Xcoords[kk], t.Ycoords[kk], t.names[kk], fontsize=1.25*t.fsize[kk])
 
-ax.text(-9, 10, "Monte-Carlo-sampled map", fontsize=13)
-ax.set_xlabel("t-SNE X dimension", fontsize=13)
+ax.text(-10, 9.5, "Monte-Carlo-sampled map", fontsize=15)
+ax.set_xlabel("t-SNE X dimension", fontsize=14)
 #ax.set_ylabel("t-SNE Y dimension", fontsize=13)
 ax.axis([-13, 27, -8, 12])
 
 plt.savefig("../im/harps_tsne-mctest_"+sets+".png", dpi=200)  
-
+plt.show()
 
 ################# age plots #########################
 
@@ -285,14 +285,14 @@ for kk in np.arange(len(t.subsets)):
     #    ax.text(t.Xcoords[kk], t.Ycoords[kk], t.names[kk], fontsize=1.25*t.fsize[kk])
 ax.set_xlabel("t-SNE X dimension", fontsize=20)
 ax.set_ylabel("t-SNE Y dimension", fontsize=20)
-ax.text(8, 3, "Thin Disc", fontsize=30)
+ax.text(8.1, 2.6, "Thin Disc", fontsize=30)
 ax.text(12, 0, "Thick Disc I+II", fontsize=24)
-ax.text(-14, -9, "Thick Disc III", fontsize=22)
-ax.text(-22.2, -6.3, "Thick Disc IV", fontsize=22)
-ax.text(-22, 7, "SMR stars", fontsize=22)
-ax.text(-22.5, -3, "Transition", fontsize=18)
-ax.text(8, -8.4, "Metal-poor thin disc", fontsize=22)
-ax.legend(loc='upper right')
+ax.text(-12.8, -9,"Inner Disc I", fontsize=22)
+ax.text(-22.2, -6.3, "Inner Disc II", fontsize=22)
+ax.text(-23, 6.2, "Inner disc IV", fontsize=22)
+ax.text(-23.2, -3, "Inner Disc III", fontsize=18)
+ax.text(8, -8.8, "Outer Disc", fontsize=24)
+ax.legend(loc='upper right', fontsize=14)
 #ax.axis([-13, 25, -8, 10.2])
 
 plt.savefig("../im/harps_tsne-abundsplot_"+sets+".png", dpi=200)  

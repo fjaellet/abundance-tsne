@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  14 MAR 2018 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/TeX Live for SUSE Linux) (preloaded format=pdflatex 2017.9.22)  19 MAR 2018 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -961,14 +961,14 @@ File: im/harps_tsne-abundsplot_teffcut.png Graphic file (type png)
 <use im/harps_tsne-abundsplot_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-abundsplot_teffcut.png used on input lin
 e 71.
-(pdftex.def)             Requested size: 445.00429pt x 519.1813pt.
+(pdftex.def)             Requested size: 507.82541pt x 592.46786pt.
 
-<im/HARPS_tsne_plots_withteffcut40_rand0.png, id=17, 867.24pt x 867.24pt>
-File: im/HARPS_tsne_plots_withteffcut40_rand0.png Graphic file (type png)
+<im/HARPS_tsne_plots_40_nice.png, id=17, 867.24pt x 867.24pt>
+File: im/HARPS_tsne_plots_40_nice.png Graphic file (type png)
 
-<use im/HARPS_tsne_plots_withteffcut40_rand0.png>
-Package pdftex.def Info: im/HARPS_tsne_plots_withteffcut40_rand0.png used on in
-put line 98.
+<use im/HARPS_tsne_plots_40_nice.png>
+Package pdftex.def Info: im/HARPS_tsne_plots_40_nice.png used on input line 98.
+
 (pdftex.def)             Requested size: 518.29826pt x 518.32338pt.
  [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -977,53 +977,75 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3 <./im/harps_tsne-abundsplot_teffcut.png>]
+Underfull \vbox (badness 4531) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 <./im/HARPS_tsne_plots_withteffcut40_rand0.png>]
+ [4 <./im/HARPS_tsne_plots_40_nice.png>]
+Underfull \vbox (badness 4316) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `T1/txss/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 115.
+(Font)              scaled to size 9.49997pt on input line 116.
 LaTeX Font Info:    Font shape `T1/txss/m/it' in size <10> not available
-(Font)              Font shape `T1/txss/m/sl' tried instead on input line 115.
+(Font)              Font shape `T1/txss/m/sl' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/txss/m/sl' will be
-(Font)              scaled to size 9.49997pt on input line 115.
+(Font)              scaled to size 9.49997pt on input line 116.
 
 <im/harps_tsne_abundances-relto-Fe_thin.png, id=32, 867.24pt x 578.16pt>
 File: im/harps_tsne_abundances-relto-Fe_thin.png Graphic file (type png)
 
 <use im/harps_tsne_abundances-relto-Fe_thin.png>
 Package pdftex.def Info: im/harps_tsne_abundances-relto-Fe_thin.png used on inp
-ut line 118.
-(pdftex.def)             Requested size: 256.53291pt x 154.19029pt.
+ut line 123.
+(pdftex.def)             Requested size: 277.47063pt x 166.77303pt.
 
 <im/harps_tsne_abundances-relto-Fe_thick.png, id=34, 867.24pt x 578.16pt>
 File: im/harps_tsne_abundances-relto-Fe_thick.png Graphic file (type png)
 
 <use im/harps_tsne_abundances-relto-Fe_thick.png>
 Package pdftex.def Info: im/harps_tsne_abundances-relto-Fe_thick.png used on in
-put line 119.
-(pdftex.def)             Requested size: 256.53291pt x 137.35728pt.
+put line 123.
+(pdftex.def)             Requested size: 277.47063pt x 148.56638pt.
 
 <im/harps_tsne_abundances-relto-Fe_strange.png, id=36, 867.24pt x 578.16pt>
 File: im/harps_tsne_abundances-relto-Fe_strange.png Graphic file (type png)
 
 <use im/harps_tsne_abundances-relto-Fe_strange.png>
 Package pdftex.def Info: im/harps_tsne_abundances-relto-Fe_strange.png used on 
-input line 120.
-(pdftex.def)             Requested size: 256.53291pt x 154.19028pt.
+input line 123.
+(pdftex.def)             Requested size: 277.47063pt x 166.77303pt.
 
-Underfull \vbox (badness 1259) has occurred while \output is active []
 
- [5 <./im/harps_tsne_abundances-relto-Fe_thin.png> <./im/harps_tsne_abundances-
-relto-Fe_thick.png> <./im/harps_tsne_abundances-relto-Fe_strange.png>]
+Class aa Warning: No sufficient room for the legend; using normal \caption. on 
+input line 123.
+
+
+Overfull \hbox (21.39583pt too wide) in paragraph at lines 123--123
+[][] 
+ []
+
+
+Overfull \hbox (21.39583pt too wide) in paragraph at lines 123--123
+[] 
+ []
+
+
+Overfull \hbox (21.39583pt too wide) in paragraph at lines 123--123
+[] 
+ []
+
+[5 <./im/harps_tsne_abundances-relto-Fe_thin.png> <./im/harps_tsne_abundances-r
+elto-Fe_thick.png> <./im/harps_tsne_abundances-relto-Fe_strange.png>]
 <im/harps-tSNE_perplexitytest_withsubsets.png, id=48, 505.89pt x 722.7pt>
 File: im/harps-tSNE_perplexitytest_withsubsets.png Graphic file (type png)
 
 <use im/harps-tSNE_perplexitytest_withsubsets.png>
 Package pdftex.def Info: im/harps-tSNE_perplexitytest_withsubsets.png used on i
-nput line 136.
+nput line 138.
 (pdftex.def)             Requested size: 256.53291pt x 366.4769pt.
 
-Underfull \hbox (badness 2393) in paragraph at lines 143--144
+Underfull \hbox (badness 2393) in paragraph at lines 145--146
 \T1/txr/m/n/10 points) of the map are pre-served (mod-ulo map ro-ta-
  []
 
@@ -1032,58 +1054,60 @@ File: im/harps_tsne-mctest_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-mctest_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-mctest_teffcut.png used on input line 15
-1.
-(pdftex.def)             Requested size: 256.53291pt x 128.26305pt.
+5.
+(pdftex.def)             Requested size: 335.05933pt x 167.52977pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[6 <./im/harps-tSNE_perplexitytest_withsubsets.png> <./im/harps_tsne-mctest_tef
-fcut.png>]
-<im/harps_tsne-age-abundsplot_teffcut.png, id=55, 433.62pt x 722.7pt>
+
+Underfull \vbox (badness 2443) has occurred while \output is active []
+
+ [6 <./im/harps-tSNE_perplexitytest_withsubsets.png>]
+Underfull \hbox (badness 2726) in paragraph at lines 172--173
+[]\T1/txr/m/it/10 Super-metal-rich stars: \T1/txr/m/n/10 The In-ner Disc IV pop
+-u-la-tion
+ []
+
+[7 <./im/harps_tsne-mctest_teffcut.png>]
+<im/harps_tsne-age-abundsplot_teffcut.png, id=61, 433.62pt x 722.7pt>
 File: im/harps_tsne-age-abundsplot_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-age-abundsplot_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-age-abundsplot_teffcut.png used on input
- line 167.
+ line 188.
 (pdftex.def)             Requested size: 261.76535pt x 436.29199pt.
 
-Overfull \hbox (5.69055pt too wide) in paragraph at lines 167--168
+Overfull \hbox (5.69055pt too wide) in paragraph at lines 188--189
  [][] 
  []
 
-[7 <./im/harps_tsne-age-abundsplot_teffcut.png>] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+[8 <./im/harps_tsne-age-abundsplot_teffcut.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 []\T1/txr/m/it/10 Extreme-[Ti/Fe] star: \T1/txr/m/n/10 HD14452 (limegreen pen-t
 agon,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 []\T1/txr/m/it/10 Low-[Mg/Fe] can-di-date: \T1/txr/m/n/10 HD113513 (black squar
 e,
  []
 
-
-Underfull \hbox (badness 1742) in paragraph at lines 240--241
-\T1/txr/m/n/10 SNR$[] \OT1/txr/m/n/10 = 26$\T1/txr/m/n/10 ) is not re-ally an o
-ut-lier in the t-SNE
- []
-
-<im/harps_tsne-kin-abundsplot_teffcut.png, id=65, 433.62pt x 578.16pt>
+<im/harps_tsne-kin-abundsplot_teffcut.png, id=66, 433.62pt x 578.16pt>
 File: im/harps_tsne-kin-abundsplot_teffcut.png Graphic file (type png)
 
 <use im/harps_tsne-kin-abundsplot_teffcut.png>
 Package pdftex.def Info: im/harps_tsne-kin-abundsplot_teffcut.png used on input
- line 248.
+ line 252.
 (pdftex.def)             Requested size: 256.53291pt x 342.05539pt.
  [9 <./im/harps_tsne-kin-abundsplot_teffcut.png>]
-Underfull \hbox (badness 1661) in paragraph at lines 289--290
+Underfull \hbox (badness 1661) in paragraph at lines 293--294
 []\T1/txr/m/n/10 Our iden-ti-fi-ca-tion of the s-process-rich abun-dance pair
  []
 
-(./tsne_abunds.bbl
+(./tsne_abunds.bbl [10]
 Underfull \hbox (badness 1173) in paragraph at lines 511--513
 []\T1/txr/m/n/8 Pedregosa, F., Varo-quaux, G., Gram-fort, A., et al. 2012, ArXi
 v e-prints,
@@ -1095,7 +1119,7 @@ Underfull \hbox (badness 6758) in paragraph at lines 531--533
 t-ted,
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 626--628
 []\T1/txr/m/n/8 Wattenberg, M., Vié-gas, F., & John-son, I. 2016, Dis-till,
  []
@@ -1104,13 +1128,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 626--628
 
 ] (./tsne_abunds.aux) ) 
 Here is how much of TeX's memory you used:
- 6542 strings out of 494041
- 84831 string characters out of 6158495
- 232424 words of memory out of 5000000
- 9704 multiletter control sequences out of 15000+600000
+ 6543 strings out of 494041
+ 84777 string characters out of 6158495
+ 228156 words of memory out of 5000000
+ 9705 multiletter control sequences out of 15000+600000
  91191 words of font info for 152 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 41i,12n,45p,7218b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,45p,7218b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/base/8r.enc}</usr/shar
 e/texmf/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texmf/fonts/type1/publi
 c/txfonts/rtxmi.pfb></usr/share/texmf/fonts/type1/public/txfonts/rtxr.pfb></usr
@@ -1123,7 +1147,7 @@ onts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmb
 8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texmf/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on tsne_abunds.pdf (11 pages, 4519246 bytes).
+Output written on tsne_abunds.pdf (11 pages, 5396686 bytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

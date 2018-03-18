@@ -13,7 +13,7 @@ from astroML.decorators import pickle_results
 from astroML.density_estimation import XDGMM
 from astroML.plotting.tools import draw_ellipse
 from astroML.plotting import setup_text_plots
-setup_text_plots(fontsize=10, usetex=True)
+setup_text_plots(fontsize=13, usetex=True)
 
 import open_data
 from astropy.io import fits as pyfits
@@ -25,11 +25,11 @@ sets = "teffcut"
 
 f = plt.figure(figsize=(7, 2*len(p)))
 plt.suptitle("Sensitivity of abundance-space t-SNE to input parameters",
-             fontsize=14)
+             fontsize=20)
 import matplotlib.gridspec as gridspec
 gs0 = gridspec.GridSpec(len(p), 4)
-gs0.update(left=0.08, bottom=0.08, right=0.92, top=0.9,
-           wspace=0.05, hspace=0.12)
+gs0.update(left=0.03, bottom=0.03, right=0.92, top=0.9,
+           wspace=0.05, hspace=0.05)
 
 plotsubsets = True
 
@@ -52,14 +52,14 @@ for ii in range(len(p)):
     bensb4 = np.genfromtxt("../tsne_results/harps_tsne_results_withageteffcut"+str(p[ii])+
                         "_rand0.csv", delimiter=',')
     data = [bensb1, bensb2, bensb3, bensb4]
-    title= ["Only [X/Fe]", "[X/Fe] + [Fe/H]", "Abundances + age",
-            "Abundances + age + kin."]
+    title= ["Only [X/Fe]", "[X/Fe] + [Fe/H]", "Abunds.+age",
+            "Abunds.+age+kin."]
     #best = [1, 5, 4]
     for jj in range(4):
         ax = plt.Subplot(f, gs0[ii, jj])
         f.add_subplot(ax)
         if jj == 1 and ii == 2:
-            ax.set_axis_bgcolor('yellow')
+            ax.set_facecolor('yellow')
         if jj == 0 and ii == 4:
             data[jj][:, 1] = -data[jj][:, 1]
         if plotsubsets:
@@ -71,17 +71,18 @@ for ii in range(len(p)):
         else:
             scat = plt.scatter(data[jj][:, 1], data[jj][:, 2], c='k', marker="o",
                            lw=0, s=6, alpha=.5)
-        if jj!=0:
-            ax.yaxis.set_major_formatter(NullFormatter())
+        #if jj!=0:
+        ax.yaxis.set_major_formatter(NullFormatter())
         if jj==3:
-            ax.text(1.05, 0.5, r"$p=$" + str(p[ii]), transform=ax.transAxes)
+            ax.text(1.02, 0.5, r"$p=$" + str(p[ii]), fontsize=14,
+                    transform=ax.transAxes)
         if ii==0:
             #ax2 = ax.twiny()
             #ax2.set_xlim(ax.get_xlim())
             ax.xaxis.set_major_formatter(NullFormatter())
             plt.title(title[jj])
-        elif ii==len(p)-1:
-            pass
+        #elif ii==len(p)-1:
+        #    pass
         else:
             ax.xaxis.set_major_formatter(NullFormatter())
         plt.axis('tight')

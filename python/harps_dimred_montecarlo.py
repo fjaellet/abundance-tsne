@@ -21,8 +21,8 @@ import scipy
 
 # The dataset
 plot     = True
-age      = False
-kin      = False
+age      = True
+kin      = True
 feh      = True
 teffcut  = True
 mc       = 1 # needs to be an integer >=1. If ==1, then no MC magic will happen

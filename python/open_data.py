@@ -65,8 +65,8 @@ class harps(object):
                        "mpthin", "smr", "t4trans",
                        "debris1", "debris2", "debris3", "debris4", "debris5?", 
                        "t2trans1", "t2trans2", "highTi","thicklow"]
-            self.names   = ["Thin Disc", "Thick Disc I", "Thick Disc II", "Thick Disc III",
-                       "Thick Disc IV", "Metal-poor \n Thin Disc", "SMR", "Transition",
+            self.names   = ["Thin Disc", "Thick Disc I", "Thick Disc II", "Inner Disc I",
+                       "Inner Disc II", "Outer \n Thin Disc", "SMR", "Inner Disc III",
                        "", "", "Satellite \n debris", "", "", r"TII/III", "", 
                        r"Extreme-Ti star", r"Lowest-[Fe/H] star"]
             self.Xcoords = [-25, 15, 4.5, -12,  18, -31, 22, 26,-22.5, -14, -2, -25]
