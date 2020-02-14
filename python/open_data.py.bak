@@ -147,7 +147,7 @@ class bensby(object):
         if teffcut:
             data = data [(data['Teff']>5000) * (data['Teff']<6300)]
         self.data= data
-        print(len(data), " stars included.")
+        print len(data), " stars included."
         return None
 
     def get_ndimspace(self, age=False, kin=False, feh=True, mc=50):
@@ -161,7 +161,7 @@ class bensby(object):
             mc:  Int   - if ==1, then no MC magic will happen
         """
         data = self.data
-        print(len(data), " stars included.")
+        print len(data), " stars included."
         verr = 10. * np.ones(len(data))
         X        = np.c_[data['Fe_H'],data['O_Fe'],data['Na_Fe'],data['Mg_Fe'],
                          data['Al_Fe'],data['Si_Fe'],data['Ca_Fe'],data['Ti_Fe'],

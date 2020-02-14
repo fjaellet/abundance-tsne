@@ -41,7 +41,7 @@ if age or kin or mc>1 or not feh:
         add = add + "nofeh"
     if mc>1:
         add = add + "mc" + str(mc)
-print add        
+print(add)        
 
 # The dataset
 tsne =  np.genfromtxt("../tsne_results/bensby2014_tsne_results"+add+str(p)+

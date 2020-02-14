@@ -30,7 +30,7 @@ mc       = 1 # needs to be an integer >=1. If ==1, then no MC magic will happen
 # READ DelGADO-MENA DATA
 harps = open_data.harps(teffcut=teffcut, ages=True, abunds=True)
 data  = harps.data
-print(len(data))
+print len(data)
 
 n_points = len(data)
 n_components = 2
@@ -65,7 +65,7 @@ Xnorm    = (X/Xerr[np.newaxis,:])
 #Xgood    = (np.sum(data['ELEMFLAG'][:, [0,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,
 #                                18,19]], axis=1)== 0) #* (data['NA_FE']>-0.8) 
 #X        = X[Xgood]
-print(len(X), " good ones")
+print len(X), " good ones"
 
 colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
             data['MgFe']-data['TiIFe'],data['CuFe'],data['AlFe']-data['MgFe'],
@@ -87,8 +87,8 @@ for p in [5, 15, 30, 40, 50, 75, 100, 120, 150]:#[
                              learning_rate=1, early_exaggeration=len(X)/10)
         Y = tsne.fit_transform(Xnorm)
         t1 = time()
-        print("p=", p, " , random state ", i)
-        print(("t-SNE: %.2g sec" % (t1 - t0)))
+        print "p=", p, " , random state ", i
+        print("t-SNE: %.2g sec" % (t1 - t0))
 
         f = plt.figure(figsize=(12, 12))
         plt.suptitle("t-SNE manifold learning for the HARPS sample (Delgado-Mena et al. 2017)", fontsize=14)
@@ -134,7 +134,7 @@ for p in [5, 15, 30, 40, 50, 75, 100, 120, 150]:#[
                 add = add + "teffcut"
             if mc>1:
                 add = add + "mc" + str(mc)
-        print(add)        
+        print add        
         np.savetxt("../tsne_results/harps_tsne_results"+add+str(p)+
                            "_rand"+str(i)+".csv", rec, delimiter=',',
                fmt = ('%s, %.5e, %.5e'))

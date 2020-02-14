@@ -91,7 +91,7 @@ Rg   = Rcur #XYZg[0]               IS THERE A PROBLEM WITH rect_to_cyl ???
 Phig = RPhiZg[1]
 Zg   = XYZg[:,2]
 Phig_deg= Phig*180./(2*np.pi)
-print(Phig_deg)
+print Phig_deg
 
 # Linearised uncertainties
 Xg_sig = abs(np.cos(b_rad)*np.cos(l_rad)*e_d)
@@ -250,7 +250,7 @@ print '...done.'
 from galpy.actionAngle import actionAngleStaeckel
 
 aAS= actionAngleStaeckel(pot=MWPotential2014,delta=0.4) #optimal value for MWP14
-print('Calculating Actions in Staeckel approximation...')
+print 'Calculating Actions in Staeckel approximation...'
 
 e, zmax, rperi, rap = aAS.EccZmaxRperiRap(Rg/_Rsun, Zg/_Rsun,
                           vPhig/_vc_sun, vRg/_vc_sun, vZg/_vc_sun,Phig )
@@ -291,10 +291,10 @@ JR_st_L[mask] = staeckel_actions_L[0]
 JPhi_st_L[mask] = staeckel_actions_L[1]
 JZ_st_L[mask] = staeckel_actions_L[2]
 
-print('...done.')
+print '...done.'
 
 
-print("Trying to save file...")
+print "Trying to save file..."
 
 c01=pyfits.Column( name='ID', format='12A', array=ID)
 #c02=pyfits.Column( name='APOGEE', format='20A', array=APOGEE_ID)
@@ -356,7 +356,7 @@ columns= pyfits.ColDefs( [c01,c03,c04,c05,c06,c07,c08,c09,c10, \
                           c51] )
 newHDU= pyfits.BinTableHDU.from_columns(columns)
 if os.path.exists(savefile):
-    print('output file exists already')
+    print 'output file exists already'
 else:
     newHDU.writeto(savefile)
-    print('...done')
+    print '...done'

@@ -46,7 +46,7 @@ gs0.update(left=0.08, bottom=0.05, right=0.92, top=0.92,
 
 for ii in range(5):
     for jj in range(4):
-        print(jj)
+        print jj
         ax = plt.Subplot(f, gs0[ii, jj])
         f.add_subplot(ax)
         scat = plt.scatter(data['X_tsne_teffcut40'], data['Y_tsne_teffcut40'], 

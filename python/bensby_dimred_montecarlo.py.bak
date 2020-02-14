@@ -57,8 +57,8 @@ for p in [20, 25]: #[5, 15, 30, 40, 50, 75, 100, 120, 150]:#[
                              learning_rate=1, early_exaggeration=len(data)/10)
         Y = tsne.fit_transform(ben.Xnorm)
         t1 = time()
-        print("p=", p, " , random state ", i)
-        print(("t-SNE: %.2g sec" % (t1 - t0)))
+        print "p=", p, " , random state ", i
+        print("t-SNE: %.2g sec" % (t1 - t0))
 
         f = plt.figure(figsize=(12, 12))
         plt.suptitle("t-SNE manifold learning for the Bensby+2014 sample", fontsize=14)
@@ -103,7 +103,7 @@ for p in [20, 25]: #[5, 15, 30, 40, 50, 75, 100, 120, 150]:#[
                 add = add + "nofeh"
             if mc>1:
                 add = add + "mc" + str(mc)
-        print(add)        
+        print add        
         np.savetxt("../tsne_results/bensby2014_tsne_results"+add+str(p)+
                            "_rand"+str(i)+".csv", rec, delimiter=',',
                fmt = ('%s, %.5e, %.5e'))

@@ -39,7 +39,7 @@ if plotsubsets:
     t.get_tsne_subsets( sets = sets )
 
 for ii in range(len(p)):
-    print(ii)
+    print ii
     # READ DATA
     #bensb0 = np.genfromtxt("../tsne_results/harps_tsne_results"+str(p[ii])+
     #                    "_rand0.csv", delimiter=',')

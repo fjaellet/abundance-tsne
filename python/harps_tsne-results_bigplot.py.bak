@@ -101,7 +101,7 @@ g.add_subplot(ax)
 mcres =  np.genfromtxt("../tsne_results/harps_tsne_results_withteffcutmc5040_rand0.csv", delimiter=',',
                   dtype=[('Name', "|S14"), ('X', float), ('Y', float)])
 ax.scatter(mcres["X"], mcres["Y"], s=4, lw=0, c="grey", alpha=0.15)
-print(len(mcres))
+print len(mcres)
 for kk in np.arange(len(t.subsets)):
     mask = (t.classcol == t.subsets[kk])
     if "debris4" in t.subsets[kk]:
@@ -143,7 +143,7 @@ gs.update(left=0.12, bottom=0.07, right=0.86, top=0.93,
            wspace=0.06, hspace=0.11)
 
 for jj in range(8):
-    print(jj)
+    print jj
     ax = plt.Subplot(g, gs[jj/2, jj%2])
     if exinds[jj] != None:
         g.add_subplot(ax)
@@ -184,7 +184,7 @@ gs.update(left=0.12, bottom=0.07, right=0.86, top=0.93,
            wspace=0.06, hspace=0.31)
 
 for jj in range(6):
-    print(jj)
+    print jj
     ax = plt.Subplot(g, gs[jj/2, jj%2])
     if exinds[jj] != None:
         g.add_subplot(ax)
@@ -243,7 +243,7 @@ gs.update(left=0.08, bottom=0.06, right=0.98, top=0.98,
            wspace=0.4, hspace=0.33)
 
 for jj in range(20):
-    print(jj)
+    print jj
     ax = plt.Subplot(g, gs[jj/4, jj%4])
     if exinds[jj] != None:
         g.add_subplot(ax)
@@ -408,7 +408,7 @@ if sets not in ["teffcut", "plain"]:
 for kk in np.arange(len(t.subsets)):
     mask = (t.classcol == t.subsets[kk])
     if t.subsets[kk] == "debris1" and sets=="errlim":
-        ax.plot(t.Xt[mask], 9.7, marker=r"$\\uparrow$", zorder=0, ms=20)
+        ax.plot(t.Xt[mask], 9.7, marker=r"$\uparrow$", zorder=0, ms=20)
         ax.scatter(t.Xt[mask], 9.5, s=4*t.size[kk], lw=t.lw[kk], edgecolors="k",
                    c=t.col[kk], alpha=t.al[kk], marker=t.sym[kk])
     else:

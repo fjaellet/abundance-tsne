@@ -48,7 +48,7 @@ if plotsubsets:
           "orange", "cyan", "lime", "yellow", "m",
           "hotpink", "peru", "cornflowerblue"]
 for ii in range(len(p)):
-    print(ii)
+    print ii
     # READ DATA
     bensb0 = np.genfromtxt("specialsets/bensby2014_tsne_results_withnofeh"+str(p[ii])+
                         "_rand0.csv", delimiter=',')

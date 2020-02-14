@@ -42,7 +42,7 @@ if age or kin or mc>1 or teffcut or not feh:
         add = add + "teffcut"
     if mc>1:
         add = add + "mc" + str(mc)
-print(add)        
+print add        
 
 # The dataset
 tsne =  np.genfromtxt("../tsne_results/harps_tsne_results"+add+str(p)+
@@ -58,7 +58,7 @@ for ii in np.arange(means.shape[0]):
 # READ DelGADO-MENA DATA
 harps = open_data.harps(teffcut=teffcut, ages=True, abunds=True)
 data  = harps.data
-print(data['Star'])
+print data['Star']
 assert len(tsne)/mc == len(data)
 colors   = [data['feh'], data['TiIFe'], data['CaFe'], data['MgFe'],
             data['MgFe']-data['TiIFe'],data['CuFe'],data['AlFe']-data['MgFe'],
@@ -82,7 +82,7 @@ gs0.update(left=0.08, bottom=0.08, right=0.92, top=0.92,
 
 for ii in range(5):
     for jj in range(4):
-        print(jj)
+        print jj
         ax = plt.Subplot(f, gs0[ii, jj])
         f.add_subplot(ax)
         scat = plt.scatter(tsne['X'], tsne['Y'], 
